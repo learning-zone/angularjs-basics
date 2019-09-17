@@ -1,0 +1,73 @@
+body{
+	padding-top: 51px;
+}
+
+/* ng-cloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng.ng-cloak {
+    display: none;
+}
+ul{
+	list-style: none;
+}
+a{
+	color: #333;
+}
+a:hover{
+	cursor: pointer;
+}
+ul.simple-post-list .post-image {
+	float: left;
+	margin-right: 12px;
+}
+ul.simple-post-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.callout-box{
+	background-color: #546489;
+	color: #fff;
+	padding: 10px 20px;
+}
+.body-title{
+	border: 1px solid #e3e3e3;
+	border-left: 5px solid #234383;
+	padding: 0 20px 20px;
+}
+.featured-box{
+	border: 1px solid #e3e3e3;
+	border-top: 5px solid #234383;
+	padding: 0 20px 20px;
+}
+.breadcrumbs {
+position: relative;
+border-bottom: 1px solid #E5E5E5;
+background-color: #F5F5F5;
+}
+.breadcrumb{
+	margin-bottom: 0;
+}
+.cart-btn{
+	border-radius:0;
+}
+.navbar {
+	border-radius: 0;
+	
+/*background: #438EB9;
+color: #fff;border: 0;*/
+
+}
+/* Removed width:auto from navbar-collapse classs; */
+.navbar-collapse {
+border-top: 0;
+box-shadow: none;
+}
+.navbar .navbar-brand {
+/*color: #FFF;
+font-size: 24px;
+text-shadow: none;
+padding-bottom: 10px;*/
+}
+.form-group-addon{
+	padding-left: -20px;
+}
