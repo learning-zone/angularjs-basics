@@ -1,0 +1,35 @@
+/* The html and body elements cannot have any padding or margin */
+html,
+body {
+    height: 100%; /* for sticky footer */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -80px; /* must equal footer height */
+}
+
+#push,
+#footer { 
+    height: 80px;
+}
+
+#footer {
+    padding: 0 20px;
+}
+
+.margin-left-10 { margin-left: 10px; }
+.margin-right-10{ margin-right: 10px; }
+
+.red, a.red   { color: #d2322d }
+.blue, a.blue  { color: #428bca }
+.green, a.green { color: #47a447 }
+
+a.glyphicon {
+    cursor: pointer;
+}
+
+.pull-up { margin: -45px 0 15px 0 }

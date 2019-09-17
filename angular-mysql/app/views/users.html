@@ -1,0 +1,39 @@
+<h1>Users</h1>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th ng-repeat="header in headers">{{header}}</th>
+            <th>Id</th>      
+            <th>Firstname</th>      
+            <th>Lastname</th>      
+            <th>Email</th>      
+            <th>Company</th>         
+            <th class="text-center">View</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in users">
+            <td>{{user.id}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+            <td>{{user.company}}</td>
+            <td class="text-center">
+                <a ng-href="user/view/{{user.id}}" class="glyphicon glyphicon-eye-open green"></a>
+            </td>
+            <td class="text-center">
+                <a ng-href="user/edit/{{user.id}}" class="glyphicon glyphicon-pencil blue"></a>
+            </td>
+            <td class="text-center">
+                <a ng-click="deleteUser(user.id)" class="glyphicon glyphicon-remove red"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="/user/create" class="btn btn-default btn-primary">
+    <span class="glyphicon glyphicon-plus"></span> Create
+</a>

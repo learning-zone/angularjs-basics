@@ -1,0 +1,19 @@
+<div class="jumbotron">
+
+    <h1>Welcome to {{applicationName}}</h1>
+  
+    <p>This is an example CRUD application using Angular.js, MySQL and RESTful services.</p>
+ 
+</div>
+
+<div ng-show="users">
+
+    <p>Users:</p>
+    
+    <ul>
+        <li ng-repeat="user in users">
+            <a ng-href="user/view/{{user.id}}">{{user.firstname}} {{user.lastname}}</a>
+        </li>
+    </ul>
+  
+</div>

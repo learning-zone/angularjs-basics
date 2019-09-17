@@ -1,0 +1,37 @@
+<h1>{{user.firstname}} {{user.lastname}}</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>{{user.id}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Firstname</td>
+            <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+            <td>Lastname</td>
+            <td>{{user.lastname}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><a href="mailto:{{user.email}}">{{user.email}}</a></td>
+        </tr>
+        <tr>
+            <td>Company</td>
+            <td>{{user.company}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<a ng-href="/user/edit/{{user.id}}" class="btn btn-default btn-primary margin-right-10">
+    <span class="glyphicon glyphicon-pencil"></span> Edit
+</a>
+
+<button ng-click="goBack()" class="btn btn-default pull-right">
+    <span class="glyphicon glyphicon-arrow-left"></span> Back
+</button>
+

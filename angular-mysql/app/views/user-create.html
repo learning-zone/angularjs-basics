@@ -1,0 +1,36 @@
+<h1>Create User</h1>
+    
+<form name="userForm" role="form" novalidate>
+
+    <div class="form-group" ng-class="{ 'has-error': userForm.firstname.$dirty && userForm.firstname.$invalid }">
+        <label for="firstname" class="control-label">Firstname: <span class="red">*</span></label>
+        <input type="text" ng-model="user.firstname" name="firstname" placeholder="firstname" class="form-control" required>
+        <span class="help-block" ng-show="userForm.firstname.$dirty && userForm.firstname.$error.required">Required</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.lastname.$dirty && userForm.lastname.$invalid }">
+        <label for="lastname" class="control-label">Lastname: <span class="red">*</span></label>
+        <input type="text" ng-model="user.lastname" name="lastname" placeholder="lastname" class="form-control" required>
+        <span class="help-block" ng-show="userForm.lastname.$dirty && userForm.lastname.$error.required">Required</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.email.$dirty && userForm.email.$invalid }">
+        <label for="email" class="control-label">Email: <span class="red">*</span></label>
+        <input type="email" ng-model="user.email" name="email" placeholder="email" class="form-control" required>
+        <span class="help-block" ng-show="userForm.email.$dirty && userForm.email.$error.required">Required</span>
+        <span class="help-block" ng-show="userForm.email.$dirty && userForm.email.$error.email">Invalid email</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.company.$invalid }">
+        <label for="company" class="control-label">Company:</label>
+        <input type="text" ng-model="user.company" name="company" placeholder="company" class="form-control">
+    </div>
+    
+    <br>
+    
+    <button ng-click="createUser()" ng-class="{ disabled: userForm.$invalid }" class="btn btn-primary">Save</button>
+    <button ng-click="goBack()" class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-arrow-left"></span> Back
+    </button>    
+
+</form>

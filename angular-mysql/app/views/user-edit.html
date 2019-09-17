@@ -1,0 +1,46 @@
+<h1>Edit User</h1>
+    
+<form name="userForm" role="form" novalidate>
+
+    <div class="form-group">
+        <label for="id" class="control-label">Id:</label>
+        <input type="text" ng-model="user.id" name="id" class="form-control" disabled>
+    </div>    
+
+    <div class="form-group" ng-class="{ 'has-error': userForm.firstname.$invalid }">
+        <label for="firstname" class="control-label">Firstname: <span class="red">*</span></label>
+        <input type="text" ng-model="user.firstname" name="firstname" placeholder="firstname" class="form-control" required>
+        <span class="help-block" ng-show="userForm.firstname.$error.required">Required</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.lastname.$invalid }">
+        <label for="lastname" class="control-label">Lastname: <span class="red">*</span></label>
+        <input type="text" ng-model="user.lastname" name="lastname" placeholder="lastname" class="form-control" required>
+        <span class="help-block" ng-show="userForm.lastname.$error.required">Required</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.email.$invalid }">
+        <label for="email" class="control-label">Email: <span class="red">*</span></label>
+        <input type="email" ng-model="user.email" name="email" placeholder="email" class="form-control" required>
+        <span class="help-block" ng-show="userForm.email.$error.required">Required</span>
+        <span class="help-block" ng-show="userForm.email.$error.email">Invalid email</span>
+    </div>                
+    
+    <div class="form-group" ng-class="{ 'has-error': userForm.company.$invalid }">
+        <label for="company" class="control-label">Company:</label>
+        <input type="text" ng-model="user.company" name="company" placeholder="company" class="form-control">
+    </div>    
+    
+    <br>  
+    
+    <button ng-click="updateUser()" ng-class="{ disabled: userForm.$invalid }" class="btn btn-primary">Update</button>      
+    <button ng-click="goBack()" class="btn btn-default pull-right">
+        <span class="glyphicon glyphicon-arrow-left"></span> Back
+    </button>              
+    <button ng-click="deleteUser(user.id)" ng-show="!isNew()" class="btn btn-danger pull-right margin-right-10">Delete</button> 
+        
+</form>
+
+
+
+
