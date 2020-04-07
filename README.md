@@ -342,10 +342,10 @@ Angular's HTML compiler allows you to teach the browser new HTML syntax. The com
 AngularJS compilation process takes place in the web browser; no server side or pre-compilation step is involved.
 Angular uses $compiler service to compile your angular HTML page. The angular' compilation process begins after your HTML page (static DOM) is fully loaded. It happens in two phases:
 
-  1. Compile - It traverse the DOM and collect all of the directives. The result is a linking function.
-  2. Link - It combines the directives with a scope and produces a live view. Any changes in the scope model are reflected in the view, and any user interactions with the view are reflected in the scope model.
+1. Compile - It traverse the DOM and collect all of the directives. The result is a linking function.
+2. Link - It combines the directives with a scope and produces a live view. Any changes in the scope model are reflected in the view, and any user interactions with the view are reflected in the scope model.
 
-  The concept of compile and link comes from C language, where you first compile the code and then link it to actually execute it. The process is very much similar in AngularJS as well.
+The concept of compile and link comes from C language, where you first compile the code and then link it to actually execute it. The process is very much similar in AngularJS as well.
 
 #### Q. How AngularJS compilation is different from other JavaScript frameworks?
 
@@ -358,9 +358,9 @@ AngularJS process the template in another way. It directly works on HTML DOM rat
 It is important to note that Angular operates on DOM nodes rather than strings. Usually, you don't notice
 this because when an html page loads, the web browser parses HTML into the DOM automatically. HTML compilation happens in three phases:
 
-  1. The $compile traverses the DOM and looks for directives. For each directive it finds, it adds it to a list of directives.
-  2. Once the entire DOM has been traversed, it will sort that list of directives by their priority. Then, each directive’s own compile function is executed, giving each directive the chance to modify the DOM itself. Each compile function returns a linking function, which is then composed into a combined linking function and returned.
-  3. $compile links the template with the scope by calling the combined linking function from the previous step. This in turn will call the linking function of the individual directives, registering listeners on the elements and setting up $watch with the scope as each directive is configured to do.
+1. The $compile traverses the DOM and looks for directives. For each directive it finds, it adds it to a list of directives.
+2. Once the entire DOM has been traversed, it will sort that list of directives by their priority. Then, each directive’s own compile function is executed, giving each directive the chance to modify the DOM itself. Each compile function returns a linking function, which is then composed into a combined linking function and returned.
+3. $compile links the template with the scope by calling the combined linking function from the previous step. This in turn will call the linking function of the individual directives, registering listeners on the elements and setting up $watch with the scope as each directive is configured to do.
 
 The pseudo code for the above process is given below:
 
@@ -378,7 +378,6 @@ var element = linkFn(scope);
 // Step 4: Append to DOM (optional)
 parent.appendChild(element);
 ```
-
 
 #### Q. What are Compile, Pre and Post linking in AngularJS?
 
@@ -452,7 +451,55 @@ level-Two: post link
 level-One: post link
 ```
 
-Example [link](https://jsfiddle.net/krosti/8bfao4em/).
+#### Q. What are the advantage of AngularJS?
+
+There are following advantages of AngularJS:
+* Data Binding 
+* Customize & Extensible 
+* Code Reusability 
+* Compatibility 
+		
+#### Q. What is the role of ng-app, ng-init and ng-model directives?
+
+ng-app - Initialize the angular app.
+ng-init - Initialize the angular app data.
+ng-model - Bind the html elem
+
+#### Q. What is $scope and $rootScope?
+$scope - A $scope is a JavaScript object which is used for communication between controller and view. 
+Basically, $scope binds a view (DOM element) to the model and functions defined in a controller.
+
+$rootScope - The $rootScope is the top-most scope. An app can have only one $rootScope which will be
+shared among all the components of an app. Hence it acts like a global variable. All other $scopes are
+children of the $rootScope. 
+  
+#### Q. What are the directives in angular JS ?
+AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or
+CSS classes) and supporting JavaScript code.The JavaScript directive code defines the template data and
+behaviors of the HTML elements.
+
+#### Q. What are different ways to invoke a directive?
+Attribute ('A')		<span my-directive></span>
+Class('C') 		<span class="my-directive: expression;"></span>
+Element ('E')	 	<my-directive></my-directive>
+Comment	('M')		<!-- directive: my-directive expression -->
+
+#### Q. What is difference between $scope and scope ?
+$scope - In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is 
+the injected arguments must match to the names of injectable objects followed by dollar ($) prefix .
+	
+scope - When the methods like directive linker function don’t receive arguments through dependency injection,
+you just pass the scope object without using dollar prefix i.e. scope. The reason is the passing arguments 
+are received by its caller.
+
+
+#### Q. What is difference between services and factory ?
+Service - It is just a function for the business layer of the application . It is act as a constauctor function
+and invoked once at a run time with new keyword.
+	
+factory - Factory give you the same capability of as .serice() , but it is more powerful and flexible . 
+A factory is a design pattern . Factory create objetcs such as new class instances , returns object literals,
+return functions and closures or even just return a simply string.
 
 #### Q. What directives are user to show and hide HTML elements in AngularJS?
 #### Q. Explain directives ng-if, ng-switch and ng-repeat.
@@ -475,7 +522,6 @@ Example [link](https://jsfiddle.net/krosti/8bfao4em/).
 	}
 });
 ```
-
 
 #### Q.	IIFE pattern used in AngularJS
 
@@ -826,5 +872,7 @@ Modules consist of one or more components. They do not control any html. Modules
 > $routeChangeError
 ```
 +function() { console.log("Foo!"); }(); --> It forces the parser to treat the part following the + as an expression. This is usually used for functions that are invoked immediately. + is just one of the options. It can also be -, !, ~, or just about any other unary operator
-
  
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
