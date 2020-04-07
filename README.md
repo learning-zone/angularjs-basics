@@ -31,6 +31,7 @@
 
 
 #### Q. Why to use AngularJS?
+<hr>
 
 There are following reasons to choose AngularJS as a web development framework:
 
