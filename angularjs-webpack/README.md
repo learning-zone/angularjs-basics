@@ -111,37 +111,24 @@ module.exports = {
 
 ### Development Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-### Code Scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
 ### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### Running Unit Tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running End-to-End Tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm run-script build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 
 ### Resources
 
 *   [Bootstrap](https://getbootstrap.com/)
-*   [ngx bootstrap](https://valor-software.com/ngx-bootstrap/)
 *   [Font awsome](http://fontawesome.io/)
-*   [Angular Perfect Scrollbar](https://github.com/zefoy/ngx-perfect-scrollbar)
-*   [Online XLIFF Editor](http://xliff.brightec.co.uk/)
-*   [Angular in-memory-web-api](https://github.com/angular/in-memory-web-api#readme)
-*   [Material Design for Angular](https://github.com/angular/components#readme)
-*   [Touch Gestures](http://hammerjs.github.io/)
+*   [AngularJS](https://angularjs.org/)
+*   [Webpack](https://webpack.js.org/)
+*   [SCSS](https://sass-lang.com/)
+*   [NodeJS](https://nodejs.org/en/)
+
 
 ### Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular.js/blob/master/README.md).
+To get more help on the AngularJS use [AngularJS README](https://github.com/angular/angular.js/blob/master/README.md).
 
