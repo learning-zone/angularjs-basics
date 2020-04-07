@@ -523,7 +523,7 @@ return functions and closures or even just return a simply string.
 });
 ```
 
-#### Q.	IIFE pattern used in AngularJS
+#### Q.	IIFE Pattern used in AngularJS
 
 ```html
 <!DOCTYPE html>
@@ -531,7 +531,8 @@ return functions and closures or even just return a simply string.
 <head>
     <meta charset="UTF-8">
     <title>Angular Js</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 
     <script src="persons.js"></script>
