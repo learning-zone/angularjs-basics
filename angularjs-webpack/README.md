@@ -38,7 +38,7 @@ npm install webpack-cli --save-dev
 npm install html-webpack-plugin --save-dev
 npm install rimraf --save-dev
 ```
-Now `package.json` will be
+Now `package.json` will look like below
 ```
 {
   "name": "angularjs-webpack",
