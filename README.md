@@ -30,7 +30,7 @@
  - When it is necessary or whether it is necessary to use `$scope.$apply`
 
 
-### Q. Why to use AngularJS?
+#### Q. Why to use AngularJS?
 
 There are following reasons to choose AngularJS as a web development framework:
 
