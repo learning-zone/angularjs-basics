@@ -11,6 +11,6 @@ function mainComponentCtrl ($timeout) {
     let ctrl = this;
     ctrl.$onInit = init;
     function init() {
-        ctrl.title = "Main Component Working!";
+        ctrl.title = "SCSS Component Loaded!";
     }
 }

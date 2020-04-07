@@ -3,6 +3,6 @@ import './main/main.module';
 
 var mainApp = angular.module('mainApp', ['mainModule']);
 mainApp.controller('appController',  ['$scope', function ($scope) {
-    $scope.title ='Hello Angular';
+    $scope.title ='AngularJS with Webpack';
 }]
 )
