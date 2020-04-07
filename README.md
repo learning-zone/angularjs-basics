@@ -1,4 +1,4 @@
-## AngularJS-1.5 Interview Questions and Answers
+## AngularJS Interview Questions 
 
 
 #### Q. Factory vs Service
