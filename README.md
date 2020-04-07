@@ -31,7 +31,6 @@
 
 
 #### Q. Why to use AngularJS?
-<hr style="border: 0 !important; padding-bottom !important: .3em; border-bottom: 1px solid #eaecef !important;">
 
 There are following reasons to choose AngularJS as a web development framework:
 
