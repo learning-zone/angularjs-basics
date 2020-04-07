@@ -729,7 +729,7 @@ var directiveDefinitionObject = {
 	controller: function($scope, $element, $attrs, $transclude, otherInjectables) { ... },
 	controllerAs: 'stringIdentifier',
 	bindToController: false,
-	require: 'siblingDirectiveName', // or // ['^parentDirectiveName', '?optionalDirectiveName', '? ^optionalParent'],
+	require: 'siblingDirectiveName', // or ['^parentDirectiveName', '?optionalDirectiveName', '? ^optionalParent'],
 	compile: function compile(tElement, tAttrs, transclude) {
 	  return {
 		    pre: function preLink(scope, iElement, iAttrs, controller) { ... },
