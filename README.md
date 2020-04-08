@@ -189,18 +189,17 @@ You can manually initialized your angular app by using **angular.bootstrap()** f
 ```html
 <html>
 <body>
-    <div ng-controller="Ctrl">
-Hello {{msg}}! </div>
-    <script src="lib/angular.js"></script>
-    <script>
-        var app = angular.module('myApp', []);
-        app.controller('Ctrl', function ($scope) {
-              $scope.msg = 'World';
-          });
-        //manual bootstrap process
-angular.element(document).ready(function () { angular.bootstrap(document, ['myApp']);
-});
-    </script>
+    <div ng-controller="Ctrl"> Hello {{msg}}! </div>
+<script src="lib/angular.js"></script>
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('Ctrl', function ($scope) {
+        $scope.msg = 'World';
+    });
+  //manual bootstrap process
+  angular.element(document).ready(function () { angular.bootstrap(document, ['myApp']);
+  });
+</script>
 </body>
 </html>
 ```
