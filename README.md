@@ -61,32 +61,11 @@ There are following advantages of AngularJS:
 5. **Compatibility** - AngularJS is based on JavaScript which makes it easier to integrate with any other JavaScript library and runnable on browsers like IE, Opera, FF, Safari, Chrome etc.
 6. **Testing** - AngularJS is designed to be testable so that you can test your AngularJS app components as easy as possible. It has dependency injection at its core, which makes it easy to test.
 
-
-#### Q. Does AngularJS has dependency on jQuery?
-
-AngularJS has no dependency on jQuery library. But it can be used with jQuery library.
-
-
 #### Q. What is jQLite/jQuery Lite?
-
 jQLite is a subset of jQuery that is built directly into AngularJS. jQLite provides you all the useful features of jQuery. In fact it provides you limited features or functions of jQuery.
 
-
 #### Q. How to access jQLite?
-
 jQuery lite or the full jQuery library if available, can be accessed via the AngularJS code by using the element(Q. function in AngularJS. Basically, ```angular.element()``` is an alias for the jQuery function.
-
-
-#### Q. What browsers AngularJS support?
-
-The latest version of AngularJS 1.3 support Safari, Chrome, Firefox, Opera 15+, IE9+ and mobile browsers
-(Android, Chrome Mobile, iOS Safari, Opera Mobile).
-AngularJS 1.3 has dropped support for IE8 but AngularJS 1.2 will continue to support IE8.
-
-
-#### Q. What is the size of AngularJS file?
-
-The size of the compressed and minified file is < 36KB.
 
 
 #### Q. What are the AngularJS features?
