@@ -323,7 +323,8 @@ module.directive('myDirective', function () // injected arguments here {
     return {
         // linker function does not use dependency injection
         link: function (scope, el, attrs) {
-	// the calling function will passes the three arguments to the linker: scope, element and attributes, in the same order
+  // the calling function will passes the three arguments to the linker: 
+  // scope, element and attributes, in the same order
 	} };
 });
 ```
