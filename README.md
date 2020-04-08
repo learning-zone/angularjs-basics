@@ -151,7 +151,6 @@ There are four valid options for restrict:
 'M' (Comment)- <!-- directive: my-directive expression -->
 ```
 
-
 #### Q. Can you define multiple restrict options on a directive?
 
 You can also specify multiple restrict options to support more than one methods of directive invocation as an element or an attribute. Make sure all are specified in the restrict keyword as: ```restrict: 'EA'``` .
@@ -323,8 +322,8 @@ module.directive('myDirective', function () // injected arguments here {
     return {
         // linker function does not use dependency injection
         link: function (scope, el, attrs) {
-  // the calling function will passes the three arguments to the linker: 
-  // scope, element and attributes, in the same order
+        /** The calling function will passes the three arguments to the linker: 
+            scope, element and attributes, in the same order **/
 	} };
 });
 ```
@@ -501,12 +500,8 @@ factory - Factory give you the same capability of as .serice() , but it is more 
 A factory is a design pattern . Factory create objetcs such as new class instances , returns object literals,
 return functions and closures or even just return a simply string.
 
-#### Q. What directives are user to show and hide HTML elements in AngularJS?
-#### Q. Explain directives ng-if, ng-switch and ng-repeat.
-#### Q. What are ng-repeat special variables?
-#### Q. How AngularJS handle data binding?
-#### Q. What are the basics steps to unit test an AngulatJS filter?
 
+#### Q. What are the basics steps to unit test an AngulatJS filter?
 1. Inject the module that contains the filter.
 2. Provide any mocks that the filter relies on.
 3. Get an instance of the filter using $filter('yourFilterName').
@@ -1229,7 +1224,12 @@ Modules consist of one or more components. They do not control any html. Modules
 > $routeChangeError
 ```
 +function() { console.log("Foo!"); }(); --> It forces the parser to treat the part following the + as an expression. This is usually used for functions that are invoked immediately. + is just one of the options. It can also be -, !, ~, or just about any other unary operator
- 
+
+#### Q. What directives are user to show and hide HTML elements in AngularJS?
+#### Q. Explain directives ng-if, ng-switch and ng-repeat.
+#### Q. What are ng-repeat special variables?
+#### Q. How AngularJS handle data binding?
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
