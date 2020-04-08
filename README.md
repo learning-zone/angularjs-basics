@@ -479,14 +479,6 @@ level-Three: post link
 level-Two: post link
 level-One: post link
 ```
-
-#### Q. What are the advantage of AngularJS?
-
-There are following advantages of AngularJS:
-* Data Binding 
-* Customize & Extensible 
-* Code Reusability 
-* Compatibility 
 		
 #### Q. What is the role of ng-app, ng-init and ng-model directives?
 
