@@ -216,7 +216,8 @@ module.exports = function makeWebpackConfig() {
   config.devServer = {
     contentBase: './src/public',
     stats: 'minimal',
-    host: '0.0.0.0'
+    compress: true,
+    port: 4200
   };
 
   return config;
