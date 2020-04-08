@@ -1,32 +1,56 @@
 {
-  "name": "angularjs-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "angular-webpack-workflow",
+  "version": "1.1.0",
+  "description": "A workflow for Angular made with Webpack",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress --open --watch",
+    "build": "webpack --bail --progress --profile",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "test": "karma start",
+    "test-watch": "karma start --auto-watch --no-single-run",
     "start": "npm run server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/preboot/angularjs-webpack.git"
+  },
+  "author": "Jesus Rodriguez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/preboot/angularjs-webpack/issues"
+  },
+  "homepage": "https://github.com/preboot/angularjs-webpack",
   "dependencies": {
-    "angular": "^1.7.9",
-    "fibers": "^4.0.2",
-    "sass": "^1.26.3"
+    "angular": "^1.7.0"
   },
   "devDependencies": {
-    "css-loader": "^3.5.1",
-    "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.0.4",
-    "node-sass": "^4.13.1",
-    "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "ajv": "^6.4.0",
+    "angular-mocks": "^1.7.0",
+    "autoprefixer": "^8.4.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.1.18",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-coverage": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-webpack": "^3.0.0",
+    "node-libs-browser": "^2.1.0",
+    "null-loader": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.4",
+    "postcss-loader": "^2.1.5",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.2"
   }
 }

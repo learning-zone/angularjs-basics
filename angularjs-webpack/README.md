@@ -1,134 +1,89 @@
-## AngularJS with Webpack 
+# angularjs-webpack
 
+[![Dependency Status](https://david-dm.org/preboot/angularjs-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angularjs-webpack/dev-status.svg)](https://david-dm.org/preboot/angularjs-webpack#info=devDependencies)
 
+A complete, yet simple, starter for AngularJS using Webpack.
 
-### Project Description
+This workflow serves as a starting point for building AngularJS (1.x) applications using Webpack 2.x. Should be noted that apart from the pre-installed angular package, this workflow is pretty much generic.
 
-This Projects describe about AngularJS configuration with Webpack and SCSS library.
+* Heavily commented webpack configuration with reasonable defaults.
+* ES6, and ES7 support with babel.
+* Source maps included in all builds.
+* Development server with live reload.
+* Production builds with cache busting.
+* Testing environment using karma to run tests and jasmine as the framework.
+* Code coverage when tests are run.
+* No gulp and no grunt, just npm scripts.
 
+>Warning: Make sure you're using the latest version of Node.js and NPM
 
-### Configuration Steps
+### Quick start
 
-**1. Generate package.json**  
-```
-npm init -y
-```
-This will create a package.json file.
-```json
-{
-  "name": "webpackAndAngularJS",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
-```
+> Clone/Download the repo then edit `app.js` inside [`/src/app/app.js`](/src/app/app.js)
 
-**2. Install Dependencies**  
-```
-npm install angular --save
-npm install webpack --save-dev
-npm install webpack-dev-server --save-dev
-npm install webpack-cli --save-dev
-npm install html-webpack-plugin --save-dev
-npm install rimraf --save-dev
-```
-Now `package.json` will look like below
-```
-{
-  "name": "angularjs-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && webpack --bail --progress --profile",
-    "server": "webpack-dev-server --history-api-fallback --inline --progress --open --watch",
-    "start": "npm run server"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "angular": "^1.7.9",
-    "fibers": "^4.0.2",
-    "sass": "^1.26.3"
-  },
-  "devDependencies": {
-    "css-loader": "^3.5.1",
-    "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.0.4",
-    "node-sass": "^4.13.1",
-    "rimraf": "^3.0.2",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
-  }
-}
-```
-**3. Generate webpack.config.js**
+```bash
+# clone our repo
+$ git clone https://github.com/preboot/angularjs-webpack.git my-app
 
-```javascript
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
-const webpack = require('webpack'); //to access built-in plugins
-const path = require('path');
+# change directory to your app
+$ cd my-app
 
-module.exports = {
-  entry: './src/app/app.js',
-  output: {
-    filename: 'my-first-webpack.bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  module: {
-   rules: [{ 
-      test: /\.(html)$/, 
-      use: [
-        { loader:'html-loader'}
-      ]
-   },
-   { 
-    test: /\.(scss)$/, 
-    use: [
-      { loader:'style-loader'},
-      { loader:'css-loader'},
-      { loader:'sass-loader'}
-    ]
-   }
-  ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
-  ]
-};
+# install the dependencies with npm
+$ npm install
+
+# start the server
+$ npm start
 ```
 
-### Development Server
+go to [http://localhost:8080](http://localhost:8080) in your browser.
 
-Run `npm start` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+# Table of Contents
 
-### Build
+* [Getting Started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Installing](#installing)
+    * [Running the app](#running-the-app)
+    * [Developing](#developing)
+    * [Testing](#testing)
+* [License](#license)
 
-Run `npm run-script build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Getting Started
 
+## Dependencies
 
-### Resources
+What you need to run this app:
+* `node` and `npm` (Use [NVM](https://github.com/creationix/nvm))
+* Ensure you're running Node (`v4.1.x`+) and NPM (`2.14.x`+)
 
-*   [Bootstrap](https://getbootstrap.com/)
-*   [Font awsome](http://fontawesome.io/)
-*   [AngularJS](https://angularjs.org/)
-*   [Webpack](https://webpack.js.org/)
-*   [SCSS](https://sass-lang.com/)
-*   [NodeJS](https://nodejs.org/en/)
+## Installing
 
+* `fork` this repo
+* `clone` your fork
+* `npm install` to install all dependencies
 
-### Further help
+## Running the app
 
-To get more help on the AngularJS use [AngularJS README](https://github.com/angular/angular.js/blob/master/README.md).
+After you have installed all dependencies you can now run the app with:
+```bash
+npm start
+```
 
+It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
+
+## Developing
+
+### Build files
+
+* single run: `npm run build`
+* build files and watch: `npm start`
+
+## Testing
+
+#### 1. Unit Tests
+
+* single run: `npm test`
+* live mode (TDD style): `npm run test-watch`
+
+# License
+
+[MIT](/LICENSE)
