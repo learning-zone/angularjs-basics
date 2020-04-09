@@ -262,47 +262,52 @@ For example, suppose you have two controllers: ParentController and ChildControl
 ```html
 <!doctype html>
 <html>
-<head>
-    <script src="lib/angular.js"></script>
-    <script>
-	var app = angular.module('ScopeChain', []); app.controller("parentController", function ($scope) {
-		$scope.managerName = 'Shailendra Chauhan';
-		$scope.$parent.companyName = 'Dot Net Tricks'; //attached to $rootScope
-	});
-	app.controller("childController", function ($scope, $controller) {
-            $scope.teamLeadName = 'Deepak Chauhan';
-        });
-    </script>
+  <head>
+  <script src="lib/angular.js"></script>
+  <script>
+    var app = angular.module('ScopeChain', []); 
+    app.controller("parentController", function ($scope) {
+	  	$scope.managerName = 'Shailendra Chauhan';
+	  	$scope.$parent.companyName = 'Dot Net Tricks'; //attached to $rootScope
+	  });
+	  app.controller("childController", function ($scope, $controller) {
+              $scope.teamLeadName = 'Deepak Chauhan';
+    });
+  </script>
 </head>
 <body ng-app="ScopeChain">
 	<div ng-controller="parentController ">
 		<table style="border:2px solid #e37112">
 			<caption>Parent Controller</caption>
 		<tr>
-             	<td>Manager Name</td>
-			<td>{{managerName}}</td>
+        <td>Manager Name</td>
+			  <td>{{managerName}}</td>
 		</tr>
 		<tr>
-             	<td>Company Name</td>
-			<td>{{companyName}}</td>
+        <td>Company Name</td>
+			  <td>{{companyName}}</td>
 		</tr>
 		<tr>
 			<td>
-				<table ng-controller="childController" style="border:2px solid #428bca">
+				<table ng-controller="childController" style="border:2px solid #428bca;">
 					<caption>Child Controller</caption>
 				<tr>
-                         		<td>Team Lead Name</td>
-					<td>{{ teamLeadName }}</td> </tr>
+            <td>Team Lead Name</td>
+            <td>{{ teamLeadName }}</td> 
+        </tr>
 				<tr>
-					<td>Reporting To</td> <td>{{managerName}}</td>
-				</tr> <tr>
-                         		<td>Company Name</td>
-					<td>{{companyName}}</td> </tr>
-                		</table>
-              	</td>
-             </tr>
-        	</table>
-    </div>
+            <td>Reporting To</td> 
+            <td>{{managerName}}</td>
+        </tr> 
+        <tr>
+            <td>Company Name</td>
+            <td>{{companyName}}</td> 
+        </tr>
+        </table>
+      </td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
 ```
