@@ -239,11 +239,13 @@ For example, suppose you have two controllers: Ctrl1 and Ctrl2 as given below:
       </div>
   <script src="lib/angular.js"></script>
   <script>
-        var app = angular.module('myApp', []); app.controller('Ctrl1', function ($scope, $rootScope) {
-          $scope.msg = 'World';
+        var app = angular.module('myApp', []); 
+        app.controller('Ctrl1', function ($scope, $rootScope) {
+          $scope.msg = 'Hello';
           $rootScope.name = 'AngularJS';
         });
-        app.controller('Ctrl2', function ($scope, $rootScope) { $scope.msg = 'Dot Net Tricks';
+        app.controller('Ctrl2', function ($scope, $rootScope) { 
+          $scope.msg = 'World';
           $scope.myName = $rootScope.name;
         });
     </script>
