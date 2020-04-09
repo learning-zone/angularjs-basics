@@ -167,6 +167,7 @@ Angular initializes automatically upon ```DOMContentLoaded``` event or when the 
 This process is called auto-bootstrapping.
 
 ```html
+<!doctype html>
 <html>
 <body ng-app="myApp">
 <div ng-controller="Ctrl"> Hello {{msg}}!
@@ -181,12 +182,12 @@ var app = angular.module('myApp', []); app.controller('Ctrl', function ($scope) 
 </html>
 ```
 
-
 #### Q. What is manual bootstrap process in AngularJS?
 
 You can manually initialized your angular app by using **angular.bootstrap()** function. This function takes the modules as parameters and should be called within **angular.element(document).ready()** function. The **angular.element(document).ready()** function is fired when the DOM is ready for manipulation.
 
 ```html
+<!doctype html>
 <html>
 <body>
     <div ng-controller="Ctrl"> Hello {{msg}}! </div>
@@ -251,7 +252,6 @@ $scope.myName = $rootScope.name;
 </html>
 ```
 
-
 #### Q. What is scope hierarchy?
 
 The **$scope** object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the **$rootScope** can has one or more child scopes. Each controller has its own **$scope** (which is a child of the **$rootScope**), so whatever variables you create on $scope within controller, these variables are accessible by the view based on this controller.
@@ -259,6 +259,7 @@ The **$scope** object used by views in AngularJS are organized into a hierarchy.
 For example, suppose you have two controllers: ParentController and ChildController as given below:
 
 ```html
+<!doctype html>
 <html>
 <head>
     <script src="lib/angular.js"></script>
@@ -302,10 +303,8 @@ For example, suppose you have two controllers: ParentController and ChildControl
         	</table>
     </div>
 </body>
-
 </html>
 ```
-
 
 #### Q. What is the difference between $scope and scope?
 
@@ -401,6 +400,7 @@ Use the pre-link function to implement logic that runs when AngularJS has alread
 
 
 ```html
+<!doctype html>
 <html>
   <head>
   <title>Compile vs Link</title>
@@ -878,8 +878,8 @@ Answer: True
 #### Q.	IIFE Pattern used in AngularJS
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Angular Js</title>
