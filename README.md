@@ -29,6 +29,7 @@
  - What is the best practice to build your application
  - When it is necessary or whether it is necessary to use `$scope.$apply`
 
+<br/>
 
 #### Q. Why to use AngularJS?
 
