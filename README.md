@@ -460,19 +460,11 @@ level-One: post link
 ```
 		
 #### Q. What is the role of ng-app, ng-init and ng-model directives?
-
 ng-app - Initialize the angular app.
 ng-init - Initialize the angular app data.
 ng-model - Bind the html elem
 
-#### Q. What is $scope and $rootScope?
-$scope - A $scope is a JavaScript object which is used for communication between controller and view. 
-Basically, $scope binds a view (DOM element) to the model and functions defined in a controller.
 
-$rootScope - The $rootScope is the top-most scope. An app can have only one $rootScope which will be
-shared among all the components of an app. Hence it acts like a global variable. All other $scopes are
-children of the $rootScope. 
-  
 #### Q. What are the directives in angular JS ?
 AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or
 CSS classes) and supporting JavaScript code.The JavaScript directive code defines the template data and
