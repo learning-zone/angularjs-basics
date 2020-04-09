@@ -229,26 +229,25 @@ For example, suppose you have two controllers: Ctrl1 and Ctrl2 as given below:
 ```html
 <!doctype html>
 <html>
-<body ng-app="myApp">
-<div ng-controller="Ctrl1" style="border:2px solid blue; padding:5px"> Hello {{msg}}!
-<br />
-Hello {{name}}! (rootScope) </div>
-<br />
-<div ng-controller="Ctrl2" style="border:2px solid green; padding:5px">
-Hello {{msg}}! <br />
-Hey {{myName}}! <br />
-Hi {{name}}! (rootScope) </div>
-    <script src="lib/angular.js"></script>
-    <script>
-var app = angular.module('myApp', []); app.controller('Ctrl1', function ($scope, $rootScope) {
-            $scope.msg = 'World';
-            $rootScope.name = 'AngularJS';
+  <body ng-app="myApp">
+      <div ng-controller="Ctrl1" style="border:2px solid blue; padding:5px"> Hello {{msg}}! <br />
+        Hello {{name}}! (rootScope) </div> <br />
+      <div ng-controller="Ctrl2" style="border:2px solid green; padding:5px">
+        Hello {{msg}}! <br />
+        Hey {{myName}}! <br />
+        Hi {{name}}! (rootScope) 
+      </div>
+  <script src="lib/angular.js"></script>
+  <script>
+        var app = angular.module('myApp', []); app.controller('Ctrl1', function ($scope, $rootScope) {
+          $scope.msg = 'World';
+          $rootScope.name = 'AngularJS';
         });
-app.controller('Ctrl2', function ($scope, $rootScope) { $scope.msg = 'Dot Net Tricks';
-$scope.myName = $rootScope.name;
-});
+        app.controller('Ctrl2', function ($scope, $rootScope) { $scope.msg = 'Dot Net Tricks';
+          $scope.myName = $rootScope.name;
+        });
     </script>
-</body>
+  </body>
 </html>
 ```
 
