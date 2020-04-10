@@ -1223,6 +1223,25 @@ Modules consist of one or more components. They do not control any html. Modules
 ```
 +function() { console.log("Foo!"); }(); --> It forces the parser to treat the part following the + as an expression. This is usually used for functions that are invoked immediately. + is just one of the options. It can also be -, !, ~, or just about any other unary operator
 
+#### Q. What are the differences between ng-repeat and ng-options and why do they not behave the same way?
+ng-repeat creates a new scope for each iteration so will not perform as well as ng-options.
+
+For small lists, it will not matter, but larger lists should use ng-options. Apart from that, It provides lot of flexibility in specifying iterator and offers performance benefits over ng-repeat.
+
+Example:
+```html
+<!-- ng-repeat Example -->
+<select>
+  <option ng-repeat="x in names">{{x}}</option>
+</select>
+
+
+<!-- ng-options Example -->
+<select ng-model="selectedName" ng-options="x for x in names"></select>
+```
+```javascript
+$scope.names = ["Emil", "Tobias", "Linus"];
+```
 #### Q. What directives are user to show and hide HTML elements in AngularJS?
 #### Q. Explain directives ng-if, ng-switch and ng-repeat.
 #### Q. What are ng-repeat special variables?
