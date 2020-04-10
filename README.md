@@ -265,13 +265,13 @@ For example, suppose you have two controllers: ParentController and ChildControl
   <head>
   <script src="lib/angular.js"></script>
   <script>
-    var app = angular.module('ScopeChain', []); 
+    var app = angular.module('ScopeChain', []);
     app.controller("parentController", function ($scope) {
 	  	$scope.managerName = 'Shailendra Chauhan';
 	  	$scope.$parent.companyName = 'Dot Net Tricks'; //attached to $rootScope
 	  });
 	  app.controller("childController", function ($scope, $controller) {
-              $scope.teamLeadName = 'Deepak Chauhan';
+      $scope.teamLeadName = 'Deepak Chauhan';
     });
   </script>
 </head>
@@ -293,15 +293,15 @@ For example, suppose you have two controllers: ParentController and ChildControl
 					<caption>Child Controller</caption>
 				<tr>
             <td>Team Lead Name</td>
-            <td>{{ teamLeadName }}</td> 
+            <td>{{ teamLeadName }}</td>
         </tr>
 				<tr>
-            <td>Reporting To</td> 
+            <td>Reporting To</td>
             <td>{{managerName}}</td>
-        </tr> 
+        </tr>
         <tr>
             <td>Company Name</td>
-            <td>{{companyName}}</td> 
+            <td>{{companyName}}</td>
         </tr>
         </table>
       </td>
