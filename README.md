@@ -393,14 +393,14 @@ parent.appendChild(element);
 
 #### Q. What are Compile, Pre and Post linking in AngularJS?
 
-* *Compile* – This compiles an HTML string or DOM into a template and produces a template function, which
+* **Compile** – This compiles an HTML string or DOM into a template and produces a template function, which
 can then be used to link scope and the template together.
 Use the compile function to change the original DOM (template element) before AngularJS creates an instance of it and before a scope is created.
 
-* *Post-Link* – This is executed after the child elements are linked. It is safe to do DOM transformation in the post- linking function.
+* **Post-Link** – This is executed after the child elements are linked. It is safe to do DOM transformation in the post- linking function.
 Use the post-link function to execute logic, knowing that all child elements have been compiled and all pre-link and post-link functions of child elements have been executed.
 
-* *Pre-Link* – This is executed before the child elements are linked. Not safe to do DOM transformation since the compiler linking function will fail to locate the correct elements for linking.
+* **Pre-Link** – This is executed before the child elements are linked. Not safe to do DOM transformation since the compiler linking function will fail to locate the correct elements for linking.
 Use the pre-link function to implement logic that runs when AngularJS has already compiled the child elements, but before any of the child element's post-link functions have been called.
 
 
