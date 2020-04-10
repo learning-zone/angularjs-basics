@@ -465,9 +465,9 @@ level-One: post link
 ```
 		
 #### Q. What is the role of ng-app, ng-init and ng-model directives?
-ng-app - Initialize the angular app.
-ng-init - Initialize the angular app data.
-ng-model - Bind the html elem
+* **ng-app** - Initialize the angular app.  
+* **ng-init** - Initialize the angular app data.  
+* **ng-model** - Bind the html element  
 
 
 #### Q. What are the directives in angular JS ?
