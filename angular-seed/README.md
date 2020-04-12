@@ -3,8 +3,7 @@
 
 ### Purpose
 
-This project uses the latest master branch of AngularJS Material to build the application outlined
-below.
+This project uses the latest master branch of AngularJS Material to build the application
 
 
 This Starter app demonstrates how:
