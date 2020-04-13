@@ -80,7 +80,7 @@ md-list .md-button {
 #content {
   position: relative;
   overflow: visible;
-  max-width: 1024px;
+  max-width: 100%;
   z-index: 2;
   margin: auto;
   border-radius: 3px;

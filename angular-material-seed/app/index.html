@@ -40,9 +40,7 @@
           <md-button
             ng-href="{{menuItem.href}}"
             ng-click="menu.setActiveMenu(menuItem, true)"
-            ng-class="{'active md-raised': menu.selected.title === menuItem.title}">
-              {{menuItem.title}}
-          </md-button>
+            ng-class="{'active md-raised': menu.selected.title === menuItem.title}">{{menuItem.title}}xx</md-button>
         </md-list-item>
       </md-list>
 
@@ -63,9 +61,7 @@
             ng-href="{{menuItem.href}}"
             ng-repeat="menuItem in menu.menuItems"
             ng-click="menu.setActiveMenu(menuItem)"
-            ng-class="{active: menu.selected.title === menuItem.title}">
-              {{menuItem.title}}
-          </md-button>
+            ng-class="{active: menu.selected.title === menuItem.title}">{{menuItem.title}}</md-button>
         </div>
       </md-toolbar>
       
