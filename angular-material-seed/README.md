@@ -47,6 +47,8 @@ We have preconfigured `npm` to automatically run `bower` so we can simply do:
 
 ```
 npm install
+
+npm install --global http-server
 ```
 
 Behind the scenes this will also call `bower install`.  You should find that you have two new
@@ -55,11 +57,9 @@ folders in your project.
 * `node_modules` - contains the npm packages for the tools we need
 * `app/bower_components` - contains the AngularJS framework files
 
-### Start the application locally
+### Running the app
 
 ```
-npm install --global http-server
-
 http-server ./app
 ```
 
