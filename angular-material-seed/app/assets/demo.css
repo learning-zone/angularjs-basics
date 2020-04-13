@@ -1,0 +1,27 @@
+.typography-list h1,
+.typography-list h2, 
+.typography-list h3, 
+.typography-list h4, 
+.typography-list h5, 
+.typography-list h6 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+pre, code {
+    margin: 0;
+    padding: 0;
+    font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+    overflow-wrap: break-word;
+}
+code {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.065);
+}
+code:not(.highlight) {
+    color: #106CC8;
+    margin-left: 1px;
+    margin-right: 1px;
+    -webkit-font-smoothing: auto;
+    padding: 0.125em 0.35em;
+    border-radius: 2px;
+}

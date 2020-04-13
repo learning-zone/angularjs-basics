@@ -1,0 +1,18 @@
+{
+  "name": "angular-material-seed",
+  "description": "A starter project for AngularJS Material Design",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ritenv/angular-material-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-material": "^1.0.0",
+    "angular-route": "~1.4.8"
+  },
+  "devDependencies": {
+    "angular-material": "https://github.com/angular/bower-material.git#master"
+  }
+}

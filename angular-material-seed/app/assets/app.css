@@ -1,0 +1,203 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size:14px;
+  height:auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: #F5F5F5;
+}
+
+a {
+  color: #106CC8;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(64, 84, 178, 0.25);
+}
+
+/* Toolbar area */
+
+md-toolbar#header-toolbar {
+  min-height: 540px;
+  margin-bottom: -115px;
+}
+
+md-toolbar#header-toolbar h1 {
+  padding: 8px 20px;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+
+.menu {
+  margin: 10px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  border: none;
+  height: 38px;
+  margin: 16px;
+  min-width: 36px;
+}
+
+.menu .md-button {
+  padding: 4px 12px;
+  margin: 0;
+  min-width: 0;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+  .menu .md-button.active {
+    border-bottom: 2px solid #fff;
+  }
+  .menu a.md-button:hover {
+    background-color: transparent;
+  }
+
+.menu .md-button .md-ripple-container {
+  display: none;
+}
+
+/* Sidenav area */
+
+md-list .md-button {
+  color: inherit;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+  md-list .md-button.selected {
+    color: #03a9f4;
+  }
+
+  md-sidenav  md-list {
+    padding: 0px 0px 8px 0px;
+  }
+
+
+/* Primary content area */
+
+#content {
+  position: relative;
+  overflow: visible;
+  max-width: 1024px;
+  z-index: 2;
+  margin: auto;
+  border-radius: 3px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+  margin-bottom: 100px;
+}
+#content [ng-view] {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  #content {
+    min-width: 1024px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #content .site-title {
+    margin-left: -40px;
+    margin-left: -40px;
+  }
+}
+
+#content .site-title h2:first-child {
+  font-size: 3.3em;
+  letter-spacing: -1px;
+  font-weight: 300;
+  margin-top: -120px;
+  margin-bottom: 57px;
+}
+
+#content h2.light {
+  color: #fff;
+}
+
+#content .md-button.contact {
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  height: 48px;
+  margin: 8px auto 16px 0;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+#content md-icon.avatar {
+  margin-top: 10px;
+}
+
+#content .md-button.contact > md-icon {
+  fill:black;
+  width:36px;
+  height:36px;
+}
+
+md-button.menuBtn > md-icon {
+  fill:white;
+  width:24px;
+  height:24px;
+}
+
+#content .md-button.contact:active > md-icon {
+  background-color: #dadada;
+  border-radius: 75%;
+  padding:4px;
+  transition: all 100ms ease-out 30ms;
+}
+
+#content img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Utils */
+
+.content-wrapper {
+  position: relative;
+}
+
+/* Typography support coming in 0.8.0 */
+
+md-toolbar h1 {
+  font-size: 1.250em;
+  font-weight: 400;
+}
+  md-toolbar h1.auto {
+    margin: auto;
+  }
+
+.avatar {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px;
+  vertical-align: middle;
+  zoom:0.70;
+  transform: translateZ(0);
+  -webkit-transform: scale(0.70);
+  -moz-transform:scale(0.70);
+}
+
+
+md-bottom-sheet  md-icon {
+  margin-right:20px;
+}
+
+span.name {
+  font-weight: bold;
+  font-size:1.1em;
+  padding-left:5px;
+}
