@@ -17,8 +17,7 @@ a {
 /* Toolbar area */
 
 md-toolbar#header-toolbar {
-  min-height: 540px;
-  margin-bottom: -115px;
+  min-height: 80px;
 }
 
 md-toolbar#header-toolbar h1 {
