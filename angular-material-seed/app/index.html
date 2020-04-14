@@ -27,7 +27,7 @@
   </head>
 
   <body ng-app="starterApp" layout="row" ng-cloak ng-controller="MenuController as menu">
-
+    <!-- Mobile View -->
     <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
                   md-component-id="left">
 
@@ -40,13 +40,13 @@
           <md-button
             ng-href="{{menuItem.href}}"
             ng-click="menu.setActiveMenu(menuItem, true)"
-            ng-class="{'active md-raised': menu.selected.title === menuItem.title}">{{menuItem.title}}xx</md-button>
+            ng-class="{'active md-raised': menu.selected.title === menuItem.title}">{{menuItem.title}}</md-button>
         </md-list-item>
       </md-list>
 
     </md-sidenav>
 
-
+    <!-- Desktop View -->
     <div flex tabIndex="-1" role="main" class="">
 
       <md-toolbar layout="row" class="md-whiteframe-z1" id="header-toolbar" style="background-color: #21909E">
@@ -115,8 +115,6 @@
                           .accentPalette('red');
 
               });
-
     </script>
-
   </body>
 </html>
