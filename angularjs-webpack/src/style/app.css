@@ -1,7 +1,8 @@
 /* styles in src/style directory are applied to the whole page */
 body {
-  background: #0147A7;
-  color: #fff;
+  background: #293f501f;
+  color: rgba(8, 8, 8, 0.726);
+  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -11,12 +12,43 @@ a {
 main {
   padding: 1em;
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
   display: block;
 }
 
-footer {
+ul { 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  padding-left: 20px;
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
   text-align: center;
-  font-size: 0.8em;
+  padding: 20px 18px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.ng-scope .active > a {
+  color: #008CBA;
+}
+
+header {
+  margin: -8px;
 }
