@@ -1,9 +1,11 @@
+<header>
+  <ul>
+    <li ng-repeat="section in sections" ng-class="{active : isSelected(section)}">
+      <a href="#!{{section.value}}" ng-click="setMaster(section)">{{section.name}}</a>
+  </li>
+  </ul>
+</header>
 <main>
   <h1 class="title">Hello from Angular !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
+  <div ng-view></div>
 </main>
-<footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
-</footer>
