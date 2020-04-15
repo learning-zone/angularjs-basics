@@ -1,4 +1,4 @@
-# AngularJS Seed App using Webpack
+## AngularJS Seed App using Webpack
 
 
 A complete, yet simple, starter for AngularJS using Webpack.
