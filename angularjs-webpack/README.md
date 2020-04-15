@@ -1,4 +1,4 @@
-## AngularJS Seed App using Webpack
+# AngularJS Seed App using Webpack
 
 
 A complete, yet simple, starter for AngularJS using Webpack.
@@ -30,7 +30,7 @@ $ npm start
 
 go to [http://localhost:4200](http://localhost:4200) in your browser.
 
-# Table of Contents
+## Table of Contents
 
 * [Getting Started](#getting-started)
     * [Dependencies](#dependencies)
@@ -40,7 +40,7 @@ go to [http://localhost:4200](http://localhost:4200) in your browser.
     * [Testing](#testing)
 * [License](#license)
 
-# Getting Started
+## Getting Started
 
 ## Dependencies
 
@@ -77,6 +77,4 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 * single run: `npm test`
 * live mode (TDD style): `npm run test-watch`
 
-# License
 
-[MIT](/LICENSE)
