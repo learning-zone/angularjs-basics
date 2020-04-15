@@ -1,6 +1,5 @@
-# angularjs-webpack
+# AngularJS Seed App using Webpack
 
-[![Dependency Status](https://david-dm.org/preboot/angularjs-webpack/status.svg)](https://david-dm.org/preboot/angular-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angularjs-webpack/dev-status.svg)](https://david-dm.org/preboot/angularjs-webpack#info=devDependencies)
 
 A complete, yet simple, starter for AngularJS using Webpack.
 
@@ -19,15 +18,9 @@ This workflow serves as a starting point for building AngularJS (1.x) applicatio
 
 ### Quick start
 
-> Clone/Download the repo then edit `app.js` inside [`/src/app/app.js`](/src/app/app.js)
+> Clone/Download the repo 
 
 ```bash
-# clone our repo
-$ git clone https://github.com/preboot/angularjs-webpack.git my-app
-
-# change directory to your app
-$ cd my-app
-
 # install the dependencies with npm
 $ npm install
 
@@ -35,7 +28,7 @@ $ npm install
 $ npm start
 ```
 
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:4200](http://localhost:4200) in your browser.
 
 # Table of Contents
 
