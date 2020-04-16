@@ -1,0 +1,25 @@
+<md-content>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">hello home component</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+            <md-button class="md-raised md-primary" ng-click="$ctrl.testClick()">
+                some button
+            </md-button>
+        </md-card-content>
+    </md-card>
+
+    <md-list>
+        <md-subheader class="md-no-sticky">Folders</md-subheader>
+        <md-list-item class="md-2-line" ng-click="null" ng-repeat="folder in $ctrl.folders">
+            <md-icon>{{folder.icon}}</md-icon>
+            <div class="md-list-item-text">
+                <h3>{{folder.title}}</h3>
+                <p>{{folder.updated | date}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>

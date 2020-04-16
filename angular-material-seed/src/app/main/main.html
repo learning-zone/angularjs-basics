@@ -1,0 +1,36 @@
+<div md-theme="{{$ctrl.currentTheme}}" layout="row" flex hm-swiperight="$ctrl.openNav()" hm-swipeleft="$ctrl.closeNav()">
+
+    <md-sidenav class="md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-tall">
+            <div class="md-toolbar-tools">
+                Toolbar Info
+            </div>
+        </md-toolbar>
+
+        <md-content>
+            <md-list>
+                <md-subheader class="md-no-sticky">Menu</md-subheader>
+                <md-list-item ng-repeat="item in $ctrl.menu" ng-click="$ctrl.goTo(item.link)">
+                    <md-icon>{{item.icon}}</md-icon>
+                    <p>{{item.title}}</p>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+
+    <div flex>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button ng-click="$ctrl.toggleNav()" class="md-icon-button">
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <h2 flex>{{$ctrl.title}}</h2>
+            </div>
+        </md-toolbar>
+
+        <md-content>
+            <ui-view></ui-view>
+        </md-content>
+
+    </div>
+</div>

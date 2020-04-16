@@ -1,0 +1,26 @@
+<md-content>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Test</span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+
+            <md-input-container class="md-block">
+                <label>Title</label>
+                <input />
+            </md-input-container>
+
+            <md-input-container>
+                <label>Theme</label>
+                <md-select ng-model="$ctrl.theme" ng-change="$ctrl.updateTheme()">
+                    <md-option ng-repeat="theme in $ctrl.themes" ng-value="theme">
+                        {{theme}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+        </md-card-content>
+    </md-card>
+</md-content>
