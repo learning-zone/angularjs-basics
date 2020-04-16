@@ -1,4 +1,6 @@
 /* styles in src/style directory are applied to the whole page */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
 body {
   background: #293f501f;
   color: rgba(8, 8, 8, 0.726);
@@ -6,7 +8,7 @@ body {
 }
 
 a {
-  color: #03A9F4;
+  color: #03a9f4;
 }
 
 main {
@@ -16,17 +18,18 @@ main {
   display: block;
 }
 
-ul { 
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky; 
   position: sticky;
   top: 0;
   padding-left: 20px;
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
 }
 
 li {
@@ -43,11 +46,11 @@ li a {
 
 li a:hover {
   background-color: #111;
-}
+} 
 
 .ng-scope .active > a {
-  color: #008CBA;
-}
+  color: #008cba;
+} 
 
 header {
   margin: -8px;

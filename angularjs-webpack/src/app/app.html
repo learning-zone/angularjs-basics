@@ -1,8 +1,8 @@
 <header>
   <ul>
-    <li ng-repeat="section in sections" ng-class="{active : isSelected(section)}">
-      <a href="#!{{section.value}}" ng-click="setMaster(section)">{{section.name}}</a>
-  </li>
+    <li ng-repeat="menu in menus" ng-class="{active : isSelected(menu)}">
+      <a href="#!{{menu.action}}" ng-click="setMaster(menu)">{{menu.title}}</a>
+    </li>
   </ul>
 </header>
 <main>

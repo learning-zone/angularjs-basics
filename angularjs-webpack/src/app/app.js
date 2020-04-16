@@ -1,4 +1,7 @@
 import angular from 'angular';
+import ngRoute from 'angular-route';
+import ngMaterial from 'angular-material';
+import ngMessages from 'angular-messages';
 
 import '../style/app.css';
 
@@ -12,10 +15,47 @@ let app = () => {
 
 function AppCtrl($scope) {
 
-  $scope.sections = [
-      {name: 'Home',  value:'home'},
-      {name: 'About', value:'about'},
-      {name: 'Contact', value:'contact'}];
+
+  $scope.menus = [
+    {
+      title: "Menu1", 
+      action: "home", 
+      menus: [
+        {
+          title: "Submenu 1a",
+          action: "stuff"
+        },
+        {
+          title: "Submenu 1b",
+          action: "moreStuff",
+          menus: [
+            {
+              title: "Submenu 1b 1",
+              action: "stuff"
+            },
+            {
+              title: "Submenu 1b 2",
+              action: "moreStuff"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Menu2", 
+      action: "about", 
+      menus: [
+        {
+          title: "Submenu 2a",
+          action: "awesomeStuff"
+        },
+        {
+          title: "Submenu 2b",
+          action: "moreAwesomeStuff"
+        }
+      ]
+    }
+  ];
 
   $scope.setMaster = function(section) {
       $scope.selected = section;
@@ -28,7 +68,7 @@ function AppCtrl($scope) {
 
 const MODULE_NAME = 'app';
 
-angular.module(MODULE_NAME, [require("angular-route")])
+angular.module(MODULE_NAME, ['ngRoute', 'ngMessages'])
   .directive('app', app)
   .controller('AppCtrl', AppCtrl)
   .config(function($routeProvider) {
@@ -41,6 +81,9 @@ angular.module(MODULE_NAME, [require("angular-route")])
     })
     .when("/contact", {
       templateUrl : "components/yellow.html"
+    })
+    .otherwise({
+      templateUrl : "components/red.html"
     });
   });
 
