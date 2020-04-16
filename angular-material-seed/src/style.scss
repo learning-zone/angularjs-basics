@@ -36,3 +36,13 @@
 [ng-cloak].splash {
     display: block !important;
 }
+
+.md-sidenav-left, md-sidenav {
+    left: 0;
+    top: 65px;
+    transform: translate3d(0%, 0, 0);
+}
+
+md-sidenav {
+    max-width: 280px;
+}
