@@ -31,7 +31,7 @@ angular.module("app").config(["$mdThemingProvider", function ($mdThemingProvider
 
 //https://docs.angularjs.org/guide/production
 angular.module("app").config(['$compileProvider', function ($compileProvider) {
-    $compileProvider.debugInfoEnabled(false);
+    $compileProvider.debugInfoEnabled(true);
     $compileProvider.commentDirectivesEnabled(false);
     $compileProvider.cssClassDirectivesEnabled(false);
 }]);
