@@ -11,7 +11,7 @@ class MainCtrl {
 
     $onInit() { }
 
-    currentTheme = "blue";
+    currentTheme = "green";
     menu = [
         { link: "home", title: "Home", icon: "home" },
         { link: "settings", title: "Settings", icon: "settings" }
