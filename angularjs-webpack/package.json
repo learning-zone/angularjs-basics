@@ -24,13 +24,13 @@
     "angular-animate": "^1.7.9",
     "angular-aria": "^1.7.9",
     "angular-font-awesome": "^3.1.2",
-    "angular-material": "^1.1.21",
     "angular-messages": "^1.7.9",
     "angular-route": "^1.7.9",
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "ajv": "^6.4.0",
+    "angular-material": "^1.1.21",
     "angular-mocks": "^1.7.0",
     "autoprefixer": "^8.4.1",
     "babel-core": "^6.26.3",
