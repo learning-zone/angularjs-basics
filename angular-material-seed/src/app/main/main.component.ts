@@ -24,7 +24,11 @@ class MainCtrl {
         { link: "home", title: "Home", icon: "home" },
         { link: "settings", title: "Settings", icon: "settings" }
     ];
-
+    
+    sideNav() { 
+        document.getElementById('pages').classList.toggle('pages-sidenav');
+    }
+    
     toggleNav() {  
         this.$mdSidenav("left").toggle();
     }
@@ -43,7 +47,7 @@ class MainCtrl {
     }
 }
 
-MainCtrl.$inject = ["$scope", "$mdSidenav", "$location"];
+MainCtrl.$inject = ["$scope", "$mdSidenav", "$location", "$mdComponentRegistry", "$log", "$mdMedia", "$timeout"];
 
 export default {
     bindings: { title: "=" },

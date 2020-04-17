@@ -1,6 +1,6 @@
 <div md-theme="{{$ctrl.currentTheme}}" layout="row" flex hm-swiperight="$ctrl.openNav()" hm-swipeleft="$ctrl.closeNav()">
 
-    <md-sidenav class="md-whiteframe-z2" md-component-id="left" hm-swiperight="$ctrl.openNav()">
+    <md-sidenav class="md-whiteframe-z2" md-component-id="left" hm-swiperight="$ctrl.openNav()" md-disable-backdrop>
         <md-toolbar class="md-tall">
             <div class="md-toolbar-tools">
                 
@@ -24,12 +24,12 @@
             <div class="md-toolbar-tools">
                 <h2>{{$ctrl.title}}</h2>
                 <md-button ng-click="$ctrl.toggleNav()" class="md-icon-button">
-                    <md-icon>menu</md-icon>
+                    <md-icon ng-click="$ctrl.sideNav()">menu</md-icon>
                 </md-button>
             </div>
         </md-toolbar>
 
-        <md-content id="pages" class="pages-sidenav">
+        <md-content id="pages">
             <ui-view></ui-view>
         </md-content>
 
