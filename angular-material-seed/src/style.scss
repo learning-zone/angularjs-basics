@@ -39,13 +39,29 @@
 }
 
 .md-sidenav-left, md-sidenav {
-    top: 65px;
+    top: 71px;
+    border-radius: 4px;
 }
 
 md-sidenav {
-    max-width: 280px;
+    max-width: 240px;
 }
 
 md-toolbar:not(.md-menu-toolbar) {
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }
+
+md-backdrop.md-opaque {
+    opacity: 0;
+}
+
+md-toolbar.md-tall {
+    height: 0px;
+    min-height: 0px;
+    max-height: 0px;
+}
+
+.pages-sidenav {
+    padding-left: 16%;
+}
+

@@ -1,4 +1,7 @@
+import * as angular from 'angular';
+
 class MainCtrl {
+    
     constructor(
         private $scope: ng.IScope,
         private $mdSidenav: ng.material.ISidenavService,
@@ -7,17 +10,22 @@ class MainCtrl {
         this.$scope.$on('update-theme', (event, args) => {
             this.currentTheme = args;
         });
+
+        this.$scope.$on('$viewContentLoaded', () => { 
+            document.getElementById('pages').classList.add('pages-sidenav');
+            this.openNav();
+        });
     }
-
-    $onInit() { }
-
+    $onInit() { 
+    }
+   
     currentTheme = "green";
     menu = [
         { link: "home", title: "Home", icon: "home" },
         { link: "settings", title: "Settings", icon: "settings" }
     ];
 
-    toggleNav() {
+    toggleNav() {  
         this.$mdSidenav("left").toggle();
     }
 

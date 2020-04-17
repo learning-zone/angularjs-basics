@@ -1,9 +1,9 @@
 <div md-theme="{{$ctrl.currentTheme}}" layout="row" flex hm-swiperight="$ctrl.openNav()" hm-swipeleft="$ctrl.closeNav()">
 
-    <md-sidenav class="md-whiteframe-z2" md-component-id="left">
+    <md-sidenav class="md-whiteframe-z2" md-component-id="left" hm-swiperight="$ctrl.openNav()">
         <md-toolbar class="md-tall">
             <div class="md-toolbar-tools">
-                Toolbar Info
+                
             </div>
         </md-toolbar>
 
@@ -29,7 +29,7 @@
             </div>
         </md-toolbar>
 
-        <md-content>
+        <md-content id="pages">
             <ui-view></ui-view>
         </md-content>
 
