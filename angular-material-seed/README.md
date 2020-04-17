@@ -32,6 +32,6 @@ npm run build:prod
 * [AngularJS V1.7x](https://code.angularjs.org/snapshot-stable/docs/tutorial/step_00)
 * [AngularJS Material](https://material.angularjs.org/latest/)
 * [HammerJS](https://hammerjs.github.io/)
-* [SASS](https://sass-lang.com/)
+* [Sass](https://sass-lang.com/)
 * [Webpack](https://webpack.js.org/)
 * [Typescript](https://www.typescriptlang.org/)
