@@ -30,6 +30,16 @@ npm run build:prod
 * Angular-Hammer
 * UI-Router
 
-### Project Output
+## Project Output
 
 ![Project Output](https://github.com/learning-zone/angularjs-interview-questions/blob/master/angular-material-seed/src/assets/angularjs-material.png)
+
+
+## References
+
+* [AngularJS V1.7x](https://code.angularjs.org/snapshot-stable/docs/tutorial/step_00)
+* [AngularJS Material](https://material.angularjs.org/latest/)
+* [HammerJS](https://hammerjs.github.io/)
+* [SASS](https://sass-lang.com/)
+* [Webpack](https://webpack.js.org/)
+* [Typescript](https://www.typescriptlang.org/)
