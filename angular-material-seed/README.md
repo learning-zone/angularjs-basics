@@ -22,14 +22,6 @@ Build Project and deploy to "dist":
 npm run build:prod
 ```
 
-## Dependencies
-* AngularJs
-* Angular-Material
-* Angular-Animate
-* Angular-Aria
-* Angular-Hammer
-* UI-Router
-
 ## Project Output
 
 ![Project Output](https://github.com/learning-zone/angularjs-interview-questions/blob/master/angular-material-seed/src/assets/angularjs-material.png)
