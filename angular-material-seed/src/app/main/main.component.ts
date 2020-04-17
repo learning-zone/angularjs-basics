@@ -18,7 +18,7 @@ class MainCtrl {
     }
     $onInit() { 
     }
-   
+
     currentTheme = "green";
     menu = [
         { link: "home", title: "Home", icon: "home" },
@@ -38,7 +38,7 @@ class MainCtrl {
     }
 
     goTo(link: string) {
-        this.$mdSidenav("left").close();
+        this.$mdSidenav("left").open();
         this.$location.path(link);
     }
 }
