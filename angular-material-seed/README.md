@@ -30,5 +30,6 @@ npm run build:prod
 * Angular-Hammer
 * UI-Router
 
-## TODO
-Edit Webconfig with DEV and PROD vars
+### Project Output
+
+![Project Output](https://github.com/learning-zone/angularjs-interview-questions/blob/master/angular-material-seed/src/assets/angularjs-material.png)
