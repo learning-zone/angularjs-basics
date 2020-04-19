@@ -20,10 +20,53 @@ class MainCtrl {
     }
 
     currentTheme = "green";
-    menu = [
+    menus = [
+        {
+          title: 'Components',
+          icon: 'history',
+          active: false,
+          type: 'dropdown',
+          submenus: [
+            {
+              title: 'Component - 1',
+              icon: 'history',
+              path: 'home'
+            },
+            {
+              title: 'Components - 2',
+              icon: 'history',
+              path: 'settings'
+            },
+            {
+              title: 'Components - 3',
+              icon: 'history',
+              path: 'home'
+            }
+          ]
+        },
+        {
+          title: 'Forms',
+          icon: 'settings',
+          active: false,
+          type: 'dropdown',
+          submenus: [
+            {
+              title: 'Forms - 1',
+              icon: 'settings',
+              path: 'settings'
+            },
+            {
+              title: 'Forms - 2',
+              icon: 'settings',
+              path: 'home'
+            }
+          ]
+        }
+      ];
+    /*/menu = [
         { link: "home", title: "Home", icon: "home" },
         { link: "settings", title: "Settings", icon: "settings" }
-    ];
+    ];*/
     
     sideNav() { 
         document.getElementById('pages').classList.toggle('pages-sidenav');
