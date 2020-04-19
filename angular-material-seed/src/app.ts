@@ -15,6 +15,7 @@ import settingsModule from './app/settings/settings.module';
 import homeModule from './app/home/home.module';
 import numberModule from './app/expressions/number/number.module';
 import stringModule from './app/expressions/string/string.module';
+import objectModule from './app/expressions/object/object.module';
 
 angular.module("app", [
     uiRouter.default, 
@@ -25,7 +26,8 @@ angular.module("app", [
     settingsModule, 
     homeModule,
     numberModule,
-    stringModule
+    stringModule,
+    objectModule
 ]);
 angular.module("app").config(routes);
 
