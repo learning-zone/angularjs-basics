@@ -35,17 +35,17 @@ class MainCtrl {
             {
               title: 'String Expressions',
               icon: 'settings_ethernet',
-              path: 'settings'
+              path: 'string'
             },
             {
               title: 'Object Expressions',
               icon: 'settings_ethernet',
-              path: 'home'
+              path: 'object'
             },
             {
                 title: 'Array Expressions',
                 icon: 'settings_ethernet',
-                path: 'home'
+                path: 'array'
               }
           ]
         },
