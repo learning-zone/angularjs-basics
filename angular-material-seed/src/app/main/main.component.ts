@@ -22,42 +22,102 @@ class MainCtrl {
     currentTheme = "green";
     menus = [
         {
-          title: 'Components',
-          icon: 'history',
+          title: 'Expressions',
+          icon: 'list',
           active: false,
           type: 'dropdown',
           submenus: [
             {
-              title: 'Component - 1',
-              icon: 'history',
-              path: 'home'
+              title: 'Number Expressions',
+              icon: 'code',
+              path: 'number'
             },
             {
-              title: 'Components - 2',
-              icon: 'history',
+              title: 'String Expression',
+              icon: 'code',
               path: 'settings'
             },
             {
-              title: 'Components - 3',
-              icon: 'history',
+              title: 'Object Expressions',
+              icon: 'code',
               path: 'home'
-            }
+            },
+            {
+                title: 'Array Expressions',
+                icon: 'code',
+                path: 'home'
+              }
           ]
         },
         {
-          title: 'Forms',
-          icon: 'settings',
+          title: 'Directives',
+          icon: 'list',
           active: false,
           type: 'dropdown',
           submenus: [
             {
-              title: 'Forms - 1',
-              icon: 'settings',
+              title: 'ng-app',
+              icon: 'code',
               path: 'settings'
             },
             {
-              title: 'Forms - 2',
-              icon: 'settings',
+              title: 'ng-init',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-model',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-repeat',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-bind',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-show',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-switch',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-if',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-include',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-cloak',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-view',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'ng-template',
+              icon: 'code',
+              path: 'home'
+            },
+            {
+              title: 'Custom Directive',
+              icon: 'code',
               path: 'home'
             }
           ]

@@ -15,7 +15,8 @@
                     <span>{{item.title}}</span>
                 </md-subheader>
                 <md-list-item ng-repeat="subitem in item.submenus" ng-click="$ctrl.goTo(subitem.path)">
-                    <p>{{subitem.title}}</p>
+                    <md-icon>{{subitem.icon}}</md-icon>
+                    <span class="submenus-text">{{subitem.title}}</span>
                 </md-list-item>
             </md-list>
         </md-content>

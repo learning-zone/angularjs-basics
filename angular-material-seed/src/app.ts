@@ -13,8 +13,18 @@ import './style.scss';
 import mainModule from './app/main/main.module';
 import settingsModule from './app/settings/settings.module';
 import homeModule from './app/home/home.module';
+import numberModule from './app/expressions/number/number.module';
 
-angular.module("app", [uiRouter.default, ngAnimate, ngAria, ngMaterial, hmTouchEvents, mainModule, settingsModule, homeModule]);
+angular.module("app", [
+    uiRouter.default, 
+    ngAnimate, ngAria, 
+    ngMaterial, 
+    hmTouchEvents, 
+    mainModule, 
+    settingsModule, 
+    homeModule,
+    numberModule
+]);
 angular.module("app").config(routes);
 
 angular.module("app").config(["$mdThemingProvider", function ($mdThemingProvider) {

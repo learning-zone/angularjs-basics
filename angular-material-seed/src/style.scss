@@ -67,3 +67,11 @@ md-toolbar.md-tall {
     -webkit-transition-duration: 0.6s;
 }
 
+.submenus-text {
+    padding-left: 2px;
+    font-size: 14px;
+}
+
+md-list-item .md-list-item-inner {
+    border-bottom: 0.1px solid;
+}
