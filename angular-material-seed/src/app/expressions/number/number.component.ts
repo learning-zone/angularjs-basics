@@ -8,7 +8,7 @@ class NumberCtrl {
     }
 
     getResult() {
-        this.$scope.result = this.$scope.user.number1 + this.$scope.user.number2;
+        this.$scope.result = 'Total is: '+this.$scope.user.number1 + this.$scope.user.number2;
     }
 }
 
