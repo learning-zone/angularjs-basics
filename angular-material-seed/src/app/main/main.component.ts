@@ -29,22 +29,22 @@ class MainCtrl {
           submenus: [
             {
               title: 'Number Expressions',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'number'
             },
             {
-              title: 'String Expression',
-              icon: 'code',
+              title: 'String Expressions',
+              icon: 'settings_ethernet',
               path: 'settings'
             },
             {
               title: 'Object Expressions',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
                 title: 'Array Expressions',
-                icon: 'code',
+                icon: 'settings_ethernet',
                 path: 'home'
               }
           ]
@@ -57,76 +57,72 @@ class MainCtrl {
           submenus: [
             {
               title: 'ng-app',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'settings'
             },
             {
               title: 'ng-init',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-model',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-repeat',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-bind',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-show',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-switch',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-if',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-include',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-cloak',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-view',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'ng-template',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             },
             {
               title: 'Custom Directive',
-              icon: 'code',
+              icon: 'settings_ethernet',
               path: 'home'
             }
           ]
         }
       ];
-    /*/menu = [
-        { link: "home", title: "Home", icon: "home" },
-        { link: "settings", title: "Settings", icon: "settings" }
-    ];*/
     
     sideNav() { 
         document.getElementById('pages').classList.toggle('pages-sidenav');

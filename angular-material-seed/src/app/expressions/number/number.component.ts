@@ -1,25 +1,19 @@
 
+import * as angular from 'angular';
+
 class NumberCtrl {
-    static $inject = [];
-    constructor() {
-        this.test = "some binding";
+    
+    constructor(private $scope: any) {    
+
     }
 
-    test: string;
-
-    testClick() {
-        alert("you clicked the button")
+    getResult() {
+        this.$scope.result = this.$scope.user.number1 + this.$scope.user.number2;
     }
-
-    folders = [
-        { title: "list item 1", icon: "folder", updated: new Date('1/1/16') },
-        { title: "list item 2", icon: "folder", updated: new Date('1/1/16') },
-        { title: "list item 3", icon: "folder", updated: new Date('1/1/16') },
-    ];
 }
 
 export default {
-    bindings: {},
+    bindings: { title: "=" },
     templateUrl: require("./number.html"),
     controller: NumberCtrl
 }

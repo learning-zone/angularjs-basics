@@ -2,14 +2,30 @@
     <md-card>
         <md-card-title>
             <md-card-title-text>
-                <span class="md-headline">Number Page</span>
+                <span class="md-headline">Number Expressions</span>
             </md-card-title-text>
         </md-card-title>
-        <md-card-content>
-            <md-button class="md-raised md-primary" ng-click="$ctrl.testClick()">
-                some button
-            </md-button>
-        </md-card-content>
+        
+        <md-content layout-gt-sm="row" layout-padding>
+            <div>
+              <md-input-container>
+                <label>Enter a first number</label>
+                <input ng-model="user.number1" type="number">
+              </md-input-container>
+        
+              <md-input-container>
+                <label>Enter a second number</label>
+                <input ng-model="user.number2" type="number">
+              </md-input-container>
+              <md-card-content>
+                <md-button class="md-raised md-primary" ng-click="$ctrl.getResult()">
+                    Check
+                </md-button>
+            </md-card-content>
+            <div>
+                Result:- {{result}}
+            </div>
+        </div>
+        </md-content>
     </md-card>
-
 </md-content>
