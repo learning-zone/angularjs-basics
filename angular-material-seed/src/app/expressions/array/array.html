@@ -1,0 +1,24 @@
+<md-content>
+    <md-card>
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Array Expressions</span>
+            </md-card-title-text>
+        </md-card-title>
+        
+        <md-content layout-gt-sm="row" layout-padding >
+            <div>
+              <md-input-container>
+                <div ng-init="marks=[99,92,98]">
+                    <div> Student Marks <hr/></div>
+                    <p> 
+                        Physics: {{marks[0] }}<br/>
+                        Chemistry: {{marks[1] }}<br/>
+                        Mathematics: {{marks[2] }}<br/>
+                    </p>
+                </div>
+              </md-input-container>
+        </div>
+        </md-content>
+    </md-card>
+</md-content>
