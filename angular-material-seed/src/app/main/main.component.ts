@@ -56,69 +56,9 @@ class MainCtrl {
           type: 'dropdown',
           submenus: [
             {
-              title: 'ng-app',
+              title: 'Directives',
               icon: 'settings_ethernet',
-              path: 'settings'
-            },
-            {
-              title: 'ng-init',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-model',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-repeat',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-bind',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-show',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-switch',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-if',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-include',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-cloak',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-view',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'ng-template',
-              icon: 'settings_ethernet',
-              path: 'home'
-            },
-            {
-              title: 'Custom Directive',
-              icon: 'settings_ethernet',
-              path: 'home'
+              path: 'directives'
             }
           ]
         }
