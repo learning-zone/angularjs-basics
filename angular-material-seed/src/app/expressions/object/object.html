@@ -6,25 +6,14 @@
             </md-card-title-text>
         </md-card-title>
         
-        <md-content layout-gt-sm="row" layout-padding>
+        <md-content layout-gt-sm="row" layout-padding >
             <div>
               <md-input-container>
-                <label>Enter your first name</label>
-                <input ng-model="user.firstName" type="text">
+                <div ng-init="student={name:'Alex K', class:'Fifth', roll:'10',percent:'94%'}">
+                    <p> Student Name: {{ student.name }}</p>
+                    <p> Percentage: {{ student.percent }}</p>
+                </div>
               </md-input-container>
-        
-              <md-input-container>
-                <label>Enter your last name</label>
-                <input ng-model="user.lastName" type="text">
-              </md-input-container>
-              <md-card-content>
-                <md-button class="md-raised md-primary" ng-click="$ctrl.getResult()">
-                    Result
-                </md-button>
-            </md-card-content>
-            <div>
-                {{result}}
-            </div>
         </div>
         </md-content>
     </md-card>
