@@ -1,16 +1,15 @@
 <html ng-app="phonecatApp">
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.9/angular.min.js"></script>
-  <script src="app.js"></script>
+  <script src="app.module.js"></script>
+  <script src="phone-list/phone-list.module.js"></script>
+  <script src="phone-list/phone-list.component.js"></script>
+  <script src="phone-list/phone-list.template.html"></script>
 </head>
-<body ng-controller="PhoneListController">
+<body>
 
-  <ul>
-    <li ng-repeat="phone in phones">
-      <span>{{phone.name}}</span>
-      <p>{{phone.snippet}}</p>
-    </li>
-  </ul>
+  <!-- Use a custom component to render a list of phones -->
+  <phone-list></phone-list>
 
 </body>
 </html>

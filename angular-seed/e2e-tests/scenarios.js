@@ -2,41 +2,41 @@
 
 /* https://github.com/angular/protractor/blob/master/docs/toc.md */
 
-describe('my app', function() {
+describe('PhoneCat Application', function() {
 
-
-  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
-    browser.get('index.html');
-    expect(browser.getLocationAbsUrl()).toMatch("/view1");
-  });
-
-
-  describe('view1', function() {
+  describe('phoneList', function() {
 
     beforeEach(function() {
-      browser.get('index.html#!/view1');
+      browser.get('index.html');
     });
 
+    it('should be possible to control phone order via the drop-down menu', function() {
+      var queryField = element(by.model('$ctrl.query'));
+      var orderSelect = element(by.model('$ctrl.orderProp'));
+      var nameOption = orderSelect.element(by.css('option[value="name"]'));
+      var phoneNameColumn = element.all(by.repeater('phone in $ctrl.phones').column('phone.name'));
 
-    it('should render view1 when user navigates to /view1', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 1/);
+      function getNames() {
+        return phoneNameColumn.map(function(elem) {
+          return elem.getText();
+        });
+      }
+
+      queryField.sendKeys('tablet');   // Let's narrow the dataset to make the assertions shorter
+
+      expect(getNames()).toEqual([
+        'Motorola XOOM\u2122 with Wi-Fi',
+        'MOTOROLA XOOM\u2122'
+      ]);
+
+      nameOption.click();
+
+      expect(getNames()).toEqual([
+        'MOTOROLA XOOM\u2122',
+        'Motorola XOOM\u2122 with Wi-Fi'
+      ]);
     });
 
   });
 
-
-  describe('view2', function() {
-
-    beforeEach(function() {
-      browser.get('index.html#!/view2');
-    });
-
-
-    it('should render view2 when user navigates to /view2', function() {
-      expect(element.all(by.css('[ng-view] p')).first().getText()).
-        toMatch(/partial for view 2/);
-    });
-
-  });
 });
