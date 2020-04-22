@@ -1,0 +1,17 @@
+dist: trusty
+
+language: node_js
+node_js:
+  - 6  # Because `protractor@5.4.1` requires 6.9+.
+  - 10
+
+addons:
+  chrome: stable
+  firefox: latest
+
+cache:
+  directories:
+    - "$HOME/.npm"
+
+script:
+  - scripts/private/test-all.sh
