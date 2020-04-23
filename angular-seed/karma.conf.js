@@ -6,10 +6,10 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     files: [
-      'lib/angular/angular.js',
-      'lib/angular-animate/angular-animate.js',
-      'lib/angular-resource/angular-resource.js',
-      'lib/angular-route/angular-route.js',
+      '../node_modules/angular/angular.js',
+      '../node_modules/angular-animate/angular-animate.js',
+      '../node_modules/angular-resource/angular-resource.js',
+      '../node_modules/angular-route/angular-route.js',
       '../node_modules/angular-mocks/angular-mocks.js',
       '**/*.module.js',
       '*!(.module|.spec).js',
