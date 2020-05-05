@@ -1,0 +1,30 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * A `PropertyBinding` represents a mapping between a property name
+ * and an attribute name. It is parsed from a string of the form
+ * `"prop: attr"`; or simply `"propAndAttr" where the property
+ * and attribute have the same identifier.
+ */
+export class PropertyBinding {
+    constructor(prop, attr) {
+        this.prop = prop;
+        this.attr = attr;
+        this.parseBinding();
+    }
+    parseBinding() {
+        this.bracketAttr = `[${this.attr}]`;
+        this.parenAttr = `(${this.attr})`;
+        this.bracketParenAttr = `[(${this.attr})]`;
+        const capitalAttr = this.attr.charAt(0).toUpperCase() + this.attr.substr(1);
+        this.onAttr = `on${capitalAttr}`;
+        this.bindAttr = `bind${capitalAttr}`;
+        this.bindonAttr = `bindon${capitalAttr}`;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50X2luZm8uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi8uLi9wYWNrYWdlcy91cGdyYWRlL3NyYy9jb21tb24vc3JjL2NvbXBvbmVudF9pbmZvLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7R0FNRztBQUVIOzs7OztHQUtHO0FBQ0gsTUFBTSxPQUFPLGVBQWU7SUFjMUIsWUFBbUIsSUFBWSxFQUFTLElBQVk7UUFBakMsU0FBSSxHQUFKLElBQUksQ0FBUTtRQUFTLFNBQUksR0FBSixJQUFJLENBQVE7UUFDbEQsSUFBSSxDQUFDLFlBQVksRUFBRSxDQUFDO0lBQ3RCLENBQUM7SUFFTyxZQUFZO1FBQ2xCLElBQUksQ0FBQyxXQUFXLEdBQUcsSUFBSSxJQUFJLENBQUMsSUFBSSxHQUFHLENBQUM7UUFDcEMsSUFBSSxDQUFDLFNBQVMsR0FBRyxJQUFJLElBQUksQ0FBQyxJQUFJLEdBQUcsQ0FBQztRQUNsQyxJQUFJLENBQUMsZ0JBQWdCLEdBQUcsS0FBSyxJQUFJLENBQUMsSUFBSSxJQUFJLENBQUM7UUFDM0MsTUFBTSxXQUFXLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsV0FBVyxFQUFFLEdBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUM7UUFDNUUsSUFBSSxDQUFDLE1BQU0sR0FBRyxLQUFLLFdBQVcsRUFBRSxDQUFDO1FBQ2pDLElBQUksQ0FBQyxRQUFRLEdBQUcsT0FBTyxXQUFXLEVBQUUsQ0FBQztRQUNyQyxJQUFJLENBQUMsVUFBVSxHQUFHLFNBQVMsV0FBVyxFQUFFLENBQUM7SUFDM0MsQ0FBQztDQUNGIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IEdvb2dsZSBJbmMuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuXG4gKlxuICogVXNlIG9mIHRoaXMgc291cmNlIGNvZGUgaXMgZ292ZXJuZWQgYnkgYW4gTUlULXN0eWxlIGxpY2Vuc2UgdGhhdCBjYW4gYmVcbiAqIGZvdW5kIGluIHRoZSBMSUNFTlNFIGZpbGUgYXQgaHR0cHM6Ly9hbmd1bGFyLmlvL2xpY2Vuc2VcbiAqL1xuXG4vKipcbiAqIEEgYFByb3BlcnR5QmluZGluZ2AgcmVwcmVzZW50cyBhIG1hcHBpbmcgYmV0d2VlbiBhIHByb3BlcnR5IG5hbWVcbiAqIGFuZCBhbiBhdHRyaWJ1dGUgbmFtZS4gSXQgaXMgcGFyc2VkIGZyb20gYSBzdHJpbmcgb2YgdGhlIGZvcm1cbiAqIGBcInByb3A6IGF0dHJcImA7IG9yIHNpbXBseSBgXCJwcm9wQW5kQXR0clwiIHdoZXJlIHRoZSBwcm9wZXJ0eVxuICogYW5kIGF0dHJpYnV0ZSBoYXZlIHRoZSBzYW1lIGlkZW50aWZpZXIuXG4gKi9cbmV4cG9ydCBjbGFzcyBQcm9wZXJ0eUJpbmRpbmcge1xuICAvLyBUT0RPKGlzc3VlLzI0NTcxKTogcmVtb3ZlICchJy5cbiAgYnJhY2tldEF0dHIhOiBzdHJpbmc7XG4gIC8vIFRPRE8oaXNzdWUvMjQ1NzEpOiByZW1vdmUgJyEnLlxuICBicmFja2V0UGFyZW5BdHRyITogc3RyaW5nO1xuICAvLyBUT0RPKGlzc3VlLzI0NTcxKTogcmVtb3ZlICchJy5cbiAgcGFyZW5BdHRyITogc3RyaW5nO1xuICAvLyBUT0RPKGlzc3VlLzI0NTcxKTogcmVtb3ZlICchJy5cbiAgb25BdHRyITogc3RyaW5nO1xuICAvLyBUT0RPKGlzc3VlLzI0NTcxKTogcmVtb3ZlICchJy5cbiAgYmluZEF0dHIhOiBzdHJpbmc7XG4gIC8vIFRPRE8oaXNzdWUvMjQ1NzEpOiByZW1vdmUgJyEnLlxuICBiaW5kb25BdHRyITogc3RyaW5nO1xuXG4gIGNvbnN0cnVjdG9yKHB1YmxpYyBwcm9wOiBzdHJpbmcsIHB1YmxpYyBhdHRyOiBzdHJpbmcpIHtcbiAgICB0aGlzLnBhcnNlQmluZGluZygpO1xuICB9XG5cbiAgcHJpdmF0ZSBwYXJzZUJpbmRpbmcoKSB7XG4gICAgdGhpcy5icmFja2V0QXR0ciA9IGBbJHt0aGlzLmF0dHJ9XWA7XG4gICAgdGhpcy5wYXJlbkF0dHIgPSBgKCR7dGhpcy5hdHRyfSlgO1xuICAgIHRoaXMuYnJhY2tldFBhcmVuQXR0ciA9IGBbKCR7dGhpcy5hdHRyfSldYDtcbiAgICBjb25zdCBjYXBpdGFsQXR0ciA9IHRoaXMuYXR0ci5jaGFyQXQoMCkudG9VcHBlckNhc2UoKSArIHRoaXMuYXR0ci5zdWJzdHIoMSk7XG4gICAgdGhpcy5vbkF0dHIgPSBgb24ke2NhcGl0YWxBdHRyfWA7XG4gICAgdGhpcy5iaW5kQXR0ciA9IGBiaW5kJHtjYXBpdGFsQXR0cn1gO1xuICAgIHRoaXMuYmluZG9uQXR0ciA9IGBiaW5kb24ke2NhcGl0YWxBdHRyfWA7XG4gIH1cbn1cbiJdfQ==
