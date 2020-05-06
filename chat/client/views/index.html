@@ -1,19 +1,26 @@
-<!-- Defining angular app -->
+<!DOCTYPE html>
 <html ng-app="app">
     <head>
-        <title>Realtime Private Chat using Angular, Nodejs and Mysql</title>
-        <meta charset="utf-8">
+        
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Shopping Cart</title>
         <base href="/">
         <!-- Adding CSS files-->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
         <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/styles.css"> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+
     </head>
 
     <!-- Defining angular controller -->
     <body>
         <div id="main">
-            <!-- Angular router will inject the content here -->
             <div ng-view></div>
         </div>
     </body>
@@ -23,8 +30,13 @@
     <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
     <script src="js/ui-bootstrap-2.5.0.min.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
-    
-    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+
     
     <script src="js/app.service.js"></script>
     <script src="js/app.js"></script>
