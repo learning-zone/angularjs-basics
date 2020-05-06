@@ -1,0 +1,75 @@
+<div class="auth-page">
+    <div class="container auth-container">
+        <div class="auth">
+
+            <!-- Auth Page Header Tabs start -->
+            <div class="auth-header">
+                <button type="button" class="btn btn-primary auth-header-btn" ng-click="active = 0">Login</button>
+                <button type="button" class="btn btn-primary auth-header-btn" ng-click="active = 1">Register</button>
+            </div>
+            <!-- Auth Page Header Tabs ends -->
+
+            <div class="auth-content">
+                <uib-tabset active="active">
+                    <!-- Login Tab starts -->
+                    <uib-tab index="0">
+                        <div class="login">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="username" 
+                                    class="form-control" 
+                                    id="username" 
+                                    placeholder="Enter username" 
+                                    ng-model="data.loginUsername">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" 
+                                    class="form-control" 
+                                    id="login-password" 
+                                    placeholder="Enter password" 
+                                    ng-model="data.loginPassword">
+                            </div>
+                            <button class="btn btn-primary" ng-click="loginUser()">Login</button>
+                        </div>
+                    </uib-tab>
+                    <!-- Login Tab ends -->
+                    <!-- Register Tab starts -->
+                    <uib-tab index="1">
+                        <div class="register">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="username" 
+                                    class="form-control" 
+                                    id="username" 
+                                    placeholder="Enter username"
+                                    autocomplete="off"
+                                    ng-model="data.regUsername" 
+                                    ng-keyup="initiateCheckUserName()" 
+                                    ng-keydown="clearCheckUserName()" 
+                                />
+                                <div ng-show='data.usernameAvailable'>
+                                    <br>
+                                    <div class="alert alert-danger" role="alert">
+                                        <strong>{{ data.regUsername }}</strong> Username is already taken.
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" 
+                                    class="form-control" 
+                                    id="reg-password" 
+                                    placeholder="Enter password"
+                                    ng-model="data.regPassword">
+                            </div>
+                            <button class="btn btn-primary" ng-click="registerUser()">Register</button>
+                        </div>
+                    </uib-tab>
+                    <!-- Register Tab ends -->
+                </uib-tabset>
+            </div>        
+        </div>
+    </div>
+</div>

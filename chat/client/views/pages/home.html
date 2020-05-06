@@ -1,0 +1,63 @@
+<div class="home-page">
+    <!-- Home page header starts -->
+    <div class="home-header">
+        <p class="welcome-user">Welcome {{ data.username }}</p>
+        <span class="logout-user" ng-click="logout()">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+        </span>        
+    </div>
+    <!-- Home page header ends -->
+
+    <!-- Home page body start -->
+    <div class="home-body">
+        <div class="row">
+            <!-- Message Area Markup starts -->
+            <div class="col-md-8">
+                <div class="message-container">
+                    <p ng-show="data.selectedFriendId !== null" ? true : false >
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span class="message-heading"> Chat History With {{data.selectedFriendName}}</span>
+                    </p>
+                    <div class="message-list">
+                        <ul class="message-thread">
+                            <li ng-repeat="messagePacket in data.messages"
+                                ng-class="{ 'align-right' : alignMessage(messagePacket.fromUserId) } ">
+                                {{messagePacket.message}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-text">
+                        <textarea id="message" 
+                            class="message form-control" 
+                            placeholder="Type and hit Enter" 
+                            ng-keydown="sendMessage($event)"
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Message Area Markup ends -->
+
+            <!-- Chat list Markup starts -->
+            <div class="col-md-4">
+                <div class="chat-list-container">
+                    <p class="chat-list-heading"><i class="fa fa-list" aria-hidden="true"></i> <span >Chat list</span> </p>
+                    <div class="chat-list">
+                        <ul class="list-group" ng-if="data.chatlist.length > 0">
+                            <li class="list-group-item"
+                                ng-repeat="friend in data.chatlist"
+                                ng-click="selectFriendToChat(friend.id)"
+                                ng-class="{'active':friend.id == data.selectedFriendId}"
+                            >{{friend.username}}</li>
+                        </ul>
+                        <div class="alert alert-info" ng-if="data.chatlist.length === 0">
+                            <strong>No one is online to chat, ask someone to Login.</strong>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <!-- Chat List Markup ends -->
+
+        </div>
+    </div>
+    <!-- Home page body start -->
+</div>

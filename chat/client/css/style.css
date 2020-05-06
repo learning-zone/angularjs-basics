@@ -1,0 +1,123 @@
+body{
+	overflow-x: hidden;
+}
+
+/* Auth page CSS starts */
+.auth-page{
+	background: #ffffff;
+	height: 100%;
+}
+
+.auth-container {
+	padding-top: 5%;
+	width: 50%;
+	margin: auto;
+}
+.auth{
+	width: 400px;
+	margin: auto;
+	padding: 5%;
+	border-radius: 5px;
+	border: solid 1px #0000003d;
+}
+
+.auth-header-btn{
+	width: 49%;
+}
+
+.login,
+.register {
+	padding: 1.5%;
+}
+/* Auth page CSS ends */
+
+/* Home page CSS starts */
+.home-header {
+	width: 100%;
+	padding: 1% 1% 1% 1%;
+	background: #007bff;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.home-body {
+	width: 100%;
+	height:85%;
+}
+
+.logout-user{
+	float: right;
+	margin-top: -2%;
+	cursor: pointer;
+}
+
+.message-container{
+	padding: 20px 0px 20px 20px;
+	background-color: rgba(255, 255, 255, 0.80);
+	margin: 10px 0px 10px 10px;
+	border-radius: 5px;
+}
+
+.message-thread {
+	overflow-y: scroll;
+	list-style-type: none;
+	height: 400px;
+	width: 100%;
+	border: solid 1px #BDBDBD;
+	margin: 0px !important;
+	padding: 5px !important;
+}
+
+.message-thread li {
+	max-width: 300px;
+	border-color: solid 0.5px rgba(0, 0, 0, 0.32);
+	clear: both;
+	text-decoration: none;
+	list-style-type: none;
+	margin: 20px 10px 0px 20px;
+	float: left;
+	margin-right: 20px;
+	padding: 25px 34px;
+	min-width: 160px;
+	min-height: 10px;
+	max-width: 350px;
+	border-radius: 5px;
+	border:solid 1px #0000001f;
+	background-color: rgba(255, 255, 255, 0.80);
+	line-height: 1.4;
+	word-wrap: break-word;
+	color: #444444;
+	text-align: left;
+}
+
+.align-left {
+	float: left !important;;
+}
+.align-right {
+	float: right !important;;
+}
+
+.message-text{
+	margin-top: 1%;
+}
+
+
+.chat-list-container {
+	padding: 20px 20px 20px 0px;
+}
+
+.chat-list-heading {
+	margin: 10px 10px 10px 0px;
+}
+
+.chat-list{
+	overflow-y: scroll;
+	height: 400px;
+	width: 100%;
+	margin: 10px 10px 10px 0px;
+	padding-right: 20px;
+}
+
+.chat-list li{
+	cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!-- Defining angular app -->
+<html ng-app="app">
+    <head>
+        <title>Realtime Private Chat using Angular, Nodejs and Mysql</title>
+        <meta charset="utf-8">
+        <base href="/">
+        <!-- Adding CSS files-->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+
+    <!-- Defining angular controller -->
+    <body>
+        <div id="main">
+            <!-- Angular router will inject the content here -->
+            <div ng-view></div>
+        </div>
+    </body>
+
+    <!-- Adding JS files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.5/angular-route.min.js"></script>
+    <script src="js/ui-bootstrap-2.5.0.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <script src="js/app.service.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.controller.js"></script>
+    <script src="js/home.controller.js"></script>
+</html>
