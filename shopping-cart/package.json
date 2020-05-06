@@ -1,5 +1,5 @@
 {
-  "name": "single-page-application",
+  "name": "shopping-cart",
   "version": "0.0.1",
   "description": "A fully functioning Node.js application with Angular and MySql",
   "private": false,
