@@ -1,9 +1,14 @@
 'user strict';
 
-app.controller('homeController', function ($scope, $routeParams, $location, appService){
+app.controller('homeController', function ($scope, $routeParams, $location, appService, $mdSidenav){
     
     const UserId = $routeParams.userId;
-
+    $scope.title = 'Shopping Cart';
+      
+    $scope.$on('$viewContentLoaded', () => { 
+        document.getElementById('pages').classList.add('pages-sidenav');
+        $scope.openNav();
+    });
     $scope.data = {
         username: '',
         chatlist: [],
@@ -148,5 +153,71 @@ app.controller('homeController', function ($scope, $routeParams, $location, appS
     $scope.logout = () => {
         appService.socketEmit(`logout`, UserId);
         $location.path(`/`);
+    }
+
+    /** Sidebar Menu  **/
+    $scope.menus = [
+        {
+          title: 'Expressions',
+          icon: 'list',
+          active: false,
+          type: 'dropdown',
+          submenus: [
+            {
+              title: 'Number Expressions',
+              icon: 'settings_ethernet',
+              path: 'number'
+            },
+            {
+              title: 'String Expressions',
+              icon: 'settings_ethernet',
+              path: 'string'
+            },
+            {
+              title: 'Object Expressions',
+              icon: 'settings_ethernet',
+              path: 'object'
+            },
+            {
+                title: 'Array Expressions',
+                icon: 'settings_ethernet',
+                path: 'array'
+              }
+          ]
+        },
+        {
+          title: 'Directives',
+          icon: 'list',
+          active: false,
+          type: 'dropdown',
+          submenus: [
+            {
+              title: 'Directives',
+              icon: 'settings_ethernet',
+              path: 'directives'
+            }
+          ]
+        }
+      ];
+
+    $scope.sideNav = () => { 
+        document.getElementById('pages').classList.toggle('pages-sidenav');
+    }
+    
+    $scope.toggleNav = () => {  
+        $mdSidenav("left").toggle();
+    }
+
+    $scope.openNav = () => {
+        $mdSidenav("left").open();
+    }
+
+    $scope.closeNav = () => {
+        $mdSidenav("left").close();
+    }
+
+    $scope.goTo = (link) => {
+        $mdSidenav("left").open();
+        $location.path(link);
     }
 });

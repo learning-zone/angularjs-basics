@@ -1,5 +1,6 @@
 'use strict';
-const app = angular.module('app', ['ngRoute', 'ui.bootstrap']);
+
+const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
 
 /*
 * configuring our routes for the app

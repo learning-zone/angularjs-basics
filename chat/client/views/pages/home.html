@@ -1,12 +1,45 @@
-<div class="home-page">
-    <!-- Home page header starts -->
-    <div class="home-header">
-        <p class="welcome-user">Welcome {{ data.username }}</p>
-        <span class="logout-user" ng-click="logout()">
-            <i class="fa fa-power-off" aria-hidden="true"></i>
-        </span>        
+ <!-- Material -->
+<div md-theme="{{currentTheme}}" layout="row" flex hm-swiperight="openNav()" hm-swipeleft="closeNav()">
+
+    <md-sidenav class="md-whiteframe-z2" md-component-id="left" hm-swiperight="openNav()" md-disable-backdrop>
+        <md-toolbar class="md-tall">
+            <div class="md-toolbar-tools">
+                <!-- Left Nav -->
+            </div>
+        </md-toolbar>
+
+        <!-- Sidebar Menus List -->
+        <md-content>
+            <md-list ng-repeat="item in menus">
+                <md-subheader class="md-no-sticky">
+                    <md-icon>{{item.icon}}</md-icon>
+                    <span>{{item.title}}</span>
+                </md-subheader>
+                <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
+                    <span class="submenus-text">
+                        <md-icon>{{subitem.icon}}</md-icon>&nbsp;
+                        {{subitem.title}}
+                    </span>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </md-sidenav>
+
+    <div flex>
+        <md-toolbar>
+            
+            <div class="md-toolbar-tools">
+                <h2 class="home-title">{{title}}</h2>
+                <md-button ng-click="toggleNav()" class="md-icon-button">
+                    <md-icon ng-click="sideNav()">menu</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+
+        <md-content id="pages">
+            <ui-view></ui-view>
+        </md-content>
+
     </div>
 </div>
-    
-
     
