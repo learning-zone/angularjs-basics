@@ -10,8 +10,8 @@
 
         <!-- Sidebar Menus List -->
         <md-content>
-            <md-list ng-repeat="item in menus">
-                <md-subheader class="md-no-sticky">
+            <md-list ng-repeat="item in menus" ng-click="goTo(item.path)">
+                <md-subheader class="submenus-text">
                     <md-icon>{{item.icon}}</md-icon>
                     <span>{{item.title}}</span>
                 </md-subheader>
@@ -41,7 +41,7 @@
         <md-content id="pages">
             <ui-view></ui-view>
         </md-content>
-
     </div>
 </div>
-    
+
+
