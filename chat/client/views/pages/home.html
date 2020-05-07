@@ -15,12 +15,14 @@
                     <md-icon>{{item.icon}}</md-icon>
                     <span>{{item.title}}</span>
                 </md-subheader>
-                <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
-                    <span class="submenus-text">
-                        <md-icon>{{subitem.icon}}</md-icon>&nbsp;
-                        {{subitem.title}}
-                    </span>
-                </md-list-item>
+                <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu">
+                    <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
+                        <span class="submenus-text">
+                            <md-icon>{{subitem.icon}}</md-icon>&nbsp;
+                            {{subitem.title}}
+                        </span>
+                    </md-list-item>
+                </div>
             </md-list>
         </md-content>
     </md-sidenav>
