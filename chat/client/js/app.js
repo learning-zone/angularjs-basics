@@ -8,13 +8,17 @@ const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         // route for the home page
-        .when('/', {
-            templateUrl: '/views/pages/auth.html',
-            controller: 'authController'
-        })
-        .when('/home/:userId', {
+        
+        .when('/home', {
             templateUrl: '/views/pages/home.html',
             controller: 'homeController'
+        })
+        .when('/products', {
+            templateUrl: '/views/pages/products.html',
+            controller: 'productsController'
+        })
+        .otherwise({
+            redirectTo: '/home'
         });
 
     // use the HTML5 History API
