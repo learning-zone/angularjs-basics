@@ -1,6 +1,6 @@
 'user strict';
 
-app.controller('MenuController', function ($scope, $routeParams, $location, $mdSidenav){
+app.controller('menuController', function ($scope, $routeParams, $location, $mdSidenav){
     
     console.log('menuController');
     $scope.project_name = 'Shopping Cart';
