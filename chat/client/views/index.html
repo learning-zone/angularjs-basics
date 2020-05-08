@@ -13,10 +13,12 @@
         <!-- CSS files-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.22/angular-material.min.css">
         <link rel="stylesheet" href="css/style.css">  
+        <link rel="stylesheet" href="https://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.css">
     </head>
 
     
-    <body ng-controller="MenuController as $ctrl">
+    <body layout="row" md-no-ink ng-controller="menuController as $ctrl" ng-cloak>
+        
         <!-- Sidebar Navigation -->
         <div md-theme="{{currentTheme}}" layout="row" flex hm-swiperight="openNav()" hm-swipeleft="closeNav()">
 
@@ -57,6 +59,7 @@
 
         <!-- Routing -->
         <md-content id="pages">
+            <div class="splash" ng-cloak>Loading...</div>
             <div ng-view></div>
         </md-content>
     </div>
@@ -71,6 +74,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular-loader.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.22/angular-material.min.js"></script>
+    <script src="https://rawgit.com/daniel-nagy/md-data-table/master/dist/md-data-table.js"></script>
     
     <!-- Angular Controllers -->
     <script src="/socket.io/socket.io.js"></script>

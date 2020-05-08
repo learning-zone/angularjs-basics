@@ -1,12 +1,12 @@
 'use strict';
 
-const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial', 'md.data.table']);
+const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'md.data.table', 'ngMaterial']);
 
 /*
 * Theme Settings
 */
 app.config(['$mdThemingProvider', function ($mdThemingProvider) {
-    
+    'use strict';
     $mdThemingProvider.theme("green")
         .primaryPalette("teal")
         .accentPalette("red");
