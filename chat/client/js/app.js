@@ -1,6 +1,16 @@
 'use strict';
 
-const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
+const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial', 'md.data.table']);
+
+/*
+* Theme Settings
+*/
+app.config(['$mdThemingProvider', function ($mdThemingProvider) {
+    
+    $mdThemingProvider.theme("green")
+        .primaryPalette("teal")
+        .accentPalette("red");
+}]);
 
 /*
 * configuring our routes for the app
