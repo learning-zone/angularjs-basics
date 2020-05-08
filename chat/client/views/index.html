@@ -15,12 +15,55 @@
         <link rel="stylesheet" href="css/style.css">  
     </head>
 
-    <!-- Defining angular controller -->
-    <body>
-        <div id="main">
+    
+    <body ng-controller="MenuController as $ctrl">
+        <!-- Sidebar Navigation -->
+        <div md-theme="{{currentTheme}}" layout="row" flex hm-swiperight="openNav()" hm-swipeleft="closeNav()">
+
+            <md-sidenav class="md-whiteframe-z2" md-component-id="left" hm-swiperight="openNav()" md-disable-backdrop>
+                <md-toolbar class="md-tall">
+                    <div class="md-toolbar-tools">
+                        <!-- Left Nav -->
+                    </div>
+                </md-toolbar>
+        
+                <!-- Sidebar Menus List -->
+                <md-content>
+                    <md-list ng-repeat="item in menus" ng-click="goTo(item.path)">
+                        <md-subheader class="submenus-text">
+                            <md-icon>{{item.icon}}</md-icon>
+                            <span>{{item.title}}</span>
+                        </md-subheader>
+                        <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu">
+                            <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
+                                <span class="submenus-text">
+                                    <md-icon>{{subitem.icon}}</md-icon>&nbsp;
+                                    {{subitem.title}}
+                                </span>
+                            </md-list-item>
+                        </div>
+                    </md-list>
+                </md-content>
+            </md-sidenav>
+        
+            <div flex>
+                <md-toolbar>
+                    
+                    <div class="md-toolbar-tools">
+                        <h2 class="home-title">{{project_name}}</h2>
+                        <md-button ng-click="toggleNav()" class="md-icon-button">
+                            <md-icon ng-click="sideNav()">menu</md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+
+        <!-- Routing -->
+        <md-content id="pages">
             <div ng-view></div>
-        </div>
-    </body>
+        </md-content>
+    </div>
+</div>
+</body>
 
     <!-- JS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.0/angular.min.js"></script>
@@ -36,6 +79,7 @@
 
     <script src="js/app.service.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/menu.controller.js"></script>
     <script src="js/home.controller.js"></script>
     <script src="js/products.controller.js"></script>
 </html>
