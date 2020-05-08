@@ -30,16 +30,14 @@
                 <!-- Sidebar Menus List -->
                 <md-content>
                     <md-list ng-repeat="item in menus" ng-click="goTo(item.path)">
-                        <md-subheader class="submenus-text">
+                        <md-subheader class="menus-text">
                             <md-icon>{{item.icon}}</md-icon>
                             <span>{{item.title}}</span>
                         </md-subheader>
                         <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu">
                             <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
                                 <span class="submenus-text">
-                                    <md-icon>{{subitem.icon}}</md-icon>&nbsp;
-                                    {{subitem.title}}
-                                </span>
+                                    <md-icon class="child-icon">{{subitem.icon}}</md-icon>&nbsp;{{subitem.title}}                              </span>
                             </md-list-item>
                         </div>
                     </md-list>
