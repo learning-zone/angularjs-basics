@@ -2,5 +2,5 @@
 
 app.controller('homeController', function ($scope, $routeParams, $location, appService, $mdSidenav){
     
-    console.log('homeController');
+    console.log('HomeController');
 });
