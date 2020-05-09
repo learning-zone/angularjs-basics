@@ -2,17 +2,22 @@
 
 **Live Demo** : 
 
+
+[![License][lic-image]][npm-link] [![Build status][travis-image]][travis-link] [![Coverage Status][coverage-image]][coverage-link] [![downloads][dt-image]][npm-link]
+
+
 ## Project Description
 
+> A full fledged Shopping application developed on AngularJS, AngularJS Material, NodeJS and MySQL. 
 
-
-## Installation 
-1. `Run install`
-2. `node server.js`
 
 ## This Projects Covers
 
 - Components Interaction
+
+## Installation 
+1. `Run install`
+2. `node server.js`
 
 
 ## Tools and Technologies
