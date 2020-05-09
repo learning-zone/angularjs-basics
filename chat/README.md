@@ -1,43 +1,43 @@
-# App Name
+## App Name
 
 **Live Demo** : 
 
 
-## Project Description
+#### Project Description
 
 > A full fledged Shopping application developed on AngularJS, AngularJS Material, NodeJS and MySQL. 
 
 
-## This Projects Covers
+#### This Projects Covers
 
 - Components Interaction
 
-## Installation 
+#### Installation 
 1. `Run install`
 2. `node server.js`
 
 
-## Tools and Technologies
+#### Tools and Technologies
 
 - Technology: AngularJS, HTML, SCSS, NodeJS
 - Middleware: ExpressJS
 - Database : MySQL
 
 
-## Development Server
+#### Development Server
 - 
 
 
-## Build
+#### Build
 - 
 
-## Running Unit Tests
+#### Running Unit Tests
 - 
 
-## Running End-to-End Tests
+#### Running End-to-End Tests
 - 
 
-## Resources
+#### Resources
 
 * [AngularJS v1.7x](https://code.angularjs.org/snapshot-stable/docs/tutorial/step_00)
 * [AngularJS Material](https://material.angularjs.org/latest/)
@@ -47,6 +47,6 @@
 * [Typescript](https://www.typescriptlang.org/)
 
 
-## Project Output
+#### Project Output
 
 
