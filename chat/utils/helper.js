@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 const DB = require('./db');
 
 class Helper{
@@ -8,12 +8,12 @@ class Helper{
 	}
 
 	async userNameCheck (username){
-		return await this.db.query(`SELECT count(username) as count FROM user WHERE LOWER(username) = ?`, `${username}`);
+		return await this.db.query(`SELECT count(username) as count FROM users WHERE LOWER(username) = ?`, `${username}`);
 	}
 
 	async registerUser(params){
 		try {
-			return await this.db.query("INSERT INTO user (`username`,`password`,`online`) VALUES (?,?,?)", [params['username'],params['password'],'Y']);
+			return await this.db.query("INSERT INTO users (`username`,`password`,`online`) VALUES (?,?,?)", [params['username'],params['password'],'Y']);
 		} catch (error) {
 			console.error(error);
 			return null;
@@ -22,7 +22,7 @@ class Helper{
 
 	async loginUser(params){
 		try {
-			return await this.db.query(`SELECT id FROM user WHERE LOWER(username) = ? AND password = ?`, [params.username,params.password]);
+			return await this.db.query(`SELECT id FROM users WHERE LOWER(username) = ? AND password = ?`, [params.username,params.password]);
 		} catch (error) {
 			return null;
 		}
@@ -43,7 +43,7 @@ class Helper{
 
 	async addSocketId(userId, userSocketId){
 		try {
-			return await this.db.query(`UPDATE user SET socketid = ?, online= ? WHERE id = ?`, [userSocketId,'Y',userId]);
+			return await this.db.query(`UPDATE users SET socketid = ?, online= ? WHERE id = ?`, [userSocketId,'Y',userId]);
 		} catch (error) {
 			console.log(error);
 			return null;
@@ -52,21 +52,21 @@ class Helper{
 
 	async isUserLoggedOut(userSocketId){
 		try {
-			return await this.db.query(`SELECT online FROM user WHERE socketid = ?`, [userSocketId]);
+			return await this.db.query(`SELECT online FROM users WHERE socketid = ?`, [userSocketId]);
 		} catch (error) {
 			return null;
 		}
 	}
 
 	async logoutUser(userSocketId){
-		return await this.db.query(`UPDATE user SET socketid = ?, online= ? WHERE socketid = ?`, ['','N',userSocketId]);
+		return await this.db.query(`UPDATE users SET socketid = ?, online= ? WHERE socketid = ?`, ['','N',userSocketId]);
 	}
 
 	getChatList(userId, userSocketId){
 		try {
 			return Promise.all([
-				this.db.query(`SELECT id,username,online,socketid FROM user WHERE id = ?`, [userId]),
-				this.db.query(`SELECT id,username,online,socketid FROM user WHERE online = ? and socketid != ?`, ['Y',userSocketId])
+				this.db.query(`SELECT id,username,online,socketid FROM users WHERE id = ?`, [userId]),
+				this.db.query(`SELECT id,username,online,socketid FROM users WHERE online = ? and socketid != ?`, ['Y',userSocketId])
 			]).then( (response) => {
 				return {
 					userinfo : response[0].length > 0 ? response[0][0] : response[0],
