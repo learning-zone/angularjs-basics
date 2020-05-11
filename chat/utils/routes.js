@@ -1,6 +1,7 @@
 'use strict';
 
 const helper = require('./helper');
+const product = require('./product');
 const path = require('path');
 class Routes{
 
@@ -123,6 +124,29 @@ class Routes{
 	            response.status(200).json(messages);
 			}else{
 				const result = await helper.getMessages( userId, toUserId);
+				if (result ===  null) {
+					messages.error = true;
+					messages.message = `Internal Server error.`;
+					response.status(500).json(messages);
+				}else{
+					messages.error = false;
+					messages.messages = result;
+					response.status(200).json(messages);
+				}
+	        }
+		});
+
+		/** Get User Details */
+		this.app.post('/getUsers',async (request,response) => {
+			const userId = request.body.userId;
+			const toUserId = request.body.toUserId;
+			const messages = {}			
+			if (userId === '') {
+				messages.error = true;
+	            messages.message = `userId cant be empty.`;
+	            response.status(200).json(messages);
+			}else{
+				const result = await product.getUsers( userId, toUserId);
 				if (result ===  null) {
 					messages.error = true;
 					messages.message = `Internal Server error.`;
