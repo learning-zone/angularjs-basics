@@ -7,7 +7,7 @@ class Db {
 			host: '127.0.0.1',
 			user: 'root',
 			password: 'root',
-			database: 'chat',
+			database: 'learning_zone',
 			debug: false
 		});
 	}
