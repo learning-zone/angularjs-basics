@@ -76,9 +76,9 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     orderBy: 'comment'
   }];
 
-  $http.get('./assets/desserts.json').then(function (desserts) {
+  $http.post('/getUsers').then(function (desserts) {
     $scope.desserts = desserts.data;
-
+    console.log(desserts.data);
     // $scope.selected.push($scope.desserts.data[1]);
 
     // $scope.selected.push({
