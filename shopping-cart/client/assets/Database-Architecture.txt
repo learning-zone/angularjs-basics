@@ -1,0 +1,38 @@
+/**
+*  Table Structure
+*
+**/
+
+
+-------------------
+  Product Table
+-------------------
+   a. Product Name
+   b. Product Description
+   c. Product SKU
+   d. Product Serial Number
+   e. Product Purchase Price
+   f. Product Selling Price
+   g. Product Quantity
+   h. Reordered Stock Amount
+   i. Expiration Date
+   j. Product Image
+
+------------------
+  Barcode Table
+------------------
+   a. Barcode Type
+   b. Barcode
+
+----------------
+  Warehouse
+----------------
+
+
+
+
+----------------
+    Category
+----------------
+
+
