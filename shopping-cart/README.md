@@ -1,4 +1,4 @@
-## App Name
+## Shopping Cart
 
 **Live Demo** : 
 
