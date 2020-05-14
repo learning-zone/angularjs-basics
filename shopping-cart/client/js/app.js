@@ -35,6 +35,16 @@ app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 });
 
+app.config(
+    function($mdIconProvider, $$mdSvgRegistry) {
+        // Add default icons from angular material
+        $mdIconProvider
+            .icon('md-close', $$mdSvgRegistry.mdClose)
+            .icon('md-menu', $$mdSvgRegistry.mdMenu)
+            .icon('md-toggle-arrow', $$mdSvgRegistry.mdToggleArrow) ;
+    }
+);
+
 app.factory('appService', ($http) => {
     return new AppService($http)
 });
