@@ -91,6 +91,9 @@ md-list-item .md-list-item-inner {
 .md-accordion {
     padding: 2px;
 }
+md-list-item {
+    color: rgba(0,0,0,0.54);
+}
 .md-accordion .expandCollapse { 
     width:30px;
     height:30px;
