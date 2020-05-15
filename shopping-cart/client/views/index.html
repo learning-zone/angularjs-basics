@@ -31,15 +31,19 @@
         
                 <!-- Sidebar Menus List -->
                 <md-content>
-                    <md-list ng-repeat="item in menus" ng-click="goTo(item.path)">
-                        <md-subheader class="menus-text">
-                            <md-icon>{{item.icon}}</md-icon>
-                            <span>{{item.title}}</span>
+                    <md-list class="md-accordion" ng-repeat="data in menus" ng-click="goTo(item.path)">
+                        <md-subheader ng-init="data.expanded = false" ng-click="collapseAll(data)" class="menus-text">
+                           <div class="md-accordion-label">
+                              <md-icon>{{data.icon}}</md-icon>
+                              <span>{{data.title}}</span>
+                              <span ng-class="{expandCollapse:true, active:data.expanded}"></span> 
+                           </div>
                         </md-subheader>
-                        <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu">
-                            <md-list-item ng-repeat="subitem in item.submenus" ng-click="goTo(subitem.path)">
+                        <div *ngIf="menu.type === 'dropdown'" class="sidebar-submenu" ng-class="{dataContent:true, activeContent:data.expanded}">
+                            <md-list-item ng-repeat="subitem in data.submenus" ng-click="goTo(subitem.path)">
                                 <span class="submenus-text">
-                                    <md-icon class="child-icon">{{subitem.icon}}</md-icon>&nbsp;{{subitem.title}}                              </span>
+                                    <md-icon class="child-icon">{{subitem.icon}}</md-icon>&nbsp;{{subitem.title}} 
+                                </span>
                             </md-list-item>
                         </div>
                     </md-list>

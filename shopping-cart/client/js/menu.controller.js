@@ -242,4 +242,14 @@ app.controller('menuController', function ($scope, $routeParams, $location, $mdS
         $mdSidenav("left").open();
         $location.path(link);
     }
+
+    // Menu Toggle
+    $scope.collapseAll = function(data) {
+      for(var i in $scope.menus) {
+          if($scope.menus[i] != data) {
+              $scope.menus[i].expanded = false;
+          }
+      }
+      data.expanded = !data.expanded;
+   };
 });
