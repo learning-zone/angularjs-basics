@@ -86,7 +86,7 @@ md-list-item .md-list-item-inner {
 /****   Accordion Style ***********/
 
 .md-subheader .md-subheader-inner {    
-    padding: 0 0 0 16px !important;
+    padding: 10px !important;
 }
 .md-accordion {
     padding: 2px;
@@ -95,14 +95,15 @@ md-list-item .md-list-item-inner {
     width:30px;
     height:30px;
     position:relative;
-    font-size:20px;
+    font-size:16px;
     font-weight:bold;
     cursor:pointer;
     color:#9999;
     display:block;
     margin-top: -2px;
     margin-left: -2px;
-    overflow:hidden;
+    overflow: hidden;
+    float: right;
   }
   .md-accordion .expandCollapse:active {
     border:0px;
