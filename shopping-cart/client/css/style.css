@@ -73,7 +73,7 @@ md-toolbar.md-tall {
 }
 
 md-list-item .md-list-item-inner {
-    border-bottom: 0.1px solid;
+    border-bottom: 0.2px solid;
 }
 
 #main {
@@ -161,4 +161,8 @@ md-list-item {
   .md-accordion md-toolbar{
     cursor:pointer;
     border-bottom:1px solid rgb(63,107,181)
+  }
+
+  md-list-item._md-button-wrap>div.md-button:first-child {
+    padding: 0 10px;
   }
