@@ -22,7 +22,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   }];
 
   $scope.query = {
-    order: 'name',
+    order: 'product_name',
     limit: 5,
     page: 1
   };
