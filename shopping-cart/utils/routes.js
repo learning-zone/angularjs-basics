@@ -136,25 +136,25 @@ class Routes{
 	        }
 		});
 
-		/** Get User Details */
-		this.app.post('/getUsers',async (request,response) => {
+		/** Get Product Details */
+		this.app.post('/getProducts',async (request,response) => {
 			const userId = request.body.userId;
 			const toUserId = request.body.toUserId;
-			const messages = {}			
+			const products = {}			
 			if (userId === '') {
-				messages.error = true;
-	            messages.message = `userId cant be empty.`;
-	            response.status(200).json(messages);
+				products.error = true;
+	            products.message = `userId cant be empty.`;
+	            response.status(200).json(products);
 			}else{
-				const result = await product.getUsers( userId, toUserId);
+				const result = await product.getProducts( userId, toUserId);
 				if (result ===  null) {
-					messages.error = true;
-					messages.message = `Internal Server error.`;
-					response.status(500).json(messages);
+					products.error = true;
+					products.message = `Internal Server error.`;
+					response.status(500).json(products);
 				}else{
-					messages.error = false;
-					messages.messages = result;
-					response.status(200).json(messages);
+					products.error = false;
+					products.products = result;
+					response.status(200).json(products);
 				}
 	        }
 		});

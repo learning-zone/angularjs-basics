@@ -7,10 +7,10 @@ class Product{
 		this.db = DB;
 	}
 
-	async getUsers(userId, toUserId){
+	async getProducts(userId, toUserId){
 		try {
 			return await this.db.query(
-				`SELECT * FROM users ORDER BY id ASC`
+				`SELECT * FROM product ORDER BY id ASC`
 			);
 		} catch (error) {
 			console.warn(error);

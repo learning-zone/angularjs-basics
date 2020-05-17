@@ -17,7 +17,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',
     value: function () {
-      return $scope.desserts ? $scope.desserts.count : 0;
+      return $scope.products ? $scope.products.count : 0;
     }
   }];
 
@@ -27,118 +27,11 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     page: 1
   };
 
-  // for testing ngRepeat
-  $scope.columns = [{
-    name: 'Dessert',
-    orderBy: 'name',
-    unit: '100g serving'
-  }, {
-    descendFirst: true,
-    name: 'Type',
-    orderBy: 'type'
-  }, {
-    name: 'Calories',
-    numeric: true,
-    orderBy: 'calories.value'
-  }, {
-    name: 'Fat',
-    numeric: true,
-    orderBy: 'fat.value',
-    unit: 'g'
-  }, /* {
-    name: 'Carbs',
-    numeric: true,
-    orderBy: 'carbs.value',
-    unit: 'g'
-  }, */ {
-    name: 'Protein',
-    numeric: true,
-    orderBy: 'protein.value',
-    trim: true,
-    unit: 'g'
-  }, /* {
-    name: 'Sodium',
-    numeric: true,
-    orderBy: 'sodium.value',
-    unit: 'mg'
-  }, {
-    name: 'Calcium',
-    numeric: true,
-    orderBy: 'calcium.value',
-    unit: '%'
-  }, */ {
-    name: 'Iron',
-    numeric: true,
-    orderBy: 'iron.value',
-    unit: '%'
-  }, {
-    name: 'Comments',
-    orderBy: 'comment'
-  }];
-
-  $http.post('/getUsers').then(function (desserts) {
-    $scope.desserts = desserts.data;
-    console.log(desserts.data);
-    // $scope.selected.push($scope.desserts.data[1]);
-
-    // $scope.selected.push({
-    //   name: 'Ice cream sandwich',
-    //   type: 'Ice cream',
-    //   calories: { value: 237.0 },
-    //   fat: { value: 9.0 },
-    //   carbs: { value: 37.0 },
-    //   protein: { value: 4.3 },
-    //   sodium: { value: 129.0 },
-    //   calcium: { value: 8.0 },
-    //   iron: { value: 1.0 }
-    // });
-
-    // $scope.selected.push({
-    //   name: 'Eclair',
-    //   type: 'Pastry',
-    //   calories: { value:  262.0 },
-    //   fat: { value: 16.0 },
-    //   carbs: { value: 24.0 },
-    //   protein: { value:  6.0 },
-    //   sodium: { value: 337.0 },
-    //   calcium: { value:  6.0 },
-    //   iron: { value: 7.0 }
-    // });
-
-    // $scope.promise = $timeout(function () {
-    //   $scope.desserts = desserts.data;
-    // }, 1000);
+  $http.post('/getProducts').then(function (products) {
+    $scope.products = products.data;
+    console.log($scope.products);
   });
 
-  $scope.editComment = function (event, dessert) {
-    event.stopPropagation();
-
-    var dialog = {
-      // messages: {
-      //   test: 'I don\'t like tests!'
-      // },
-      modelValue: dessert.comment,
-      placeholder: 'Add a comment',
-      save: function (input) {
-        dessert.comment = input.$modelValue;
-      },
-      targetEvent: event,
-      title: 'Add a comment',
-      validators: {
-        'md-maxlength': 30
-      }
-    };
-
-    var promise = $scope.options.largeEditDialog ? $mdEditDialog.large(dialog) : $mdEditDialog.small(dialog);
-
-    promise.then(function (ctrl) {
-      var input = ctrl.getInput();
-
-      input.$viewChangeListeners.push(function () {
-        input.$setValidity('test', input.$modelValue !== 'test');
-      });
-    });
-  };
 
   $scope.toggleLimitOptions = function () {
     $scope.limitOptions = $scope.limitOptions ? undefined : [5, 10, 15];
