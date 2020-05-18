@@ -1,8 +1,5 @@
 <div class="product-continer">
 
-<!-- Add new  Product -->
-
-
   <md-toolbar class="md-table-toolbar md-default" ng-show="!options.rowSelection || !selected.length">
     <div class="md-toolbar-tools">
       <span>Product Details</span>
@@ -22,7 +19,95 @@
     </div>
   </md-toolbar>
 
-  <div class="product-add" ng-hide = "IsVisible">My DIV</div>
+  <!-- Add Product Start -->
+  <div class="product-add" ng-hide = "IsVisible">
+      <md-content layout-padding>
+        <form name="productForm">
+    
+          <md-input-container class="md-block">
+            <label>Product Name</label>
+            <input md-maxlength="30" required name="product_name" ng-model="product.product_name">
+            <div ng-messages="productForm.product_name.$error">
+              <div ng-message="required">This is required.</div>
+              <div ng-message="md-maxlength">The product name must be less than 30 characters long.</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block">
+            <label>Product Description</label>
+            <textarea name="product_description" ng-model="product_description" md-maxlength="500"></textarea>
+            <div ng-messages="productForm.product_description.$error">
+              <div ng-message="md-maxlength">The product escription must be less than 500 characters long.</div>
+            </div>
+          </md-input-container>
+        
+        <div layout="row">
+            <md-input-container flex="50">
+              <label>Barcode Type</label>
+              <md-select name="barcode_type" ng-model="product.barcode_type">
+                <md-option value="code39">Code 39</md-option>
+                <md-option value="code128">Code 128</md-option>
+                <md-option value="upc">Universal Product Codes (UPC)</md-option>
+                <md-option value="ean">International Article Number (EAN)</md-option>
+                <md-option value="pdf147">PDF417</md-option>
+                <md-option value="data_matrix">Data Matrix</md-option>
+                <md-option value="qr">Quick Response (QR) Codes</md-option>
+              </md-select>
+            </md-input-container>
+    
+            <md-input-container flex="50">
+              <label>Barcode</label>
+              <input name="barcode" ng-model="product.barcode">
+            </md-input-container>
+          </div>
+          <div layout="row">
+            <md-input-container flex="50">
+              <label>Warehouse</label>
+              <md-select name="warehouse" ng-model="product.warehouse">
+                <md-option value="code39">Code 39</md-option>
+                <md-option value="code128">Code 128</md-option>
+                <md-option value="upc">Universal Product Codes (UPC)</md-option>
+                <md-option value="ean">International Article Number (EAN)</md-option>
+                <md-option value="pdf147">PDF417</md-option>
+                <md-option value="data_matrix">Data Matrix</md-option>
+                <md-option value="qr">Quick Response (QR) Codes</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container flex="50">
+              <label>Category</label>
+              <md-select name="category" ng-model="product.category">
+                <md-option value="code39">Code 39</md-option>
+                <md-option value="code128">Code 128</md-option>
+                <md-option value="upc">Universal Product Codes (UPC)</md-option>
+                <md-option value="ean">International Article Number (EAN)</md-option>
+                <md-option value="pdf147">PDF417</md-option>
+                <md-option value="data_matrix">Data Matrix</md-option>
+                <md-option value="qr">Quick Response (QR) Codes</md-option>
+              </md-select>
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex="50">
+              <label>Product SKU</label>
+              <input name="sku" ng-model="product.sku">
+            </md-input-container>
+
+            <md-input-container flex="50">
+              <label>Product Serial Number</label>
+              <input name="serial" ng-model="product.serial">
+            </md-input-container>
+          </div>
+
+          <div>
+            <md-button md-no-ink class="md-primary" type="submit">Submit</md-button>
+          </div>
+    
+        </form>
+      </md-content>
+  </div>
+  <!-- Add Product Ends -->
 
   <md-toolbar class="md-table-toolbar alternate" ng-show="options.rowSelection && selected.length">
     <div class="md-toolbar-tools">

@@ -13,7 +13,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     pageSelect: true
   };
 
-  $scope.IsVisible = true;
+  $scope.IsVisible = false;
   $scope.selected = [];
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',
@@ -79,4 +79,10 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     $scope.IsVisible = $scope.IsVisible ? false : true;
   }
     
+  /** Add New Product */
+  $scope.project = {
+    description: 'Nuclear Missile Defense System',
+    rate: 500,
+    special: true
+  };
 });
