@@ -146,21 +146,21 @@ md-list-item {
 
 .md-accordion .dataContent {
   background: #F2F2F2;
-  height:0px;
-  overflow:hidden;
-  -webkit-transition: .3s all ease-out;
+  height: 0px;
+  overflow: hidden;
   transition: .3s all ease-out;
+  -webkit-transition: .3s all ease-out;
 }
 
 .md-accordion .activeContent {
-  height:auto;
-  padding:0px;
-  display:block;
+  height: auto;
+  padding-top: 0px;
+  display: block;
 }
 
 .md-accordion md-toolbar{
   cursor:pointer;
-  border-bottom:1px solid rgb(63,107,181)
+  border-bottom: 1px solid rgb(63,107,181)
 }
 md-list-item._md-button-wrap>div.md-button:first-child {
   padding: 0 10px;
@@ -174,7 +174,7 @@ md-list-item._md-button-wrap>div.md-button:first-child {
   background-color: rgba(255, 0, 0, 0.042);
   height: 400px;
   border: 1px solid rgba(0,0,0,0.07);
-  transition: all linear 0.5s;
+  transition: .3s all ease-out;
 }
 .ng-hide {
   height: 0;
