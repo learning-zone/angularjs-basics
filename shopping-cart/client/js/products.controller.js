@@ -13,7 +13,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     pageSelect: true
   };
 
-  $scope.IsVisible = false;
+  $scope.IsVisible = true;
   $scope.selected = [];
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',

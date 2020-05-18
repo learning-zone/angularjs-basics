@@ -171,6 +171,11 @@ md-list-item._md-button-wrap>div.md-button:first-child {
   border-radius: 4px;
 }
 .product-add {
-  height: 200px;
+  background-color: rgba(255, 0, 0, 0.042);
+  height: 400px;
   border: 1px solid rgba(0,0,0,0.07);
+  transition: all linear 0.5s;
+}
+.ng-hide {
+  height: 0;
 }
