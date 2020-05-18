@@ -165,3 +165,8 @@ md-list-item {
 md-list-item._md-button-wrap>div.md-button:first-child {
   padding: 0 10px;
 }
+
+.product-continer {
+  padding: 6px 2px 0 0;
+  border-radius: 4px;
+}
