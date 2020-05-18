@@ -1,9 +1,15 @@
 <div class="product-continer">
 
+<!-- Add new  Product -->
+
+
   <md-toolbar class="md-table-toolbar md-default" ng-show="!options.rowSelection || !selected.length">
     <div class="md-toolbar-tools">
-      <span>Products Details</span>
+      <span>Product Details</span>
       <span flex></span>
+      <md-button class="md-icon-button" ng-click="addProduct()">
+        <md-icon>playlist_add</md-icon>
+      </md-button>
       <md-button class="md-icon-button" ng-click="loadStuff()">
         <md-icon>refresh</md-icon>
       </md-button>
@@ -15,7 +21,9 @@
       </md-button>
     </div>
   </md-toolbar>
-  
+
+  <div class="product-add" ng-show = "IsVisible">My DIV</div>
+
   <md-toolbar class="md-table-toolbar alternate" ng-show="options.rowSelection && selected.length">
     <div class="md-toolbar-tools">
       <span>{{selected.length}} {{selected.length > 1 ? 'items' : 'item'}} selected</span>
@@ -59,4 +67,5 @@
   </md-table-container>
   
   <data-md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{products.products.count}}" md-on-paginate="onPaginate" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"></data-md-table-pagination>
+
 </div>

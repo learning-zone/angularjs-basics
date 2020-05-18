@@ -13,6 +13,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     pageSelect: true
   };
 
+  $scope.IsVisible = false;
   $scope.selected = [];
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',
@@ -73,5 +74,9 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
 
     }, 2000);
   };
+
+  $scope.addProduct = function() {
+    $scope.IsVisible = $scope.IsVisible ? false : true;
+  }
     
 });
