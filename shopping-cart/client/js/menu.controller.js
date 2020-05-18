@@ -4,6 +4,7 @@ app.controller('menuController', function ($scope, $routeParams, $location, $mdS
     
     console.log('menuController');
     $scope.project_name = 'Shopping Cart';
+    $scope.currentTheme = "green";
       
     $scope.$on('$viewContentLoaded', () => { 
         document.getElementById('pages').classList.add('pages-sidenav');

@@ -6,10 +6,19 @@ const app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngAria', 'md.data.ta
 * Theme Settings
 */
 app.config(['$mdThemingProvider', function ($mdThemingProvider) {
-    'use strict';
+    $mdThemingProvider.theme("blue")
+        .primaryPalette("blue")
+        .accentPalette("red");
+
     $mdThemingProvider.theme("green")
         .primaryPalette("teal")
         .accentPalette("red");
+    
+    $mdThemingProvider.theme("altTheme")
+        .primaryPalette("purple")
+        .accentPalette("green");
+
+    $mdThemingProvider.alwaysWatchTheme(true);
 }]);
 
 /*
