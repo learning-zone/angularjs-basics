@@ -156,6 +156,7 @@ md-list-item {
   height: auto;
   padding-top: 0px;
   display: block;
+  transition: .3s all ease-out;
 }
 
 .md-accordion md-toolbar{
