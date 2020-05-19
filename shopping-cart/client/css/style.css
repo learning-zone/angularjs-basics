@@ -172,7 +172,7 @@ md-list-item._md-button-wrap>div.md-button:first-child {
   border-radius: 4px;
 }
 .product-add {
-  height: 800px;
+  height: auto;
   border: 1px solid rgba(0,0,0,0.07);
   transition: .3s all ease-out;
 }
@@ -186,4 +186,11 @@ md-list-item._md-button-wrap>div.md-button:first-child {
 .inputdemoErrors md-input-container > p {
   font-size: 0.8em;
   text-align: left;
-  width: 100%; }
+  width: 100%; 
+}
+
+.md-top-menu {
+  overflow: auto !important;
+  position: sticky;
+  position: -webkit-sticky;
+}

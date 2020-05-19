@@ -29,7 +29,7 @@
             <input md-maxlength="30" required name="product_name" ng-model="product.product_name">
             <div ng-messages="productForm.product_name.$error">
               <div ng-message="required">This is required.</div>
-              <div ng-message="md-maxlength">The product name must be less than 30 characters long.</div>
+              <!--<div ng-message="md-maxlength">The product name must be less than 30 characters long.</div>-->
             </div>
           </md-input-container>
 
@@ -96,7 +96,43 @@
 
             <md-input-container flex="50">
               <label>Product Serial Number</label>
-              <input name="serial" ng-model="product.serial">
+              <input name="serial_number" ng-model="product.serial_number">
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex="50">
+              <label>Product Quantity</label>
+              <input name="quantity" ng-model="product.quantity">
+            </md-input-container>
+
+            <md-input-container flex="50">
+              <label>Reorder Stock Amount</label>
+              <input name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex="50">
+              <label>Product Purchase Price</label>
+              <input name="purchase_price" ng-model="product.purchase_price">
+            </md-input-container>
+
+            <md-input-container flex="50">
+              <label>Product Selling Price</label>
+              <input name="selling_price" ng-model="product.selling_price">
+            </md-input-container>
+          </div>
+
+          <div layout="row">
+            <md-input-container flex="50">
+              <label>Expiration Date</label>
+              <input name="expiration_date" ng-model="product.expiration_date">
+            </md-input-container>
+
+            <md-input-container flex="50">
+              <label>Product Image</label>
+              <input name="product_image" ng-model="product.product_image">
             </md-input-container>
           </div>
 
