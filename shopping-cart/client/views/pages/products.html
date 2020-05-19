@@ -127,12 +127,20 @@
           <div layout="row">
             <md-input-container flex="50">
               <label>Expiration Date</label>
-              <input name="expiration_date" ng-model="product.expiration_date">
+              <md-datepicker name="expiration_date" ng-model="product.expiration_date"></md-datepicker>
             </md-input-container>
 
-            <md-input-container flex="50">
-              <label>Product Image</label>
-              <input name="product_image" ng-model="product.product_image">
+            <md-input-container flex="25">
+              <div ng-show="!$flow.files.length">
+                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"/>
+              </div>
+              <div ng-show="$flow.files.length">
+                <img flow-img="$flow.files[0]"/>
+              </div>
+             <div>
+              <input type="file" class="ng-hide" id="input-file-id"  />
+              <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
+             </div>
             </md-input-container>
           </div>
 
