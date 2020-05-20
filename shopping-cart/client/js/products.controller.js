@@ -85,4 +85,15 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     rate: 500,
     special: true
   };
+
+  // Image Preview
+  $scope.SelectFile = function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $scope.PreviewImage = e.target.result;
+        $scope.$apply();
+    };
+
+    reader.readAsDataURL(e.target.files[0]);
+  };
 });

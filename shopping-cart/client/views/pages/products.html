@@ -131,16 +131,9 @@
             </md-input-container>
 
             <md-input-container flex="25">
-              <div ng-show="!$flow.files.length">
-                <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image"/>
-              </div>
-              <div ng-show="$flow.files.length">
-                <img flow-img="$flow.files[0]"/>
-              </div>
-             <div>
-              <input type="file" class="ng-hide" id="input-file-id"  />
-              <label for="input-file-id" class="md-button md-raised md-primary">Choose Files</label>
-             </div>
+              <input type="file" onchange="angular.element(this).scope().SelectFile(event)" />
+              <hr />
+              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px" />
             </md-input-container>
           </div>
 

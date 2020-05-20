@@ -190,3 +190,15 @@ md-list-item._md-button-wrap>div.md-button:first-child {
   text-align: left;
   width: 100%; 
 }
+#input-file-id {
+  opacity: 1;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(0,0,0,.14);
+  background-color: rgba(0,0,0,.02);
+  
+}
+
+#input-file-id:before {
+  content: '';
+}
