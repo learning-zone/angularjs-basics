@@ -96,4 +96,18 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
 
     reader.readAsDataURL(e.target.files[0]);
   };
+
+  // Add Product
+  $scope.submit= function(){
+
+    console.log("Form Data: "+ JSON.stringify($scope.product));
+    $http({
+      url: '/addProducts',
+      method: 'POST',
+      data: $scope.product
+    }).then(function (httpResponse) {
+        console.log('response:', httpResponse);
+    })
+ 
+  }
 });
