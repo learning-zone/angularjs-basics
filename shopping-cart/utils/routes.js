@@ -158,6 +158,34 @@ class Routes{
 				}
 	        }
 		});
+
+		// Add Product
+		this.app.post('/addProducts',async (request, response, next) => {
+			
+			const userId = request.body.userId;
+			const toUserId = request.body.toUserId;
+			const params = request.body;
+
+			console.log("Add Product: "+params); 
+
+			const products = {}			
+			if (userId === '') {
+				products.error = true;
+	            products.message = `userId cant be empty.`;
+	            response.status(200).json(products);
+			}else{
+				const result = await product.addProducts( params );
+				if (result ===  null) {
+					products.error = true;
+					products.message = `Internal Server error.`;
+					response.status(500).json(products);
+				}else{
+					products.error = false;
+					products.products = result;
+					response.status(200).json(products);
+				}
+	        }
+		});
 		
 		this.app.get('*',(request,response) =>{
 			response.sendFile(path.join(__dirname + '../../client/views/index.html'));
