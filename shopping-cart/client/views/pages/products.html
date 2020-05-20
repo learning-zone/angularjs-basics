@@ -22,7 +22,7 @@
   <!-- Add Product Start -->
   <div class="product-add" ng-hide = "IsVisible">
       <md-content layout-padding>
-        <form name="productForm">
+        <form name="productForm" method="POST" enctype="multipart/form-data">
     
           <md-input-container class="md-block">
             <label>Product Name</label>
@@ -35,7 +35,7 @@
 
           <md-input-container class="md-block">
             <label>Product Description</label>
-            <textarea name="product_description" ng-model="product_description" md-maxlength="500"></textarea>
+            <textarea name="product_description" ng-model="product.product_description" md-maxlength="500"></textarea>
             <div ng-messages="productForm.product_description.$error">
               <div ng-message="md-maxlength">The product escription must be less than 500 characters long.</div>
             </div>
@@ -91,54 +91,54 @@
           <div layout="row">
             <md-input-container flex="50">
               <label>Product SKU</label>
-              <input name="sku" ng-model="product.sku">
+              <input type="text" name="sku" ng-model="product.sku">
             </md-input-container>
 
             <md-input-container flex="50">
               <label>Product Serial Number</label>
-              <input name="serial_number" ng-model="product.serial_number">
+              <input type="text" name="serial_number" ng-model="product.serial_number">
             </md-input-container>
           </div>
 
           <div layout="row">
             <md-input-container flex="50">
               <label>Product Quantity</label>
-              <input name="quantity" ng-model="product.quantity">
+              <input type="number" name="quantity" ng-model="product.quantity">
             </md-input-container>
 
             <md-input-container flex="50">
               <label>Reorder Stock Amount</label>
-              <input name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
+              <input type="number" name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
             </md-input-container>
           </div>
 
           <div layout="row">
             <md-input-container flex="50">
               <label>Product Purchase Price</label>
-              <input name="purchase_price" ng-model="product.purchase_price">
+              <input type="number" name="purchase_price" ng-model="product.purchase_price">
             </md-input-container>
 
             <md-input-container flex="50">
               <label>Product Selling Price</label>
-              <input name="selling_price" ng-model="product.selling_price">
+              <input type="number" name="selling_price" ng-model="product.selling_price">
             </md-input-container>
           </div>
 
           <div layout="row">
             <md-input-container flex="50">
               <label>Expiration Date</label>
-              <md-datepicker name="expiration_date" ng-model="product.expiration_date"></md-datepicker>
+              <md-datepicker type="text" name="expiration_date" ng-model="product.expiration_date"></md-datepicker>
             </md-input-container>
 
             <md-input-container flex="25">
               <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" />
               <hr />
-              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px" />
+              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px" ng-model="product.product_image" />
             </md-input-container>
           </div>
 
           <div>
-            <md-button md-no-ink class="md-raised md-primary" type="submit">Submit</md-button>
+            <md-button md-no-ink class="md-raised md-primary" type="submit" ng-click="submit()">Submit</md-button>
           </div>
     
         </form>
