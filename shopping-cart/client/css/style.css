@@ -202,3 +202,27 @@ md-list-item._md-button-wrap>div.md-button:first-child {
 #input-file-id:before {
   content: '';
 }
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Browse';
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 8px 26px 5px 26px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-size: 14px;
+  color: #999;
+}
+.custom-file-input:hover::before {
+  border-color: #999;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
