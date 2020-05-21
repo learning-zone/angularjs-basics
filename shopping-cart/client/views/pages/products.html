@@ -64,13 +64,10 @@
             <md-input-container flex="50">
               <label>Warehouse</label>
               <md-select name="warehouse" ng-model="product.warehouse">
-                <md-option value="code39">Code 39</md-option>
-                <md-option value="code128">Code 128</md-option>
-                <md-option value="upc">Universal Product Codes (UPC)</md-option>
-                <md-option value="ean">International Article Number (EAN)</md-option>
-                <md-option value="pdf147">PDF417</md-option>
-                <md-option value="data_matrix">Data Matrix</md-option>
-                <md-option value="qr">Quick Response (QR) Codes</md-option>
+                <md-option value="Delhi">Delhi</md-option>
+                <md-option value="Mumbai">Mumbai</md-option>
+                <md-option value="Kolkata">Kolkata</md-option>
+                <md-option value="Chennai">Chennai</md-option>
               </md-select>
             </md-input-container>
 
@@ -127,9 +124,9 @@
             </md-input-container>
 
             <md-input-container flex="25">
-              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" />
+              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" ng-model="product.product_image" />
               <hr />
-              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px" ng-model="product.product_image" />
+              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px"  />
             </md-input-container>
           </div>
 
