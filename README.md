@@ -1,4 +1,4 @@
-## AngularJS ( v1.5+ ) Interview Questions with Example
+## AngularJS ( v1.7.x ) Interview Questions with Example
 
 ### 1. Basics 
  - What is MVC?
