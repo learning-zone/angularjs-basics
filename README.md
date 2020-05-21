@@ -1,4 +1,4 @@
-# AngularJS Interview Questions 
+# AngularJS ( v1.5+ ) Interview Questions with Example
 
 ## 1. Basics 
  - What is MVC?
@@ -31,7 +31,7 @@
 
 <br/>
 
-#### Q. Why to use AngularJS?
+#### Q. ***Why to use AngularJS?***
 
 There are following reasons to choose AngularJS as a web development framework:
 
@@ -51,7 +51,7 @@ For example, it provides $http service to communicate with REST service.
 8. Also, AngularJS is mature community to help you. It has widely support over the internet.
 
 
-#### Q. What are the advantage of AngularJS?
+#### Q. ***What are the advantage of AngularJS?***
 
 There are following advantages of AngularJS:
 
@@ -62,14 +62,14 @@ There are following advantages of AngularJS:
 5. **Compatibility** - AngularJS is based on JavaScript which makes it easier to integrate with any other JavaScript library and runnable on browsers like IE, Opera, FF, Safari, Chrome etc.
 6. **Testing** - AngularJS is designed to be testable so that you can test your AngularJS app components as easy as possible. It has dependency injection at its core, which makes it easy to test.
 
-#### Q. What is jQLite/jQuery Lite?
+#### Q. ***What is jQLite/jQuery Lite?***
 jQLite is a subset of jQuery that is built directly into AngularJS. jQLite provides you all the useful features of jQuery. In fact it provides you limited features or functions of jQuery.
 
-#### Q. How to access jQLite?
+#### Q. ***How to access jQLite?***
 jQuery lite or the full jQuery library if available, can be accessed via the AngularJS code by using the element(Q. function in AngularJS. Basically, ```angular.element()``` is an alias for the jQuery function.
 
 
-#### Q. What are the AngularJS features?
+#### Q. ***What are the AngularJS features?***
 
 The features of AngularJS are listed below:
 
@@ -88,20 +88,20 @@ The features of AngularJS are listed below:
 13. Testing
 
 
-#### Q. When dependent modules of a module are loaded?
+#### Q. ***When dependent modules of a module are loaded?***
 
 A module might have dependencies on other modules. The dependent modules are loaded by angular
 before the requiring module is loaded.
 In other words the configuration blocks of the dependent modules execute before the configuration blocks of the requiring module. The same is true for the run blocks. Each module can only be loaded once, even if multiple other modules require it.
 
 
-#### Q. What is Angular’s prefixes $ and $$?
+#### Q. ***What is Angular’s prefixes $ and $$?***
 
 To prevent accidental name collisions with your code, Angular prefixes names of public objects with $ and
 names of private objects with $$. So, do not use the $ or $$ prefix in your code.
 
 
-#### Q. What are Filters in AngularJS?
+#### Q. ***What are Filters in AngularJS?***
 
 Filters are used to format data before displaying it to the user. They can be used in view templates, controllers, services and directives. There are some built-in filters provided by AngularJS like as Currency, Date, Number, OrderBy, Lowercase, Uppercase etc. You can also create your own filters.
 
@@ -109,7 +109,7 @@ Filter Syntax
 ```{{ expression | filter}}```
 
 
-#### Q. What are Directives in AngularJS?
+#### Q. ***What are Directives in AngularJS?***
 
 AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or CSS classes) and supporting JavaScript code. The JavaScript directive code defines the template data and behaviors of the HTML elements.
 
@@ -118,7 +118,7 @@ AngularJS directives are used to extend the HTML vocabulary i.e. they decorate h
 There are some built-in directives provided by AngularJS like as ng-app, ng-controller, ng-repeat, ng-model etc.
 
 
-#### Q. What is the role of ng-app, ng-init and ng-model directives?
+#### Q. ***What is the role of ng-app, ng-init and ng-model directives?***
 
 The main role of these directives is explained as:
 
@@ -127,7 +127,7 @@ The main role of these directives is explained as:
 - ```ng-model``` - Bind the html elem
 
 
-#### Q. What are different ways to invoke a directive?
+#### Q. ***What are different ways to invoke a directive?***
 
 There are four methods to invoke a directive in your angular app which are equivalent.
 
@@ -139,7 +139,7 @@ There are four methods to invoke a directive in your angular app which are equiv
 | As a comment    |    ```<!-- directive: my-directive expression -->```    |
 
 
-#### Q. What is restrict option in directive?
+#### Q. ***What is restrict option in directive?***
 
 The restrict option in angular directive, is used to specify how a directive will be invoked in your angular app i.e. as an attribute, class, element or comment.
 
@@ -152,12 +152,12 @@ There are four valid options for restrict:
 'M' (Comment)- <!-- directive: my-directive expression -->
 ```
 
-#### Q. Can you define multiple restrict options on a directive?
+#### Q. ***Can you define multiple restrict options on a directive?***
 
 You can also specify multiple restrict options to support more than one methods of directive invocation as an element or an attribute. Make sure all are specified in the restrict keyword as: ```restrict: 'EA'``` .
 
 
-#### Q. What is auto bootstrap process in AngularJS?
+#### Q. ***What is auto bootstrap process in AngularJS?***
 
 Angular initializes automatically upon ```DOMContentLoaded``` event or when the angular.js script is downloaded to the browser and the ```document.readyState``` is set to ```complete```. At this point AngularJS looks for the ```ng-app``` directive which is the root of angular app compilation and tells about AngularJS part within DOM. When the ```ng-app``` directive is found then Angular will:
 
@@ -182,7 +182,7 @@ var app = angular.module('myApp', []); app.controller('Ctrl', function ($scope) 
 </html>
 ```
 
-#### Q. What is manual bootstrap process in AngularJS?
+#### Q. ***What is manual bootstrap process in AngularJS?***
 
 You can manually initialized your angular app by using **angular.bootstrap()** function. This function takes the modules as parameters and should be called within **angular.element(document).ready()** function. The **angular.element(document).ready()** function is fired when the DOM is ready for manipulation.
 
@@ -212,14 +212,14 @@ Note:
  - Define modules, controller, services etc. before manually bootstrapping your app as defined in above example.
 
 
-#### Q. What is scope in AngularJS?
+#### Q. ***What is scope in AngularJS?***
 
 Scope is a JavaScript object that refers to the application model. It acts as a context for evaluating angular expressions. Basically, it acts as glue between controller and view.
 
 Scopes are hierarchical in nature and follow the DOM structure of your AngularJS app. AngularJS has two scope objects: **$rootScope** and **$scope**.
 
 
-#### Q. What is $scope and $rootScope?
+#### Q. ***What is $scope and $rootScope?***
 
 **$scope** - A $scope is a JavaScript object which is used for communication between controller and view. Basically, $scope binds a view (DOM element) to the model and functions defined in a controller.
 
@@ -253,7 +253,7 @@ For example, suppose you have two controllers: Ctrl1 and Ctrl2 as given below:
 </html>
 ```
 
-#### Q. What is scope hierarchy?
+#### Q. ***What is scope hierarchy?***
 
 The **$scope** object used by views in AngularJS are organized into a hierarchy. There is a root scope, and the **$rootScope** can has one or more child scopes. Each controller has its own **$scope** (which is a child of the **$rootScope**), so whatever variables you create on $scope within controller, these variables are accessible by the view based on this controller.
 
@@ -311,7 +311,7 @@ For example, suppose you have two controllers: ParentController and ChildControl
 </html>
 ```
 
-#### Q. What is the difference between $scope and scope?
+#### Q. ***What is the difference between $scope and scope?***
 
 The module factory methods like controller, directive, factory, filter, service, animation, config and run receive arguments through dependency injection (DI). In case of DI, you inject the **scope object** with the dollar prefix i.e. **$scope**. The reason is the **injected arguments** must match to the names of **injectable objects** followed by dollar ($) prefix.
 **For example**, you can inject the scope and element objects into a controller as given below:
@@ -348,7 +348,7 @@ module.directive("myDirective", function () {
 In short, in case of DI the **scope object** is received as **$scope** while in case of non-DI **scope object** is received as **scope** or with any name.
 
 
-#### Q. How AngularJS is compiled?
+#### Q. ***How AngularJS is compiled?***
 
 Angular's HTML compiler allows you to teach the browser new HTML syntax. The compiler allows you to attach new behaviors or attributes to any HTML element. Angular calls these behaviors as directives.
 AngularJS compilation process takes place in the web browser; no server side or pre-compilation step is involved.
@@ -359,13 +359,13 @@ Angular uses $compiler service to compile your angular HTML page. The angular' c
 
 The concept of compile and link comes from C language, where you first compile the code and then link it to actually execute it. The process is very much similar in AngularJS as well.
 
-#### Q. How AngularJS compilation is different from other JavaScript frameworks?
+#### Q. ***How AngularJS compilation is different from other JavaScript frameworks?***
 
 If you have worked on templates in other java script framework/library like backbone and jQuery, they process the template as a string and result as a string. You have to dumped this result string into the DOM where you wanted it with **innerHTML()**.
 
 AngularJS process the template in another way. It directly works on HTML DOM rather than strings and manipulates it as required. It uses two way data-binding between model and view to sync your data.
 
-#### Q. How Directives are compiled?
+#### Q. ***How Directives are compiled?***
 
 It is important to note that Angular operates on DOM nodes rather than strings. Usually, you don't notice
 this because when an html page loads, the web browser parses HTML into the DOM automatically. HTML compilation happens in three phases:
@@ -391,7 +391,7 @@ var element = linkFn(scope);
 parent.appendChild(element);
 ```
 
-#### Q. What are Compile, Pre and Post linking in AngularJS?
+#### Q. ***What are Compile, Pre and Post linking in AngularJS?***
 
 * **Compile** – This compiles an HTML string or DOM into a template and produces a template function, which
 can then be used to link scope and the template together.
@@ -464,24 +464,24 @@ level-Two: post link
 level-One: post link
 ```
 		
-#### Q. What is the role of ng-app, ng-init and ng-model directives?
+#### Q. ***What is the role of ng-app, ng-init and ng-model directives?***
 * **ng-app** - Initialize the angular app.  
 * **ng-init** - Initialize the angular app data.  
 * **ng-model** - Bind the html element  
 
 
-#### Q. What are the directives in angular JS ?
+#### Q. ***What are the directives in angular JS ?***
 AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or
 CSS classes) and supporting JavaScript code.The JavaScript directive code defines the template data and
 behaviors of the HTML elements.
 
-#### Q. What are different ways to invoke a directive?
+#### Q. ***What are different ways to invoke a directive?***
 Attribute ('A')		<span my-directive></span>
 Class('C') 		<span class="my-directive: expression;"></span>
 Element ('E')	 	<my-directive></my-directive>
 Comment	('M')		<!-- directive: my-directive expression -->
 
-#### Q. What is difference between $scope and scope ?
+#### Q. ***What is difference between $scope and scope ?***
 $scope - In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is 
 the injected arguments must match to the names of injectable objects followed by dollar ($) prefix .
 	
@@ -490,7 +490,7 @@ you just pass the scope object without using dollar prefix i.e. scope. The reaso
 are received by its caller.
 
 
-#### Q. What is difference between services and factory ?
+#### Q. ***What is difference between services and factory ?***
 Service - It is just a function for the business layer of the application . It is act as a constauctor function
 and invoked once at a run time with new keyword.
 	
@@ -499,7 +499,7 @@ A factory is a design pattern . Factory create objetcs such as new class instanc
 return functions and closures or even just return a simply string.
 
 
-#### Q. What are the basics steps to unit test an AngulatJS filter?
+#### Q. ***What are the basics steps to unit test an AngulatJS filter?***
 1. Inject the module that contains the filter.
 2. Provide any mocks that the filter relies on.
 3. Get an instance of the filter using $filter('yourFilterName').
@@ -510,7 +510,7 @@ Dependency injection is a powerful software design pattern that Angular employs 
 This question is useful since it can give you a feel for how familiar the candidate is with automated testing (TDD, BDD, E2E), as well as open up a conversation about approaches to code quality.
 
 
-#### Q. What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?
+#### Q. ***What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?***
 
  To reduce memory consumption and improve performance it is a good idea to limit the number of watches on a page to 2,000. A utility called `ng-stats` can help track your watch count and digest cycles.
 
@@ -520,7 +520,7 @@ Jank happens when your application cannot keep up with the screen refresh rate. 
 
 This question is valuable as it gives insight into how the candidate debugs runtime issues while creating a discussion about performance and optimization.
 
-#### Q. How do you share data between controllers?
+#### Q. ***How do you share data between controllers?***
 
 Create an AngularJS service that will hold the data and inject it inside of the controllers.
 
@@ -532,55 +532,55 @@ However, there are couple of other ways to implement data sharing between contro
 The methods above are all correct, but are not the most efficient and easy to test.
 There is a good video explanation on egghead.io.
 
-#### Q. What is the difference between ng-show/ng-hide and ng-if directives?
+#### Q. ***What is the difference between ng-show/ng-hide and ng-if directives?***
 ng-show/ng-hide will always insert the DOM element, but will display/hide it based on the condition. ng-if will not insert the DOM element until the condition is not fulfilled.
 
 ng-if is better when we needed the DOM to be loaded conditionally, as it will help load page bit faster compared to ng-show/ng-hide.
 
 We only need to keep in mind what the difference between these directives is, so deciding which one to use totally depends on the task requirements.
 
-#### Q. What is a digest cycle in AngularJS?
+#### Q. ***What is a digest cycle in AngularJS?***
 In each digest cycle Angular compares the old and the new version of the scope model values. The digest cycle is triggered automatically. We can also use $apply() if we want to trigger the digest cycle manually.
 
 For more information, take a look in the ng-book explanation: The Digest Loop and $apply
 
-#### Q. Where should we implement the DOM manipulation in AngularJS?
+#### Q. ***Where should we implement the DOM manipulation in AngularJS?***
 In the directives. DOM Manipulations should not exist in controllers, services or anywhere else but in directives.
 
-#### Q. Is it a good or bad practice to use AngularJS together with jQuery?
+#### Q. ***Is it a good or bad practice to use AngularJS together with jQuery?***
 It is definitely a bad practice. We need to stay away from jQuery and try to realize the solution with an AngularJS approach. jQuery takes a traditional imperative approach to manipulating the DOM, and in an imperative approach, it is up to the programmer to express the individual steps leading up to the desired outcome.
 
 AngularJS, however, takes a declarative approach to DOM manipulation. Here, instead of worrying about all of the step by step details regarding how to do the desired outcome, we are just declaring what we want and AngularJS worries about the rest, taking care of everything for us.
 
-#### Q. If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?
+#### Q. ***If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?***
 Changing .directive to .component to adapt to the new Angular 1.5 components
 
-#### Q. How would you specify that a scope variable should have one-time binding only?
+#### Q. ***How would you specify that a scope variable should have one-time binding only?***
 By using “::” in front of it. This allows the check if the candidate is aware of the available variable bindings in AngularJS.
 
-#### Q. What is the difference between one-way binding and two-way binding?
+#### Q. ***What is the difference between one-way binding and two-way binding?***
 
 – One way binding implies that the scope variable in the html will be set to the first value its model is bound to (i.e. assigned to)
 
 – Two way binding implies that the scope variable will change it’s value everytime its model is assigned to a different value
 
-#### Q. Explain how `$scope.$apply()` works?
+#### Q. ***Explain how `$scope.$apply()` works?***
 
 It will re-evaluates all the declared ng-models and applies the change to any that have been altered (i.e. assigned to a new value)
 
 Explanation: $scope.$apply() is one of the core angular functions that should never be used explicitly, it forces the angular engine to run on all the watched variables and all external variables and apply the changes on their values
 
-#### Q. What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
+#### Q. ***What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?***
 
 The ngIf Directive, when applied to an element, will remove that element from the DOM if it’s condition is false.
 
-#### Q. What makes the `angular.copy()` method so powerful?
+#### Q. ***What makes the `angular.copy()` method so powerful?***
 
 It creates a deep copy of the variable.
 
 A deep copy of a variable means it doesn’t point to the same memory reference as that variable. Usually assigning one variable to another creates a “shallow copy”, which makes the two variables point to the same memory reference. Therefore if we change one, the other changes as well
 
-#### Q. How would you make an Angular service return a promise? Write a code snippet as an example?
+#### Q. ***How would you make an Angular service return a promise? Write a code snippet as an example?***
 
 To add promise functionality to a service, we inject the “$q” dependency in the service, and then use it like so:
 
@@ -602,7 +602,7 @@ angular.factory('testService', function($q){
 ```
 The $q library is a helper provider that implements promises and deferred objects to enable asynchronous functionality
 
-#### Q. What is the role of services in AngularJS and name any services made available by default?
+#### Q. ***What is the role of services in AngularJS and name any services made available by default?***
 
 – AngularJS Services are objects that provide separation of concerns to an AngularJS app.
 – AngularJS Services can be created using a factory method or a service method.
@@ -622,7 +622,7 @@ AngularJS Services help create reusable components.
 A Service can be created either using the service() method or the factory() method.
 A typical service can be injected into another service or into an AngularJS Controller.
 
-#### Q. When creating a directive, it can be used in several different ways in the view. Which ways for using a directive  do you know? How do you define the way your directive will be used?
+#### Q. ***When creating a directive, it can be used in several different ways in the view. Which ways for using a directive  do you know? How do you define the way your directive will be used?***
 
 When you create a directive, it can be used as an attribute, element or class name. To define which way to use, you need to set the restrict option in your directive declaration.
 
@@ -638,14 +638,14 @@ These restrictions can all be combined as needed:
 
 For more information, feel free to check out the AngularJS documentation.
 
-#### Q. When should you use an attribute Vs an element?
+#### Q. ***When should you use an attribute Vs an element?***
 
 Use an element when you are creating a component that is in control of the template. Use an attribute when you are decorating an existing element with new functionality.
 
 This topic is important so developers can understand the several ways a directive can be used inside a view and when to use each way.
 
 
-#### Q. How do you reset a `$timeout, $interval()`, and disable a `$watch()`?
+#### Q. ***How do you reset a `$timeout, $interval()`, and disable a `$watch()`?***
 
 To reset a timeout and/or $interval, assign the result of the function to a variable and then call the .cancel() function.
 
@@ -665,19 +665,19 @@ var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
 		deregisterWatchFn();
 });		
 ```
-#### Q. Explain what is a `$scope` in AngularJS is?
+#### Q. ***Explain what is a `$scope` in AngularJS is?***
 
 Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events. Scopes are objects that refer to the model. They act as glue between controller and view.
 
 This question is important as it will judge a persons knowledge about a $scope object, and it is one of the most important concepts in AngularJS. Scope acts like a bridge between view and model.
 
-#### Q. What are Directives?
+#### Q. ***What are Directives?***
 
 Directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS’s HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children. Angular comes with a set of these directives built-in, like ngBind, ngModel, and ngClass. Much like you create controllers and services, you can create your own directives for Angular to use. When Angular bootstraps your application, the HTML compiler traverses the DOM matching directives against the DOM elements.
 
 This question is important because directives define the UI while defining a single page app. You need to be very clear about how to create a new custom directive or use the existing ones already pre-build in AngularJS.
 
-#### Q. What is DDO `Directive Difinition Object`?
+#### Q. ***What is DDO `Directive Difinition Object`?***
 
 DDO is an object used while creating a custome directive. A standard DDO object has following parameters.
 ```javascript
@@ -712,27 +712,27 @@ var directiveDefinitionObject = {
 };
 ```
 
-#### Q. What is a singleton pattern and where we can find it in AngularJS?
+#### Q. ***What is a singleton pattern and where we can find it in AngularJS?***
 
 Is a great pattern that restricts the use of a class more than once. We can find singleton pattern in angular in dependency injection and in the services.
 
 In a sense, if you do 2 times ‘new Object()‘ without this pattern, you will be alocating 2 pieces of memory for the same object. With singleton pattern, if the object exists, you reuse it.
 
 
-#### Q. What is an interceptor? 
+#### Q. ***What is an interceptor?*** 
 
 An interceptor is a middleware code where all the $http requests go through. The interceptor is a factory that are registered in `$httpProvider`.
 
-#### Q. What are common uses of an interceptor in AngularJS?
+#### Q. ***What are common uses of an interceptor in AngularJS?***
 
 There are two types of requests that go through the interceptor, request and response (with requestError and responseError respectively). This piece of code is very useful for error handling, authentication or middleware in all the requests/responses.
 
 
-#### Q. How would you programatically change or adapt the template of a directive before it is executed and transformed?
+#### Q. ***How would you programatically change or adapt the template of a directive before it is executed and transformed?***
 
 You would use the compile function. The compile function gives you access to the directive’s template before transclusion occurs and templates are transformed, so changes can safely be made to DOM elements. This is very useful for cases where the DOM needs to be constructed based on runtime directive parameters.
 
-#### Q. How would you validate a text input field for a twitter username, including the @ symbol?
+#### Q. ***How would you validate a text input field for a twitter username, including the @ symbol?***
 
 You would use the ngPattern directive to perform a regex match that matches Twitter usernames. The same principal can be applied to validating phone numbers, serial numbers, barcodes, zip codes and any other text input.
 Note: This directive is also added when the plain pattern attribute is used, with two differences:
@@ -760,7 +760,7 @@ The ngPattern attribute must be an expression, while the pattern value must be i
 </div>
 ```
 
-#### Q. How would you implement application-wide exception handling in your Angular app?
+#### Q. ***How would you implement application-wide exception handling in your Angular app?***
 
 Angular has a built-in error handler service called $exceptionHandler which can easily be overriden as seen below:
 ```javascript
@@ -776,7 +776,7 @@ Angular has a built-in error handler service called $exceptionHandler which can 
 ```
 This is very useful for sending errors to third party error logging services or helpdesk applications. Errors trapped inside of event callbacks are not propagated to this handler, but can manually be relayed to this handler by calling $exceptionHandler(e) from within a try catch block.
 
-#### Q. How do you hide an HTML element via a button click in AngularJS?
+#### Q. ***How do you hide an HTML element via a button click in AngularJS?***
 
 You can do this by using the `ng-hide` directive in conjunction with a controller we can hide an HTML element on button click.
 ```html
@@ -792,7 +792,7 @@ function MyCtrl($scope) {
 	}
 }
 ```
-#### Q. How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email.
+#### Q. ***How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email?***
 
 We can achieve this using $watch function in our controller.
 ```javascript
@@ -806,7 +806,7 @@ function MyCtrl($scope) {
 	});
 }	
 ```
-#### Q. How do you disable a button depending on a checkbox’s state?
+#### Q. ***How do you disable a button depending on a checkbox’s state?***
 
 We can use the ng-disabled directive and bind its condition to the checkbox’s state.
 ```html
@@ -815,46 +815,46 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 	<button ng-disabled="checked">Select me</button>
 </body>
 ```
-#### Q. In angular, what does the calls to the HTTP methods  return ?
+#### Q. ***In angular, what does the calls to the HTTP methods  return ?***
 
 In angular, calls to the HTTP methods actually return an observable and not a promise. You can think of an observable as a stream of events, and meeting values to anyone who has subscribed to it.
 
-#### Q. AngularJS comandline to generate e component from the terminal?
+#### Q. ***AngularJS comandline to generate e component from the terminal?***
 In Angular we can generate component from the terminal by ngFor generater. If I want to create contact componenet, I would just run `ng generate component contact` and it will create all the necesory file for me and just update that to use it!
 
 
-#### Q. An operator that we can use to avoid any 404 error is?
+#### Q. ***An operator that we can use to avoid any 404 error is?***
 In Angular we can use `?` to avoid any unecessory file not found response. Let say if we have a cantacts information and we did not give a photo url but if we write  `[src]=contact?.photoUrl`  it will say 404 even if photo was not added.
 
-#### Q. Using the Angular Http module to make a request, which method is used to listen for an emitted response?
+#### Q. ***Using the Angular Http module to make a request, which method is used to listen for an emitted response?***
 In Angular Http module to make a request,  method is used to listen for an emitted response.Subscribe
 
-#### Q.  What is the Router directive that can be placed on elements to navigate to a new route?
+#### Q. *** What is the Router directive that can be placed on elements to navigate to a new route?***
 Router directive that can be placed on elements to navigate to a new route is `[routerLink]`.
 
-#### Q. Assuming "form" is an NgForm object, which property is used to retrieve the form values?
+#### Q. ***Assuming "form" is an NgForm object, which property is used to retrieve the form values?***
 The form value can be retrieved by `[form.value]`.
 
-#### Q. An Angular class that used to create an instance that will be an argument to the request method of http is??
+#### Q. ***An Angular class that used to create an instance that will be an argument to the request method of http is?***
 `[Request]`.
 
-#### Q. An Angular generator to generate `api.service.spec.ts` inside the `shared` componenet is ?
+#### Q. ***An Angular generator to generate `api.service.spec.ts` inside the `shared` componenet is ?***
 `[ng generat service shared/api]`.
 
-#### Q. A JSON Web Token consists of .... ?
+#### Q. ***A JSON Web Token consists of .... ?***
 JSON Web Token consists of header, payload and signature. You can read more at https://jwt.io/
 
-#### Q. A JWT should be signed with a secret called ?
+#### Q. ***A JWT should be signed with a secret called ?***
 High security password. Generating long, high-quality random passwords is
 not simple. You can easily generate one via this link https://www.grc.com/passwords.htm
 
-#### Q. Having the JWT token, what is the format of the Authorization header looks like?
+#### Q. ***Having the JWT token, what is the format of the Authorization header looks like?***
 The authorization header should be `Bearer [token]`.
 
-#### Q. Is it possible to use MVC in AngularJS?
+#### Q. ***Is it possible to use MVC in AngularJS?***
 Answer: True
 
-#### Q. What's the difference between factory and service?
+#### Q. ***What's the difference between factory and service?***
 
 > factories are functions that return the object, while services are constructor functions of the object which are instantiated with the new keyword.
 > Both are singletons, even though the name “factory” might imply differently.
@@ -1223,7 +1223,7 @@ Modules consist of one or more components. They do not control any html. Modules
 ```
 +function() { console.log("Foo!"); }(); --> It forces the parser to treat the part following the + as an expression. This is usually used for functions that are invoked immediately. + is just one of the options. It can also be -, !, ~, or just about any other unary operator
 
-#### Q. What are the differences between ng-repeat and ng-options and why do they not behave the same way?
+#### Q. ***What are the differences between ng-repeat and ng-options and why do they not behave the same way?***
 ng-repeat creates a new scope for each iteration so will not perform as well as ng-options.
 
 For small lists, it will not matter, but larger lists should use ng-options. Apart from that, It provides lot of flexibility in specifying iterator and offers performance benefits over ng-repeat.
@@ -1242,10 +1242,10 @@ Example:
 ```javascript
 $scope.names = ["Emil", "Tobias", "Linus"];
 ```
-#### Q. What directives are user to show and hide HTML elements in AngularJS?
-#### Q. Explain directives ng-if, ng-switch and ng-repeat.
-#### Q. What are ng-repeat special variables?
-#### Q. How AngularJS handle data binding?
+#### Q. ***What directives are user to show and hide HTML elements in AngularJS?***
+#### Q. ***Explain directives ng-if, ng-switch and ng-repeat?***
+#### Q. ***What are ng-repeat special variables?***
+#### Q. ***How AngularJS handle data binding?***
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
