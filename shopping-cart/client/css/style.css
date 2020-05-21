@@ -88,6 +88,7 @@ md-list-item .md-list-item-inner {
 
 .md-subheader .md-subheader-inner {    
     padding: 10px !important;
+    cursor: pointer;
 }
 .md-accordion {
     padding: 2px;
