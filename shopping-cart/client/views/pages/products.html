@@ -57,7 +57,7 @@
     
             <md-input-container flex="50">
               <label>Barcode</label>
-              <input name="barcode" ng-model="product.barcode">
+              <input type="text" name="barcode" ng-model="product.barcode">
             </md-input-container>
           </div>
           <div layout="row">
@@ -77,13 +77,9 @@
             <md-input-container flex="50">
               <label>Category</label>
               <md-select name="category" ng-model="product.category">
-                <md-option value="code39">Code 39</md-option>
-                <md-option value="code128">Code 128</md-option>
-                <md-option value="upc">Universal Product Codes (UPC)</md-option>
-                <md-option value="ean">International Article Number (EAN)</md-option>
-                <md-option value="pdf147">PDF417</md-option>
-                <md-option value="data_matrix">Data Matrix</md-option>
-                <md-option value="qr">Quick Response (QR) Codes</md-option>
+                <md-option value="Electronics">Electronics</md-option>
+                <md-option value="Mobile">Mobile</md-option>
+                <md-option value="Cloths">Cloths</md-option>
               </md-select>
             </md-input-container>
           </div>
