@@ -1,7 +1,7 @@
 ## AngularJS ( v1.7.x ) Interview Questions with Example
 
 ### 1. Basics 
- - What is MVC?
+ - Why to use AngularJS?
  - Please explain what is controller/model/view in angularjs
  - Please tell about life cycle of angularjs application
 
@@ -1246,6 +1246,7 @@ $scope.names = ["Emil", "Tobias", "Linus"];
 #### Q. ***Explain directives ng-if, ng-switch and ng-repeat?***
 #### Q. ***What are ng-repeat special variables?***
 #### Q. ***How AngularJS handle data binding?***
+#### Q. ***Please tell about life cycle of angularjs application?***
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
