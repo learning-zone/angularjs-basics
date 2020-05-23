@@ -2,18 +2,19 @@
 
 ### 1. Basics 
  - Why to use AngularJS?
- - Please explain what is controller/model/view in angularjs
+ - What are the advantage of AngularJS?
+ - Please explain what is controller/model/view in angularjs?
  - Please tell about life cycle of angularjs application
 
 
 ### 2. Architecture 
- - Differences between `Provider` vs `Factory` vs `Service`
- - How do you prefer to develop the data access layer which communicate with REST service
+ - Differences between `Provider` vs `Factory` vs `Service`?
+ - How do you prefer to develop the data access layer which communicate with REST service?
  - Which service do you use: `$http` or `$resourse` or `rest-angular`?
  - How can you configure `$http` service?
  - What about `q` and promises in angularjs
- - Event model in angularjs
- - Do you use some sort of angular style guides
+ - Event model in angularjs?
+ - Do you use some sort of angular style guides?
  - What is dependency injection? Explain difference between inline and explicit annotation
 
 ### 3. Directives 
@@ -1247,6 +1248,7 @@ $scope.names = ["Emil", "Tobias", "Linus"];
 #### Q. ***What are ng-repeat special variables?***
 #### Q. ***How AngularJS handle data binding?***
 #### Q. ***Please tell about life cycle of angularjs application?***
+#### Q. ***Please explain what is controller/model/view in angularjs?***
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
