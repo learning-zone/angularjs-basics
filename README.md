@@ -4,7 +4,18 @@
  - Why to use AngularJS?
  - What are the advantage of AngularJS?
  - Please explain what is controller/model/view in angularjs?
- - Please tell about life cycle of angularjs application
+ - Please tell about life cycle of angularjs application?
+ - What is jQLite/jQuery Lite?
+ - How to access jQLite?
+ - What are the AngularJS features?
+ - When dependent modules of a module are loaded?
+ - What is Angular’s prefixes $ and $$?
+ - What are Filters in AngularJS?
+ - What are Directives in AngularJS?
+ - What is the role of ng-app, ng-init and ng-model directives?
+ - What are different ways to invoke a directive?
+ - What is restrict option in directive?
+ - Can you define multiple restrict options on a directive?
 
 
 ### 2. Architecture 
@@ -15,7 +26,8 @@
  - What about `q` and promises in angularjs
  - Event model in angularjs?
  - Do you use some sort of angular style guides?
- - What is dependency injection? Explain difference between inline and explicit annotation
+ - What is dependency injection? Explain difference between inline and explicit annotation?
+ - What is auto bootstrap process in AngularJS?
 
 ### 3. Directives 
   - What is directive in angularjs?
