@@ -31,7 +31,7 @@ class Product{
 		console.log("insert_statement: "+insert_statement);
 		console.log("values: "+values);
 		try {
-			return await this.db.query(insert_statement, [values]);
+			//return await this.db.query(insert_statement, [values]);
 		} catch (error) {
 			console.error(error);
 			return null;

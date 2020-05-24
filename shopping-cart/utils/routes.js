@@ -3,6 +3,8 @@
 const helper = require('./helper');
 const product = require('./product');
 const path = require('path');
+const multer  = require('multer');
+
 class Routes{
 
 	constructor(app){
@@ -159,14 +161,26 @@ class Routes{
 	        }
 		});
 
+		// File Upload
+		var storage = multer.diskStorage({
+			destination: './uploads/',
+			filename: function (request, file, cb) {
+			  cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
+			  console.log('request: ' + request +', file: '+file+ ', cb: '+cb);
+			}
+		  })
+		  
+		var upload = multer({ storage: storage });
+
 		// Add Product
-		this.app.post('/addProducts',async (request, response, next) => {
-			
+	    this.app.post('/addProducts', upload.single('file'), async (request, response, next) => {
+
 			const userId = request.body.userId;
 			const toUserId = request.body.toUserId;
 			const params = request.body;
-
-			console.log("Add Product: "+params); 
+			
+			console.log("Routes request: "+JSON.stringify(request.body)); 
+			console.log("Routes Params: "+JSON.stringify(params)); 
 
 			const products = {}			
 			if (userId === '') {

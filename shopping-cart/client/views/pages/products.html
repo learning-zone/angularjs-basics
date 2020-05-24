@@ -22,11 +22,11 @@
   <!-- Add Product Start -->
   <div class="product-add" ng-hide = "IsVisible">
       <md-content layout-padding>
-        <form name="productForm" method="POST" enctype="multipart/form-data">
+        <form name="productForm" method="post" enctype="multipart/form-data">
     
           <md-input-container class="md-block">
             <label>Product Name</label>
-            <input md-maxlength="30" required name="product_name" ng-model="product.product_name">
+            <input md-maxlength="30" name="product_name" ng-model="product.product_name">
             <div ng-messages="productForm.product_name.$error">
               <div ng-message="required">This is required.</div>
               <!--<div ng-message="md-maxlength">The product name must be less than 30 characters long.</div>-->
@@ -124,7 +124,7 @@
             </md-input-container>
 
             <md-input-container flex="25">
-              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" ng-model="product.product_image" />
+              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="myFile" />
               <hr />
               <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px"  />
             </md-input-container>

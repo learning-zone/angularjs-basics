@@ -1,6 +1,38 @@
 'user strict';
 
-app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope){
+// File Upload Directive
+app.directive('fileModel', ['$parse', function ($parse) {
+  return {
+     restrict: 'A',
+     link: function(scope, element, attrs) {
+        var model = $parse(attrs.fileModel);
+        var modelSetter = model.assign;
+
+        element.bind('change', function(){
+           scope.$apply(function(){
+              modelSetter(scope, element[0].files[0]);
+           });
+        });
+     }
+  };
+}]);
+
+// File Upload Service
+app.service('fileUpload', function ($http) {
+  this.uploadFileToUrl = function(file, uploadUrl){
+     var fd = new FormData();
+     fd.append('file', file);
+
+     $http.post(uploadUrl, fd, {
+        transformRequest: angular.identity,
+        headers: {'Content-Type': undefined}
+     }).then(function () {
+        
+     });
+  }
+});
+
+app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope, fileUpload){
 
   $scope.options = {
     rowSelection: true,
@@ -13,7 +45,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     pageSelect: true
   };
 
-  $scope.IsVisible = true;
+  $scope.IsVisible = false;
   $scope.selected = [];
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',
@@ -100,14 +132,34 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   // Add Product
   $scope.submit= function(){
 
-    console.log("Form Data: "+ JSON.stringify($scope.product));
-    $http({
-      url: '/addProducts',
+    // File Upload
+    //var file = $scope.myFile;
+    //console.log('file is '+ file);
+    var uploadUrl = "/addProducts";
+    //fileUpload.uploadFileToUrl(file, uploadUrl);
+    var formData = new FormData();
+    formData.append('file', $scope.myFile);
+    //formData.append('product', $scope.product);
+
+    console.log("Form Data: "+ JSON.stringify(formData));
+
+    $http.post(uploadUrl, formData, {
+      transformRequest: angular.identity,
+      headers: {'Content-Type': undefined}
+    })
+    .then(function (httpResponse) {
+        console.log('response:', httpResponse);
+    });
+
+    /*$http({
       method: 'POST',
+      url: '/addProducts',
+      transformRequest: angular.identity,
+      headers: { 'Content-Type': undefined },
       data: $scope.product
     }).then(function (httpResponse) {
         console.log('response:', httpResponse);
-    })
- 
-  }
+    })*/
+  }  
+
 });
