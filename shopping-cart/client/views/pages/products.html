@@ -41,37 +41,24 @@
             </div>
           </md-input-container>
         
-        <div layout="row">
-            <md-input-container flex="50">
-              <label>Barcode Type</label>
-              <md-select name="barcode_type" ng-model="product.barcode_type">
-                <md-option value="code39">Code 39</md-option>
-                <md-option value="code128">Code 128</md-option>
-                <md-option value="upc">Universal Product Codes (UPC)</md-option>
-                <md-option value="ean">International Article Number (EAN)</md-option>
-                <md-option value="pdf147">PDF417</md-option>
-                <md-option value="data_matrix">Data Matrix</md-option>
-                <md-option value="qr">Quick Response (QR) Codes</md-option>
-              </md-select>
-            </md-input-container>
-    
-            <md-input-container flex="50">
+        <div layout-gt-sm="row">    
+            <md-input-container flex-gt-sm>
               <label>Barcode</label>
               <input type="text" name="barcode" ng-model="product.barcode">
             </md-input-container>
-          </div>
-          <div layout="row">
-            <md-input-container flex="50">
+          
+            <md-input-container flex-gt-sm>
               <label>Warehouse</label>
               <md-select name="warehouse" ng-model="product.warehouse">
-                <md-option value="Delhi">Delhi</md-option>
-                <md-option value="Mumbai">Mumbai</md-option>
-                <md-option value="Kolkata">Kolkata</md-option>
-                <md-option value="Chennai">Chennai</md-option>
+                <md-option value="None">None</md-option>
+                <md-option value="East">East</md-option>
+                <md-option value="West">West</md-option>
+                <md-option value="North">North</md-option>
+                <md-option value="South">South</md-option>
               </md-select>
             </md-input-container>
 
-            <md-input-container flex="50">
+            <md-input-container flex-gt-sm>
               <label>Category</label>
               <md-select name="category" ng-model="product.category">
                 <md-option value="Electronics">Electronics</md-option>
@@ -82,49 +69,42 @@
           </div>
 
           <div layout="row">
-            <md-input-container flex="50">
+            <md-input-container flex-gt-sm>
               <label>Product SKU</label>
               <input type="text" name="sku" ng-model="product.sku">
             </md-input-container>
 
-            <md-input-container flex="50">
+            <md-input-container flex-gt-sm>
               <label>Product Serial Number</label>
               <input type="text" name="serial_number" ng-model="product.serial_number">
             </md-input-container>
-          </div>
-
-          <div layout="row">
-            <md-input-container flex="50">
+      
+            <md-input-container flex-gt-sm>
               <label>Product Quantity</label>
               <input type="number" name="quantity" ng-model="product.quantity">
             </md-input-container>
-
-            <md-input-container flex="50">
-              <label>Reorder Stock Amount</label>
-              <input type="number" name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
-            </md-input-container>
           </div>
 
           <div layout="row">
-            <md-input-container flex="50">
+            <md-input-container flex-gt-sm>
+              <label>Reorder Stock Amount</label>
+              <input type="number" name="reordered_stock_amount" ng-model="product.reordered_stock_amount">
+            </md-input-container>
+                   
+            <md-input-container flex-gt-sm>
               <label>Product Purchase Price</label>
               <input type="number" name="purchase_price" ng-model="product.purchase_price">
             </md-input-container>
 
-            <md-input-container flex="50">
+            <md-input-container flex-gt-sm>
               <label>Product Selling Price</label>
               <input type="number" name="selling_price" ng-model="product.selling_price">
             </md-input-container>
           </div>
 
           <div layout="row">
-            <md-input-container flex="50">
-              <label>Expiration Date</label>
-              <md-datepicker type="text" name="expiration_date" ng-model="product.expiration_date"></md-datepicker>
-            </md-input-container>
-
             <md-input-container flex="25">
-              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="productImage" />
+              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="product.file" />
               <hr />
               <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;" />
             </md-input-container>

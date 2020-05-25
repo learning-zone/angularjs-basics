@@ -181,7 +181,7 @@ class Routes{
 			const params = request.body;
 			
 			console.log("Routes request: "+JSON.stringify(request.body)); 
-			console.log("Routes Params: "+JSON.stringify(params)); 
+			console.log("Routes Params: "+JSON.stringify(request.file)); 
 
 			const products = {}			
 			if (userId === '') {

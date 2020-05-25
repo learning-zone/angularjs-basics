@@ -17,7 +17,24 @@ app.directive('fileModel', ['$parse', function ($parse) {
   };
 }]);
 
-app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope){
+// File Upload Service
+app.service('multipartForm', ['$http', function ($http) {
+  this.post = function(uploadUrl, data) {
+    var fd = new FormData();
+    for(var key in data) {
+      fd.append(key, data[key]);
+    }
+     
+    $http.post(uploadUrl, fd, {
+       transformRequest: angular.identity,
+       headers: {'Content-Type': undefined}
+    }).then(function (httpResponse) {
+       console.log('response:', httpResponse);
+    });
+  }
+}]);
+
+app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope, multipartForm){
 
   $scope.options = {
     rowSelection: true,
@@ -32,6 +49,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
 
   $scope.IsVisible = false;
   $scope.selected = [];
+  $scope.product = {};
   $scope.limitOptions = [5, 10, 15, {
     label: 'All',
     value: function () {
@@ -118,23 +136,24 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   $scope.submit= function(){
 
     // File Upload
-    //var file = $scope.productImage;
+    //var file = $scope.product.productImage;
     //console.log('file is '+ file);
     const uploadUrl = "/addProducts";
+    multipartForm.post(uploadUrl, $scope.product);
 
-    var formData = new FormData();
-    formData.append('file', $scope.productImage);
+    //var formData = new FormData();
+    //formData.append('file', $scope.product.productImage);
     //formData.append('product', $scope.product);
 
-    console.log("Form Data: "+ JSON.stringify(formData));
+    //console.log("Form Data: "+ JSON.stringify($scope.product));
 
-    $http.post(uploadUrl, formData, {
+    /*$http.post(uploadUrl, formData, {
       transformRequest: angular.identity,
       headers: {'Content-Type': undefined}
     })
     .then(function (httpResponse) {
         console.log('response:', httpResponse);
-    });
+    });*/
 
     /*$http({
       method: 'POST',
