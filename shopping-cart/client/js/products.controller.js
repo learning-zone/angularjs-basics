@@ -17,22 +17,7 @@ app.directive('fileModel', ['$parse', function ($parse) {
   };
 }]);
 
-// File Upload Service
-app.service('fileUpload', function ($http) {
-  this.uploadFileToUrl = function(file, uploadUrl){
-     var fd = new FormData();
-     fd.append('file', file);
-
-     $http.post(uploadUrl, fd, {
-        transformRequest: angular.identity,
-        headers: {'Content-Type': undefined}
-     }).then(function () {
-        
-     });
-  }
-});
-
-app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope, fileUpload){
+app.controller('productsController', function ($http, $mdEditDialog, $q, $timeout, $scope){
 
   $scope.options = {
     rowSelection: true,
@@ -133,12 +118,12 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   $scope.submit= function(){
 
     // File Upload
-    //var file = $scope.myFile;
+    //var file = $scope.productImage;
     //console.log('file is '+ file);
-    var uploadUrl = "/addProducts";
-    //fileUpload.uploadFileToUrl(file, uploadUrl);
+    const uploadUrl = "/addProducts";
+
     var formData = new FormData();
-    formData.append('file', $scope.myFile);
+    formData.append('file', $scope.productImage);
     //formData.append('product', $scope.product);
 
     console.log("Form Data: "+ JSON.stringify(formData));

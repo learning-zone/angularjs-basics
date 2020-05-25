@@ -124,9 +124,9 @@
             </md-input-container>
 
             <md-input-container flex="25">
-              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="myFile" />
+              <input type="file" aria-label="File Upload" onchange="angular.element(this).scope().SelectFile(event)" class="custom-file-input" file-model="productImage" />
               <hr />
-              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;width:100px"  />
+              <img ng-src="{{PreviewImage}}" ng-show="PreviewImage != null" alt="" style="height:100px;" />
             </md-input-container>
           </div>
 
