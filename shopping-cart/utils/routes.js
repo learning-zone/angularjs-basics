@@ -165,7 +165,8 @@ class Routes{
 		var storage = multer.diskStorage({
 			destination: './uploads/',
 			filename: function (request, file, cb) {
-			  cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + Date.now() + path.extname(file.originalname))
+			  var d = new Date();
+			  cb(null, file.originalname.replace(path.extname(file.originalname), "") + '-' + d.getDate() + '-' + (d.getMonth()+1) + '-' + d.getFullYear() + '-' + Date.now() + path.extname(file.originalname))
 			  console.log('request: ' + request +', file: '+file+ ', cb: '+cb);
 			}
 		  })
