@@ -134,28 +134,28 @@
       <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
         <tr md-row>
           <th md-column md:order:by="action">Action</th>
-          <th md-column md:order:by="product.image">Image</th>
-          <th md-column md:order:by="product.name">Name</th>
-          <th md-column md:order:by="product.wharehouse">Warehouse</th>
-          <th md-column md:order:by="product.qty">Qty</th>
+          <th md-column md:order:by="product.product_image">Image</th>
+          <th md-column md:order:by="product.product_name">Name</th>
+          <th md-column md:order:by="product.wharehouse_id">Warehouse</th>
+          <th md-column md:order:by="product.quantity">Quantity</th>
           <th md-column md:order:by="product.barcode">Barcode</th>
-          <th md-column md:order:by="product.p_price">Purchase Price</th>
-          <th md-column md:order:by="product.s_price">Selling Price</th>
-          <th md-column md:order:by="product.category">Category</th>
+          <th md-column md:order:by="product.purchase_price">Purchase Price</th>
+          <th md-column md:order:by="product.selling_price">Selling Price</th>
+          <th md-column md:order:by="product.category_id">Category</th>
         </tr>
       </thead>
       <tbody md-body>
         <tr md-row md-select="product" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" data-ng-repeat="product in products.products | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit"">
          
           <td md-cell><md-icon title="Edit this Product">edit</md-icon><md-icon title="Delete this Product">delete_outline</md-icon></td>
-          <td md-cell><img src="{{product.product_image}}" height="20"></td>
+          <td md-cell><img src="../../uploads/pic.jpg" height="20"></td>
           <td md-cell>{{product.product_name}}</td>
-          <td md-cell>{{product.warehouse}}</td>
+          <td md-cell>{{product.wharehouse_id}}</td>
           <td md-cell>{{product.quantity}}</td>
           <td md-cell>{{product.barcode}}</td>
           <td md-cell>{{product.purchase_price}}</td>
           <td md-cell>{{product.selling_price}}</td>
-          <td md-cell>{{product.category}}</td>
+          <td md-cell>{{product.category_id}}</td>
         </tr>
       </tbody>
     </table>
