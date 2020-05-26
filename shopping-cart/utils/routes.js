@@ -179,10 +179,12 @@ class Routes{
 			const userId = request.body.userId;
 			const toUserId = request.body.toUserId;
 			const params = request.body;
-			
-			console.log("Routes request: "+JSON.stringify(request.body)); 
+			// File Location
+			params.product_image = './uploads/' + request.file.filename;
+						
+			console.log("Routes request: "+JSON.stringify(params)); 
 			console.log("Routes Params: "+JSON.stringify(request.file)); 
-
+			
 			const products = {}			
 			if (userId === '') {
 				products.error = true;
