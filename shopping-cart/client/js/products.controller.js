@@ -29,7 +29,7 @@ app.service('multipartForm', ['$http', function ($http) {
        transformRequest: angular.identity,
        headers: {'Content-Type': undefined}
     }).then(function (httpResponse) {
-       console.log('response:', httpResponse);
+       console.log('multipartForm Response:', httpResponse);
     });
   }
 }]);
@@ -135,35 +135,9 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
   // Add Product
   $scope.submit= function(){
 
-    // File Upload
-    //var file = $scope.product.productImage;
-    //console.log('file is '+ file);
+    // File Upload Service
     const uploadUrl = "/addProducts";
     multipartForm.post(uploadUrl, $scope.product);
-
-    //var formData = new FormData();
-    //formData.append('file', $scope.product.productImage);
-    //formData.append('product', $scope.product);
-
-    //console.log("Form Data: "+ JSON.stringify($scope.product));
-
-    /*$http.post(uploadUrl, formData, {
-      transformRequest: angular.identity,
-      headers: {'Content-Type': undefined}
-    })
-    .then(function (httpResponse) {
-        console.log('response:', httpResponse);
-    });*/
-
-    /*$http({
-      method: 'POST',
-      url: '/addProducts',
-      transformRequest: angular.identity,
-      headers: { 'Content-Type': undefined },
-      data: $scope.product
-    }).then(function (httpResponse) {
-        console.log('response:', httpResponse);
-    })*/
   }  
 
 });
