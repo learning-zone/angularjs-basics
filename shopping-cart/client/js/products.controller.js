@@ -59,7 +59,7 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
 
   $scope.query = {
     order: 'product_name',
-    limit: 5,
+    limit: 10,
     page: 1
   };
 
@@ -68,13 +68,8 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     console.log($scope.products);
   });
 
-
   $scope.toggleLimitOptions = function () {
     $scope.limitOptions = $scope.limitOptions ? undefined : [5, 10, 15];
-  };
-
-  $scope.getTypes = function () {
-    return ['Candy', 'Ice cream', 'Other', 'Pastry'];
   };
 
   $scope.onPaginate = function(page, limit) {
@@ -114,13 +109,6 @@ app.controller('productsController', function ($http, $mdEditDialog, $q, $timeou
     $scope.IsVisible = $scope.IsVisible ? false : true;
   }
     
-  /** Add New Product */
-  $scope.project = {
-    description: 'Nuclear Missile Defense System',
-    rate: 500,
-    special: true
-  };
-
   // Image Preview
   $scope.SelectFile = function (e) {
     var reader = new FileReader();
