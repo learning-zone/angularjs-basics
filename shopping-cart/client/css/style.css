@@ -227,3 +227,7 @@ md-list-item._md-button-wrap>div.md-button:first-child {
 .custom-file-input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+
+.md-block {
+  margin: 12px;
+}
