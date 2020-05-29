@@ -27,6 +27,7 @@
  - How would you specify that a scope variable should have one-time binding only?
  - What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
  - How do you reset a $timeout, $interval(), and disable a $watch()?
+ - What is $scope in AngularJS?
 
 
 ### 2. Architecture 
@@ -50,7 +51,7 @@
 
 
 ### 3. Directives 
- - What is directive in angularjs?
+ - What are directives in angularjs?
  - List some built-in directives
  - Explain difference between 'compile' and 'link' callbacks in directive definition
  - List types of scopes directive can have?
@@ -60,6 +61,8 @@
  - What is the difference between ng-show/ng-hide and ng-if directives?
  - When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?
  - When should you use an attribute Vs an element?
+ - What is the role of ng-app, ng-init and ng-model directives?
+
 
 
 ### 4. Filters
@@ -518,11 +521,6 @@ AngularJS directives are a combination of AngularJS template markups (HTML attri
 CSS classes) and supporting JavaScript code.The JavaScript directive code defines the template data and
 behaviors of the HTML elements.
 
-#### Q. ***What are different ways to invoke a directive?***
-Attribute ('A')		<span my-directive></span>
-Class('C') 		<span class="my-directive: expression;"></span>
-Element ('E')	 	<my-directive></my-directive>
-Comment	('M')		<!-- directive: my-directive expression -->
 
 #### Q. ***What is difference between $scope and scope?***
 $scope - In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is 
