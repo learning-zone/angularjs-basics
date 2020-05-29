@@ -44,6 +44,7 @@
  - List types of scopes directive can have?
  - How Directives are compiled?
  - What are the directives in angularJS?
+ - What are different ways to invoke a directive?
 
 
 ### 4. Filters
@@ -504,7 +505,7 @@ Class('C') 		<span class="my-directive: expression;"></span>
 Element ('E')	 	<my-directive></my-directive>
 Comment	('M')		<!-- directive: my-directive expression -->
 
-#### Q. ***What is difference between $scope and scope ?***
+#### Q. ***What is difference between $scope and scope?***
 $scope - In case of DI, you inject the scope object with the dollar prefix i.e. $scope. The reason is 
 the injected arguments must match to the names of injectable objects followed by dollar ($) prefix .
 	
@@ -513,7 +514,7 @@ you just pass the scope object without using dollar prefix i.e. scope. The reaso
 are received by its caller.
 
 
-#### Q. ***What is difference between services and factory ?***
+#### Q. ***What is difference between services and factory?***
 Service - It is just a function for the business layer of the application . It is act as a constauctor function
 and invoked once at a run time with new keyword.
 	
