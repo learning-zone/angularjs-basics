@@ -21,6 +21,12 @@
  - What is the difference between $scope and scope?
  - How AngularJS compilation is different from other JavaScript frameworks?
  - What are Compile, Pre and Post linking in AngularJS?
+ - Is it a good or bad practice to use AngularJS together with jQuery?
+ - If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?
+ - What is the difference between one-way binding and two-way binding?
+ - How would you specify that a scope variable should have one-time binding only?
+ - What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
+ - How do you reset a $timeout, $interval(), and disable a $watch()?
 
 
 ### 2. Architecture 
@@ -35,6 +41,12 @@
  - What is auto bootstrap process in AngularJS?
  - What is manual bootstrap process in AngularJS?
  - How AngularJS is compiled?
+ - What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?
+ - Where should we implement the DOM manipulation in AngularJS?
+ - How works `$digest`?
+ - What is a digest cycle in AngularJS?
+ - Explain how $scope.$apply() works?
+ - What makes the angular.copy() method so powerful?
 
 
 ### 3. Directives 
@@ -45,14 +57,21 @@
  - How Directives are compiled?
  - What are the directives in angularJS?
  - What are different ways to invoke a directive?
+ - What is the difference between ng-show/ng-hide and ng-if directives?
+ - When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?
+ - When should you use an attribute Vs an element?
 
 
 ### 4. Filters
  - What are Filters in AngularJS?
+ - What are the basics steps to unit test an AngulatJS filter?
 
 
-### 5. How it works 
- - How works `$digest`?
+### 5. Service
+ - What is difference between services and factory?
+ - How do you share data between controllers?
+ - How would you make an Angular service return a promise? Write a code snippet as an example?
+ - What is the role of services in AngularJS and name any services made available by default?
 
 
 ### 6. Performance 
@@ -689,7 +708,7 @@ var deregisterWatchFn = $scope.$on(‘$destroy’, function () {
 		deregisterWatchFn();
 });		
 ```
-#### Q. ***Explain what is a `$scope` in AngularJS is?***
+#### Q. ***What is $scope in AngularJS?***
 
 Scope is an object that refers to the application model. It is an execution context for expressions. Scopes are arranged in hierarchical structure which mimic the DOM structure of the application. Scopes can watch expressions and propagate events. Scopes are objects that refer to the model. They act as glue between controller and view.
 
