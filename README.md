@@ -1,5 +1,6 @@
 ## AngularJS ( v1.7.x ) Interview Questions with Example
 
+
 ### 1. Basics 
  - Why to use AngularJS?
  - What are the advantage of AngularJS?
@@ -10,12 +11,16 @@
  - What are the AngularJS features?
  - When dependent modules of a module are loaded?
  - What is Angular’s prefixes $ and $$?
- - What are Filters in AngularJS?
- - What are Directives in AngularJS?
  - What is the role of ng-app, ng-init and ng-model directives?
  - What are different ways to invoke a directive?
  - What is restrict option in directive?
  - Can you define multiple restrict options on a directive?
+ - What is scope in AngularJS?
+ - What is $scope and $rootScope?
+ - What is scope hierarchy?
+ - What is the difference between $scope and scope?
+ - How AngularJS compilation is different from other JavaScript frameworks?
+ - What are Compile, Pre and Post linking in AngularJS?
 
 
 ### 2. Architecture 
@@ -28,17 +33,27 @@
  - Do you use some sort of angular style guides?
  - What is dependency injection? Explain difference between inline and explicit annotation?
  - What is auto bootstrap process in AngularJS?
+ - What is manual bootstrap process in AngularJS?
+ - How AngularJS is compiled?
+
 
 ### 3. Directives 
-  - What is directive in angularjs?
-  - List some built-in directives
-  - Explain difference between 'compile' and 'link' callbacks in directive definition
-  - List types of scopes directive can have
+ - What is directive in angularjs?
+ - List some built-in directives
+ - Explain difference between 'compile' and 'link' callbacks in directive definition
+ - List types of scopes directive can have?
+ - How Directives are compiled?
 
-### 4. How it works 
+
+### 4. Filters
+ - What are Filters in AngularJS?
+
+
+### 5. How it works 
  - How works `$digest`?
 
-### 5. Performance 
+
+### 6. Performance 
  - What is the best practice to build your application
  - When it is necessary or whether it is necessary to use `$scope.$apply`
 
@@ -476,12 +491,6 @@ level-Three: post link
 level-Two: post link
 level-One: post link
 ```
-		
-#### Q. ***What is the role of ng-app, ng-init and ng-model directives?***
-* **ng-app** - Initialize the angular app.  
-* **ng-init** - Initialize the angular app data.  
-* **ng-model** - Bind the html element  
-
 
 #### Q. ***What are the directives in angular JS ?***
 AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or
