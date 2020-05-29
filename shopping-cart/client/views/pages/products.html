@@ -147,7 +147,7 @@
       <tbody md-body>
         <tr md-row md-select="product" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" data-ng-repeat="product in products.products | orderBy: query.order | limitTo: query.limit : (query.page - 1) * query.limit"">
          
-          <td md-cell><md-icon title="Edit this Product">edit</md-icon></td>
+          <td md-cell><md-icon title="Edit this Product" style="cursor: pointer;">edit</md-icon></td>
           <td md-cell><img ng-src="{{product.product_image}}" height="20"></td>
           <td md-cell>{{product.product_name}}</td>
           <td md-cell>{{product.wharehouse_id}}</td>
