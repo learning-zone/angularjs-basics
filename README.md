@@ -43,6 +43,7 @@
  - Explain difference between 'compile' and 'link' callbacks in directive definition
  - List types of scopes directive can have?
  - How Directives are compiled?
+ - What are the directives in angularJS?
 
 
 ### 4. Filters
@@ -492,7 +493,7 @@ level-Two: post link
 level-One: post link
 ```
 
-#### Q. ***What are the directives in angular JS ?***
+#### Q. ***What are the directives in angularJS?***
 AngularJS directives are a combination of AngularJS template markups (HTML attributes or elements, or
 CSS classes) and supporting JavaScript code.The JavaScript directive code defines the template data and
 behaviors of the HTML elements.
