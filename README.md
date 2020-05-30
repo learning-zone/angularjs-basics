@@ -869,13 +869,10 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 #### Q. ***In angular, what does the calls to the HTTP methods  return?***
 In angular, calls to the HTTP methods actually return an observable and not a promise. You can think of an observable as a stream of events, and meeting values to anyone who has subscribed to it.
 
-#### Q. ***An operator that we can use to avoid any 404 error is?***
-In Angular we can use `?` to avoid any unecessory file not found response. Let say if we have a cantacts information and we did not give a photo url but if we write  `[src]=contact?.photoUrl`  it will say 404 even if photo was not added.
-
 #### Q. ***Using the Angular Http module to make a request, which method is used to listen for an emitted response?***
 In Angular Http module to make a request,  method is used to listen for an emitted response.Subscribe
 
-#### Q. *** What is the Router directive that can be placed on elements to navigate to a new route?***
+#### Q. ***What is the Router directive that can be placed on elements to navigate to a new route?***
 Router directive that can be placed on elements to navigate to a new route is `[routerLink]`.
 
 #### Q. ***Assuming "form" is an NgForm object, which property is used to retrieve the form values?***
