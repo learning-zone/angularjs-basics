@@ -28,6 +28,11 @@
  - What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
  - How do you reset a $timeout, $interval(), and disable a $watch()?
  - What is $scope in AngularJS?
+ - What is difference between $scope and scope?
+ - How would you validate a text input field for a twitter username, including the @ symbol?
+ - How do you hide an HTML element via a button click in AngularJS?
+ - How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email?
+ - How do you disable a button depending on a checkbox’s state?
 
 
 ### 2. Architecture 
@@ -48,6 +53,7 @@
  - What is a digest cycle in AngularJS?
  - Explain how $scope.$apply() works?
  - What makes the angular.copy() method so powerful?
+ - What is a singleton pattern and where we can find it in AngularJS?
 
 
 ### 3. Directives 
@@ -62,7 +68,7 @@
  - When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?
  - When should you use an attribute Vs an element?
  - What is the role of ng-app, ng-init and ng-model directives?
-
+ - How would you programatically change or adapt the template of a directive before it is executed and transformed?
 
 
 ### 4. Filters
@@ -75,6 +81,10 @@
  - How do you share data between controllers?
  - How would you make an Angular service return a promise? Write a code snippet as an example?
  - What is the role of services in AngularJS and name any services made available by default?
+ - What is an interceptor?
+ - What are common uses of an interceptor in AngularJS?
+ - How would you implement application-wide exception handling in your Angular app?
+ - In angular, what does the calls to the HTTP methods return?
 
 
 ### 6. Performance 
@@ -856,13 +866,8 @@ We can use the ng-disabled directive and bind its condition to the checkbox’s 
 	<button ng-disabled="checked">Select me</button>
 </body>
 ```
-#### Q. ***In angular, what does the calls to the HTTP methods  return ?***
-
+#### Q. ***In angular, what does the calls to the HTTP methods  return?***
 In angular, calls to the HTTP methods actually return an observable and not a promise. You can think of an observable as a stream of events, and meeting values to anyone who has subscribed to it.
-
-#### Q. ***AngularJS comandline to generate e component from the terminal?***
-In Angular we can generate component from the terminal by ngFor generater. If I want to create contact componenet, I would just run `ng generate component contact` and it will create all the necesory file for me and just update that to use it!
-
 
 #### Q. ***An operator that we can use to avoid any 404 error is?***
 In Angular we can use `?` to avoid any unecessory file not found response. Let say if we have a cantacts information and we did not give a photo url but if we write  `[src]=contact?.photoUrl`  it will say 404 even if photo was not added.
