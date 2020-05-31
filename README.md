@@ -65,19 +65,22 @@
 
 
 ### 3. Directives 
- - What are directives in angularjs?
- - List some built-in directives
- - Explain difference between 'compile' and 'link' callbacks in directive definition
- - List types of scopes directive can have?
- - How Directives are compiled?
- - What are the directives in angularJS?
- - What are different ways to invoke a directive?
- - What is the difference between ng-show/ng-hide and ng-if directives?
- - When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?
- - When should you use an attribute Vs an element?
- - What is the role of ng-app, ng-init and ng-model directives?
- - How would you programatically change or adapt the template of a directive before it is executed and transformed?
- - What is the Router directive that can be placed on elements to navigate to a new route?
+
+|Sl.No|  Questions                                                             |
+|-----|------------------------------------------------------------------------|
+| 01. |[What are directives in angularjs?](#q-what-are-directives-in-angularjs)|
+| 02. |[List some built-in directives](#q-list-some-built-in-directives)
+| 03. |[Explain difference between 'compile' and 'link' callbacks in directive definition](#q-explain-difference-between-compile-and-link-callbacks-in-directive-definition)
+| 04. |[List types of scopes directive can have?](#q-list-types-of-scopes-directive-can-have)|
+| 05. |[How Directives are compiled?](#q-how-directives-are-compiled)|
+| 06. |[What are the directives in angularJS?](#q-what-are-the-directives-in-angularjs)|
+| 07. |[What are different ways to invoke a directive?](#q-what-are-different-ways-to-invoke-a-directive)|
+| 08. |[What is the difference between ng-show/ng-hide and ng-if directives?](#q-what-is-the-difference-between-ng-show-ng-hide-and-ng-if-directives)|
+| 09. |[When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?](#q-when-creating-a-directive-it-can-be-used-in-several-different-ways-in-the-view-which-ways-for-using-a-directive-do-you-know-how-do-you-define-the-way-your-directive-will-be-used)|
+| 10. |[When should you use an attribute Vs an element?](#q-when-should-you-use-an-attribute-vs-an-element)|
+| 11. |[What is the role of ng-app, ng-init and ng-model directives?](#q-what-is-the-role-of-ng-app-ng-init-and-ng-model-directives)|
+| 12. |[How would you programatically change or adapt the template of a directive before it is executed and transformed?](#q-how-would-you-programatically-change-or-adapt-the-template-of-a-directive-before-it-is-executed-and-transformed)|
+| 13. |[What is the Router directive that can be placed on elements to navigate to a new route?](#q-what-is-the-router-directive-that-can-be-placed-on-elements-to-navigate-to-a-new-route)|
 
 
 ### 4. Filters
