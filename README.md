@@ -900,7 +900,7 @@ not simple. You can easily generate one via this link https://www.grc.com/passwo
 The authorization header should be `Bearer [token]`.
 
 
-#### Q.	Directive Example
+#### Q.	***Directive Example***
 
 ```javascript
 .directive("enter", function(){
@@ -912,7 +912,7 @@ The authorization header should be `Bearer [token]`.
 });
 ```
 
-#### Q.	IIFE Pattern used in AngularJS
+#### Q.	***IIFE Pattern used in AngularJS***
 
 ```html
 <!doctype html>
@@ -953,7 +953,7 @@ The authorization header should be `Bearer [token]`.
 </script>	
 ```
 
-#### Q.	Filter used in JavaScript part
+#### Q.	***Filter used in JavaScript part***
 
 ```html
 <body ng-app="app">
@@ -980,7 +980,7 @@ The authorization header should be `Bearer [token]`.
 </script>
 ```
 
-#### Q.	Factory in AngularJS
+#### Q.	***Factory in AngularJS***
 
 ```html
 <div ng-controller="IndexCtrl as vm">
@@ -1036,7 +1036,7 @@ The authorization header should be `Bearer [token]`.
 </script>
 ```
 
-#### Q.	Value in AngularJS
+#### Q.	***Value in AngularJS***
 
 ```javascript
  (function (angular) {
@@ -1065,7 +1065,7 @@ The authorization header should be `Bearer [token]`.
   })(angular);
 ``` 
 
-#### Q.	Creating Sub-Module in AngularJS ( Extending Module in AngularJS )
+#### Q.	***Creating Sub-Module in AngularJS ( Extending Module in AngularJS )***
 
 ```javascript
 (function (angular) {
@@ -1111,7 +1111,7 @@ The authorization header should be `Bearer [token]`.
   })(angular);
 ```
 
-#### Q.	config() vs run()
+#### Q.	***config() vs run()***
 
 ```javascript
 (function (angular) {
@@ -1130,7 +1130,7 @@ The authorization header should be `Bearer [token]`.
  })(angular);
 ```
 
-#### Q.	Provider
+#### Q.	***Provider***
 
 ```html
  <div class="container">
@@ -1179,7 +1179,7 @@ The authorization header should be `Bearer [token]`.
  </script>
 ```
 
-#### Q.	Provider with Constant
+#### Q.	***Provider with Constant***
 
 ```html
  <div ng-controller="IndexCtrl as vm">
@@ -1244,14 +1244,14 @@ The authorization header should be `Bearer [token]`.
 </script>  
 ```
 
-#### Q.	Component vs Module in AngularJS
+#### Q.	***Component vs Module in AngularJS***
 
 Components controls views (html). Also communicates with other components and services.
 
 Modules consist of one or more components. They do not control any html. Modules declare which components can be used by components belonging to other modules, which classes will be injected by dependency injector and which component gets bootstrapped.
 
 
-#### Q.	AngularJS Components
+#### Q.	***AngularJS Components***
 
 ```
 > templateUrl
