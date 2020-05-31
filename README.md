@@ -107,7 +107,7 @@
 | 10. |[An Angular class that used to create an instance that will be an argument to the request method of http is?](#q-an-angular-class-that-used-to-create-an-instance-that-will-be-an-argument-to-the-request-method-of-http-is)| 
 
 
-### 6. Misc 
+### 6. Miscellaneous 
 
 |Sl.No|  Questions                                                                                                  |
 |-----|-------------------------------------------------------------------------------------------------------------|
