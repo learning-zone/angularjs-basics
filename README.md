@@ -91,9 +91,12 @@
  - An Angular class that used to create an instance that will be an argument to the request method of http is?  
 
 
-### 6. Performance 
+### 6. Misc 
  - What is the best practice to build your application
  - When it is necessary or whether it is necessary to use `$scope.$apply`
+ - A JSON Web Token consists of?
+ - A JWT should be signed with a secret called?
+ - Having the JWT token, what is the format of the Authorization header looks like?
 
 <br/>
 
@@ -886,7 +889,7 @@ The form value can be retrieved by `[form.value]`.
 `[Request]`.
 
 
-#### Q. ***A JSON Web Token consists of .... ?***
+#### Q. ***A JSON Web Token consists of?***
 JSON Web Token consists of header, payload and signature. You can read more at https://jwt.io/
 
 #### Q. ***A JWT should be signed with a secret called ?***
@@ -895,14 +898,6 @@ not simple. You can easily generate one via this link https://www.grc.com/passwo
 
 #### Q. ***Having the JWT token, what is the format of the Authorization header looks like?***
 The authorization header should be `Bearer [token]`.
-
-#### Q. ***Is it possible to use MVC in AngularJS?***
-Answer: True
-
-#### Q. ***What's the difference between factory and service?***
-
-> factories are functions that return the object, while services are constructor functions of the object which are instantiated with the new keyword.
-> Both are singletons, even though the name “factory” might imply differently.
 
 
 #### Q.	Directive Example
