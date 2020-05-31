@@ -194,7 +194,9 @@ names of private objects with $$. So, do not use the $ or $$ prefix in your code
 Filters are used to format data before displaying it to the user. They can be used in view templates, controllers, services and directives. There are some built-in filters provided by AngularJS like as Currency, Date, Number, OrderBy, Lowercase, Uppercase etc. You can also create your own filters.
 
 Filter Syntax
-```{{ expression | filter}}```
+```javascript
+  {{ expression | filter}}
+```
 
 
 #### Q. ***What are Directives in AngularJS?***
