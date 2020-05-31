@@ -2,38 +2,42 @@
 
 
 ### 1. Basics 
- - Why to use AngularJS?
- - What are the advantage of AngularJS?
- - Please explain what is controller/model/view in angularjs?
- - Please tell about life cycle of angularjs application?
- - What is jQLite/jQuery Lite?
- - How to access jQLite?
- - What are the AngularJS features?
- - When dependent modules of a module are loaded?
- - What is Angular’s prefixes $ and $$?
- - What is the role of ng-app, ng-init and ng-model directives?
- - What are different ways to invoke a directive?
- - What is restrict option in directive?
- - Can you define multiple restrict options on a directive?
- - What is scope in AngularJS?
- - What is $scope and $rootScope?
- - What is scope hierarchy?
- - What is the difference between $scope and scope?
- - How AngularJS compilation is different from other JavaScript frameworks?
- - What are Compile, Pre and Post linking in AngularJS?
- - Is it a good or bad practice to use AngularJS together with jQuery?
- - If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?
- - What is the difference between one-way binding and two-way binding?
- - How would you specify that a scope variable should have one-time binding only?
- - What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?
- - How do you reset a $timeout, $interval(), and disable a $watch()?
- - What is $scope in AngularJS?
- - What is difference between $scope and scope?
- - How would you validate a text input field for a twitter username, including the @ symbol?
- - How do you hide an HTML element via a button click in AngularJS?
- - How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email?
- - How do you disable a button depending on a checkbox’s state?
- - Assuming "form" is an NgForm object, which property is used to retrieve the form values?
+
+|Sl.No|  Questions                                     |
+|-----|------------------------------------------------|
+| 01. |[Why to use AngularJS?](#q-why-to-use-angularjs)|
+| 02. |[What are the advantage of AngularJS?](#q-what-are-the-advantage-of-angularjs)|
+| 03. |[Please explain what is controller/model/view in angularjs?](#q-please-explain-what-is-controller-model-view-in-angularjs)|
+| 04. |[Please tell about life cycle of angularjs application?](#q-please-tell-about-life-cycle-of-angularjs-application)|
+| 05. |[What is jQLite/jQuery Lite?](#q-what-is-jqlite-jquery-lite)|
+| 06. |[How to access jQLite?](#q-how-to-access-jqlite)|
+| 07. |[What are the AngularJS features?](#q-what-are-the-angularjs-features)|
+| 08. |[When dependent modules of a module are loaded?](#q-when-dependent-modules-of-a-module-are-loaded)|
+| 09. |[What is Angular’s prefixes $ and $$?](#q-what-is-angular-s-prefixes-and)|
+| 10. |[What is the role of ng-app, ng-init and ng-model directives?](#q-what-is-the-role-of-ng-app-ng-init-and-ng-model-directives)|
+| 11. |[What are different ways to invoke a directive?](#q-what-are-different-ways-to-invoke-a-directive)|
+| 12. |[What is restrict option in directive?](#q-what-is-restrict-option-in-directive)|
+| 13. |[Can you define multiple restrict options on a directive?](#q-can-you-define-multiple-restrict-options-on-a-directive)|
+| 14. |[What is scope in AngularJS?](#q-what-is-scope-in-angularjs)|
+| 15. |[What is $scope and $rootScope?](#q-what-is-scope-and-rootscope)|
+| 16. |[What is scope hierarchy?](#q-what-is-scope-hierarchy)|
+| 17. |[What is the difference between $scope and scope?](#q-what-is-the-difference-between-scope-and-scope)|
+| 18. |[How AngularJS compilation is different from other JavaScript frameworks?](#q-how-angularjs-compilation-is-different-from-other-javascript-frameworks)|
+| 19. |[What are Compile, Pre and Post linking in AngularJS?](#q-what-are-compile-pre-and-post-linking-in-angularjs)|
+| 20. |[Is it a good or bad practice to use AngularJS together with jQuery?](#q-is-it-a-good-or-bad-practice-to-use-angularjs-together-with-jquery)|
+| 21. |[If you were to migrate from Angular 1.4 to 1.5, what is the main thing that would need refactoring?](#q-if-you-were-to-migrate-from-angular-14-to-15-what-is-the-main-thing-that-would-need-refactoring)|
+| 22. |[What is the difference between one-way binding and two-way binding?](#q-what-is-the-difference-between-one-way-binding-and-two-way-binding)|
+| 23. |[How would you specify that a scope variable should have one-time binding only?](#q-how-would-you-specify-that-a-scope-variable-should-have-one-time-binding-only)|
+| 24. |[What directive would you use to hide elements from the HTML DOM by removing them from that DOM not changing their styling?](#q-what-directive-would-you-use-to-hide-elements-from-the-html-dom-by-removing-them-from-that-dom-not-changing-their-styling)|
+| 25. |[How do you reset a $timeout, $interval(), and disable a $watch()?](#q-how-do-you-reset-a-timeout-interval-and-disable-a-watch)|
+| 26. |[What is $scope in AngularJS?](#q-what-is-scope-in-angularjs)|
+| 27. |[What is difference between $scope and scope?](#q-what-is-difference-between-scope-and-scope)|
+| 28. |[How would you validate a text input field for a twitter username, including the @ symbol?](#q-how-would-you-validate-a-text-input-field-for-a-twitter-username-including-the-symbol)|
+| 29. |[How do you hide an HTML element via a button click in AngularJS?](#q-how-do-you-hide-an-html-element-via-a-button-click-in-angularjs)|
+| 30. |[How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email?](#q-how-would-you-react-on-model-changes-to-trigger-some-further-action-for-instance-say-you-have-an-input-text-field-called-email-and-you-want-to-trigger-or-execute-some-code-as-soon-as-a-user-starts-to-type-in-their-email)|
+| 31. |[How do you disable a button depending on a checkbox’s state?](#q-how-do-you-disable-a-button-depending-on-a-checkbox-s-state)|
+| 32. |[Assuming "form" is an NgForm object, which property is used to retrieve the form values?](#q-assuming-form-is-an-ngform-object-which-property-is-used-to-retrieve-the-form-values)|
+
 
 
 ### 2. Architecture 
