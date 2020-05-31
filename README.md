@@ -92,16 +92,19 @@
 
 
 ### 5. Service
- - What is difference between services and factory?
- - How do you share data between controllers?
- - How would you make an Angular service return a promise? Write a code snippet as an example?
- - What is the role of services in AngularJS and name any services made available by default?
- - What is an interceptor?
- - What are common uses of an interceptor in AngularJS?
- - How would you implement application-wide exception handling in your Angular app?
- - In angular, what does the calls to the HTTP methods return?
- - Using the Angular Http module to make a request, which method is used to listen for an emitted response?
- - An Angular class that used to create an instance that will be an argument to the request method of http is?  
+
+|Sl.No|  Questions                                                                                           |
+|-----|------------------------------------------------------------------------------------------------------|
+| 01. |[What is difference between services and factory?](#q-what-is-difference-between-services-and-factory)|
+| 02. |[How do you share data between controllers?](#q-how-do-you-share-data-between-controllers)|
+| 03. |[How would you make an Angular service return a promise? Write a code snippet as an example?](#q-how-would-you-make-an-angular-service-return-a-promise--write-a-code-snippet-as-an-example)|
+| 04. |[What is the role of services in AngularJS and name any services made available by default?](#q-what-is-the-role-of-services-in-angularjs-and-name-any-services-made-available-by-default)|
+| 05. |[What is an interceptor?](#q-what-is-an-interceptor)|
+| 06. |[What are common uses of an interceptor in AngularJS?](#q-what-are-common-uses-of-an-interceptor-in-angularjs)|
+| 07. |[How would you implement application-wide exception handling in your Angular app?](#q-how-would-you-implement-application-wide-exception-handling-in-your-angular-app)|
+| 08. |[In angular, what does the calls to the HTTP methods return?](#q-in-angular--what-does-the-calls-to-the-http-methods-return)|
+| 09. |[Using the Angular Http module to make a request, which method is used to listen for an emitted response?](#q-using-the-angular-http-module-to-make-a-request--which-method-is-used-to-listen-for-an-emitted-response)|
+| 10. |[An Angular class that used to create an instance that will be an argument to the request method of http is?](#q-an-angular-class-that-used-to-create-an-instance-that-will-be-an-argument-to-the-request-method-of-http-is)| 
 
 
 ### 6. Misc 
