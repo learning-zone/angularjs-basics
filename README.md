@@ -40,25 +40,28 @@
 
 
 
-### 2. Architecture 
- - Differences between `Provider` vs `Factory` vs `Service`?
- - How do you prefer to develop the data access layer which communicate with REST service?
- - Which service do you use: `$http` or `$resourse` or `rest-angular`?
- - How can you configure `$http` service?
- - What about `q` and promises in angularjs
- - Event model in angularjs?
- - Do you use some sort of angular style guides?
- - What is dependency injection? Explain difference between inline and explicit annotation?
- - What is auto bootstrap process in AngularJS?
- - What is manual bootstrap process in AngularJS?
- - How AngularJS is compiled?
- - What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?
- - Where should we implement the DOM manipulation in AngularJS?
- - How works `$digest`?
- - What is a digest cycle in AngularJS?
- - Explain how $scope.$apply() works?
- - What makes the angular.copy() method so powerful?
- - What is a singleton pattern and where we can find it in AngularJS?
+### 2. Architecture
+
+|Sl.No| Questions                                                             |
+|-----|-----------------------------------------------------------------------|
+| 01. |[What are the differences between `Provider` vs `Factory` vs `Service`?](#q-what-are-the-differences-between-provider-vs-factory-vs-service-)|
+| 02. |[How do you prefer to develop the data access layer which communicate with REST service?](#q-how-do-you-prefer-to-develop-the-data-access-layer-which-communicate-with-rest-service)|
+| 03. |[Which service do you use: `$http` or `$resourse` or `rest-angular`?](#q-which-service-do-you-use-http-or-resourse-or-rest-angular-)|
+| 04. |[How can you configure `$http` service?](#q-how-can-you-configure-http-service)|
+| 05. |[What about `q` and promises in angularjs?](#q-what-about-q-and-promises-in-angularjs)|
+| 06. |[Explain Event model in angularjs?](#q-explain-event-model-in-angularjs)|
+| 07. |[Do you use some sort of angular style guides?](#q-do-you-use-some-sort-of-angular-style-guides)|
+| 08. |[What is dependency injection? Explain difference between inline and explicit annotation?](#q-what-is-dependency-injection-explain-difference-between-inline-and-explicit-annotation)|
+| 09. |[What is auto bootstrap process in AngularJS?](#q-what-is-auto-bootstrap-process-in-angularjs)|
+| 10. |[What is manual bootstrap process in AngularJS?](#q-what-is-manual-bootstrap-process-in-angularjs)|
+| 11. |[How AngularJS is compiled?](#q-how-angularjs-is-compiled)|
+| 12. |[What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?](#q-what-should-be-the-maximum-number-of-concurrent-watches-how-would-you-keep-an-eye-on-that-number)|
+| 13. |[Where should we implement the DOM manipulation in AngularJS?](#q-where-should-we-implement-the-dom-manipulation-in-angularjs)|
+| 14. |[How `$digest` works?](#q-how-digest-works)|
+| 15. |[What is a digest cycle in AngularJS?](#q-what-is-a-digest-cycle-in-angularjs)|
+| 16. |[Explain how $scope.$apply() works?](#q-explain-how-scope-apply-works)|
+| 17. |[What makes the angular.copy() method so powerful?](#q-what-makes-the-angularcopy-method-so-powerful)|
+| 18. |[What is a singleton pattern and where we can find it in AngularJS?](#q-what-is-a-singleton-pattern-and-where-we-can-find-it-in-angularjs)|
 
 
 ### 3. Directives 
