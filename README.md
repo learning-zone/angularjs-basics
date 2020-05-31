@@ -108,11 +108,14 @@
 
 
 ### 6. Misc 
- - What is the best practice to build your application
- - When it is necessary or whether it is necessary to use `$scope.$apply`
- - A JSON Web Token consists of?
- - A JWT should be signed with a secret called?
- - Having the JWT token, what is the format of the Authorization header looks like?
+
+|Sl.No|  Questions                                                                                                  |
+|-----|-------------------------------------------------------------------------------------------------------------|
+| 01. |[What is the best practice to build your application](#q-what-is-the-best-practice-to-build-your-application)|
+| 02. |[When it is necessary or whether it is necessary to use `$scope.$apply`](#q-when-it-is-necessary-or-whether-it-is-necessary-to-use---scope-apply)|
+| 03. |[A JSON Web Token consists of?](#q-a-json-web-token-consists-of)|
+| 04. |[A JWT should be signed with a secret called?](#q-a-jwt-should-be-signed-with-a-secret-called)|
+| 05. |[Having the JWT token, what is the format of the Authorization header looks like?](#q-having-the-jwt-token--what-is-the-format-of-the-authorization-header-looks-like)|
 
 <br/>
 
