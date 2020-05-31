@@ -33,6 +33,7 @@
  - How do you hide an HTML element via a button click in AngularJS?
  - How would you react on model changes to trigger some further action? For instance, say you have an input text field called email and you want to trigger or execute some code as soon as a user starts to type in their email?
  - How do you disable a button depending on a checkbox’s state?
+ - Assuming "form" is an NgForm object, which property is used to retrieve the form values?
 
 
 ### 2. Architecture 
@@ -69,6 +70,7 @@
  - When should you use an attribute Vs an element?
  - What is the role of ng-app, ng-init and ng-model directives?
  - How would you programatically change or adapt the template of a directive before it is executed and transformed?
+ - What is the Router directive that can be placed on elements to navigate to a new route?
 
 
 ### 4. Filters
@@ -85,6 +87,8 @@
  - What are common uses of an interceptor in AngularJS?
  - How would you implement application-wide exception handling in your Angular app?
  - In angular, what does the calls to the HTTP methods return?
+ - Using the Angular Http module to make a request, which method is used to listen for an emitted response?
+ - An Angular class that used to create an instance that will be an argument to the request method of http is?  
 
 
 ### 6. Performance 
@@ -881,8 +885,6 @@ The form value can be retrieved by `[form.value]`.
 #### Q. ***An Angular class that used to create an instance that will be an argument to the request method of http is?***
 `[Request]`.
 
-#### Q. ***An Angular generator to generate `api.service.spec.ts` inside the `shared` componenet is ?***
-`[ng generat service shared/api]`.
 
 #### Q. ***A JSON Web Token consists of .... ?***
 JSON Web Token consists of header, payload and signature. You can read more at https://jwt.io/
