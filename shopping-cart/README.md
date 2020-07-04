@@ -1,7 +1,7 @@
 ## Shopping Cart
 
 
-<img src="/client/assets/shopping-cart.png" alt="Shopping Cart" />
+<img src="client/assets/shopping-cart.png" alt="Shopping Cart" />
 
 
 #### Project Description
