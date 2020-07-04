@@ -1,18 +1,17 @@
 ## Shopping Cart
 
-**Live Demo** : 
+
+<img src="/client/assets/shopping-cart.png" alt="Shopping Cart" />
 
 
 #### Project Description
 
-> A full fledged Shopping application developed on AngularJS, AngularJS Material, NodeJS and MySQL. 
+> Shopping application developed on AngularJS, AngularJS Material, NodeJS and MySQL. 
 
 
-#### This Projects Covers
 
-- Components Interaction
+#### Installation & Setup
 
-#### Installation 
 1. `Run install`
 2. `node server.js`
 
@@ -24,18 +23,7 @@
 - Database : MySQL
 
 
-#### Development Server
-- 
-
-
-#### Build
-- 
-
-#### Running Unit Tests
-- 
-
-#### Running End-to-End Tests
-- 
+ 
 
 #### Resources
 
