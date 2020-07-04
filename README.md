@@ -1,4 +1,4 @@
-## AngularJS ( v1.7.x ) Interview Questions with Example
+## AngularJS Interview Questions with Example ( Updated upto v1.7.x )
 
 
 ### 1. Basics 
@@ -44,78 +44,77 @@
 
 |Sl.No| Questions                                                             |
 |-----|-----------------------------------------------------------------------|
-| 01. |[What are the differences between `Provider` vs `Factory` vs `Service`?](#q-what-are-the-differences-between-provider-vs-factory-vs-service-)|
-| 02. |[How do you prefer to develop the data access layer which communicate with REST service?](#q-how-do-you-prefer-to-develop-the-data-access-layer-which-communicate-with-rest-service)|
-| 03. |[Which service do you use: `$http` or `$resourse` or `rest-angular`?](#q-which-service-do-you-use-http-or-resourse-or-rest-angular-)|
-| 04. |[How can you configure `$http` service?](#q-how-can-you-configure-http-service)|
-| 05. |[What about `q` and promises in angularjs?](#q-what-about-q-and-promises-in-angularjs)|
-| 06. |[Explain Event model in angularjs?](#q-explain-event-model-in-angularjs)|
-| 07. |[Do you use some sort of angular style guides?](#q-do-you-use-some-sort-of-angular-style-guides)|
-| 08. |[What is dependency injection? Explain difference between inline and explicit annotation?](#q-what-is-dependency-injection-explain-difference-between-inline-and-explicit-annotation)|
-| 09. |[What is auto bootstrap process in AngularJS?](#q-what-is-auto-bootstrap-process-in-angularjs)|
-| 10. |[What is manual bootstrap process in AngularJS?](#q-what-is-manual-bootstrap-process-in-angularjs)|
-| 11. |[How AngularJS is compiled?](#q-how-angularjs-is-compiled)|
-| 12. |[What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?](#q-what-should-be-the-maximum-number-of-concurrent-watches-how-would-you-keep-an-eye-on-that-number)|
-| 13. |[Where should we implement the DOM manipulation in AngularJS?](#q-where-should-we-implement-the-dom-manipulation-in-angularjs)|
-| 14. |[How `$digest` works?](#q-how-digest-works)|
-| 15. |[What is a digest cycle in AngularJS?](#q-what-is-a-digest-cycle-in-angularjs)|
-| 16. |[Explain how $scope.$apply() works?](#q-explain-how-scope-apply-works)|
-| 17. |[What makes the angular.copy() method so powerful?](#q-what-makes-the-angularcopy-method-so-powerful)|
-| 18. |[What is a singleton pattern and where we can find it in AngularJS?](#q-what-is-a-singleton-pattern-and-where-we-can-find-it-in-angularjs)|
-
+| 33. |[What are the differences between `Provider` vs `Factory` vs `Service`?](#q-what-are-the-differences-between-provider-vs-factory-vs-service-)|
+| 34. |[How do you prefer to develop the data access layer which communicate with REST service?](#q-how-do-you-prefer-to-develop-the-data-access-layer-which-communicate-with-rest-service)|
+| 35. |[Which service do you use: `$http` or `$resourse` or `rest-angular`?](#q-which-service-do-you-use-http-or-resourse-or-rest-angular-)|
+| 36. |[How can you configure `$http` service?](#q-how-can-you-configure-http-service)|
+| 37. |[What about `q` and promises in angularjs?](#q-what-about-q-and-promises-in-angularjs)|
+| 38. |[Explain Event model in angularjs?](#q-explain-event-model-in-angularjs)|
+| 39. |[Do you use some sort of angular style guides?](#q-do-you-use-some-sort-of-angular-style-guides)|
+| 40. |[What is dependency injection? Explain difference between inline and explicit annotation?](#q-what-is-dependency-injection-explain-difference-between-inline-and-explicit-annotation)|
+| 41. |[What is auto bootstrap process in AngularJS?](#q-what-is-auto-bootstrap-process-in-angularjs)|
+| 42. |[What is manual bootstrap process in AngularJS?](#q-what-is-manual-bootstrap-process-in-angularjs)|
+| 43. |[How AngularJS is compiled?](#q-how-angularjs-is-compiled)|
+| 44. |[What should be the maximum number of concurrent "watches"? How would you keep an eye on that number?](#q-what-should-be-the-maximum-number-of-concurrent-watches-how-would-you-keep-an-eye-on-that-number)|
+| 45. |[Where should we implement the DOM manipulation in AngularJS?](#q-where-should-we-implement-the-dom-manipulation-in-angularjs)|
+| 46. |[How `$digest` works?](#q-how-digest-works)|
+| 47. |[What is a digest cycle in AngularJS?](#q-what-is-a-digest-cycle-in-angularjs)|
+| 48. |[Explain how $scope.$apply() works?](#q-explain-how-scope-apply-works)|
+| 49. |[What makes the angular.copy() method so powerful?](#q-what-makes-the-angularcopy-method-so-powerful)|
+| 50. |[What is a singleton pattern and where we can find it in AngularJS?](#q-what-is-a-singleton-pattern-and-where-we-can-find-it-in-angularjs)|
 
 ### 3. Directives 
 
 |Sl.No|  Questions                                                             |
 |-----|------------------------------------------------------------------------|
-| 01. |[What are directives in angularjs?](#q-what-are-directives-in-angularjs)|
-| 02. |[List some built-in directives](#q-list-some-built-in-directives)
-| 03. |[Explain difference between 'compile' and 'link' callbacks in directive definition](#q-explain-difference-between-compile-and-link-callbacks-in-directive-definition)
-| 04. |[List types of scopes directive can have?](#q-list-types-of-scopes-directive-can-have)|
-| 05. |[How Directives are compiled?](#q-how-directives-are-compiled)|
-| 06. |[What are the directives in angularJS?](#q-what-are-the-directives-in-angularjs)|
-| 07. |[What are different ways to invoke a directive?](#q-what-are-different-ways-to-invoke-a-directive)|
-| 08. |[What is the difference between ng-show/ng-hide and ng-if directives?](#q-what-is-the-difference-between-ng-show-ng-hide-and-ng-if-directives)|
-| 09. |[When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?](#q-when-creating-a-directive-it-can-be-used-in-several-different-ways-in-the-view-which-ways-for-using-a-directive-do-you-know-how-do-you-define-the-way-your-directive-will-be-used)|
-| 10. |[When should you use an attribute Vs an element?](#q-when-should-you-use-an-attribute-vs-an-element)|
-| 11. |[What is the role of ng-app, ng-init and ng-model directives?](#q-what-is-the-role-of-ng-app-ng-init-and-ng-model-directives)|
-| 12. |[How would you programatically change or adapt the template of a directive before it is executed and transformed?](#q-how-would-you-programatically-change-or-adapt-the-template-of-a-directive-before-it-is-executed-and-transformed)|
-| 13. |[What is the Router directive that can be placed on elements to navigate to a new route?](#q-what-is-the-router-directive-that-can-be-placed-on-elements-to-navigate-to-a-new-route)|
+| 51. |[What are directives in angularjs?](#q-what-are-directives-in-angularjs)|
+| 52. |[List some built-in directives](#q-list-some-built-in-directives)
+| 53. |[Explain difference between 'compile' and 'link' callbacks in directive definition](#q-explain-difference-between-compile-and-link-callbacks-in-directive-definition)
+| 54. |[List types of scopes directive can have?](#q-list-types-of-scopes-directive-can-have)|
+| 55. |[How Directives are compiled?](#q-how-directives-are-compiled)|
+| 56. |[What are the directives in angularJS?](#q-what-are-the-directives-in-angularjs)|
+| 57. |[What are different ways to invoke a directive?](#q-what-are-different-ways-to-invoke-a-directive)|
+| 58. |[What is the difference between ng-show/ng-hide and ng-if directives?](#q-what-is-the-difference-between-ng-show-ng-hide-and-ng-if-directives)|
+| 59. |[When creating a directive, it can be used in several different ways in the view. Which ways for using a directive do you know? How do you define the way your directive will be used?](#q-when-creating-a-directive-it-can-be-used-in-several-different-ways-in-the-view-which-ways-for-using-a-directive-do-you-know-how-do-you-define-the-way-your-directive-will-be-used)|
+| 60. |[When should you use an attribute Vs an element?](#q-when-should-you-use-an-attribute-vs-an-element)|
+| 61. |[What is the role of ng-app, ng-init and ng-model directives?](#q-what-is-the-role-of-ng-app-ng-init-and-ng-model-directives)|
+| 62. |[How would you programatically change or adapt the template of a directive before it is executed and transformed?](#q-how-would-you-programatically-change-or-adapt-the-template-of-a-directive-before-it-is-executed-and-transformed)|
+| 63. |[What is the Router directive that can be placed on elements to navigate to a new route?](#q-what-is-the-router-directive-that-can-be-placed-on-elements-to-navigate-to-a-new-route)|
 
 
 ### 4. Filters
 
 |Sl.No|  Questions                                                       |
 |-----|------------------------------------------------------------------|
-| 01. |[What are Filters in AngularJS?](#q-what-are-filters-in-angularjs)|
-| 02. |[What are the basics steps to unit test an AngulatJS filter?](#q-what-are-the-basics-steps-to-unit-test-an-angulatjs-filter)|
+| 64. |[What are Filters in AngularJS?](#q-what-are-filters-in-angularjs)|
+| 65. |[What are the basics steps to unit test an AngulatJS filter?](#q-what-are-the-basics-steps-to-unit-test-an-angulatjs-filter)|
 
 
 ### 5. Service
 
 |Sl.No|  Questions                                                                                           |
 |-----|------------------------------------------------------------------------------------------------------|
-| 01. |[What is difference between services and factory?](#q-what-is-difference-between-services-and-factory)|
-| 02. |[How do you share data between controllers?](#q-how-do-you-share-data-between-controllers)|
-| 03. |[How would you make an Angular service return a promise? Write a code snippet as an example?](#q-how-would-you-make-an-angular-service-return-a-promise--write-a-code-snippet-as-an-example)|
-| 04. |[What is the role of services in AngularJS and name any services made available by default?](#q-what-is-the-role-of-services-in-angularjs-and-name-any-services-made-available-by-default)|
-| 05. |[What is an interceptor?](#q-what-is-an-interceptor)|
-| 06. |[What are common uses of an interceptor in AngularJS?](#q-what-are-common-uses-of-an-interceptor-in-angularjs)|
-| 07. |[How would you implement application-wide exception handling in your Angular app?](#q-how-would-you-implement-application-wide-exception-handling-in-your-angular-app)|
-| 08. |[In angular, what does the calls to the HTTP methods return?](#q-in-angular--what-does-the-calls-to-the-http-methods-return)|
-| 09. |[Using the Angular Http module to make a request, which method is used to listen for an emitted response?](#q-using-the-angular-http-module-to-make-a-request--which-method-is-used-to-listen-for-an-emitted-response)|
-| 10. |[An Angular class that used to create an instance that will be an argument to the request method of http is?](#q-an-angular-class-that-used-to-create-an-instance-that-will-be-an-argument-to-the-request-method-of-http-is)| 
+| 66. |[What is difference between services and factory?](#q-what-is-difference-between-services-and-factory)|
+| 67. |[How do you share data between controllers?](#q-how-do-you-share-data-between-controllers)|
+| 68. |[How would you make an Angular service return a promise? Write a code snippet as an example?](#q-how-would-you-make-an-angular-service-return-a-promise--write-a-code-snippet-as-an-example)|
+| 69. |[What is the role of services in AngularJS and name any services made available by default?](#q-what-is-the-role-of-services-in-angularjs-and-name-any-services-made-available-by-default)|
+| 70. |[What is an interceptor?](#q-what-is-an-interceptor)|
+| 71. |[What are common uses of an interceptor in AngularJS?](#q-what-are-common-uses-of-an-interceptor-in-angularjs)|
+| 72. |[How would you implement application-wide exception handling in your Angular app?](#q-how-would-you-implement-application-wide-exception-handling-in-your-angular-app)|
+| 73. |[In angular, what does the calls to the HTTP methods return?](#q-in-angular--what-does-the-calls-to-the-http-methods-return)|
+| 74. |[Using the Angular Http module to make a request, which method is used to listen for an emitted response?](#q-using-the-angular-http-module-to-make-a-request--which-method-is-used-to-listen-for-an-emitted-response)|
+| 75. |[An Angular class that used to create an instance that will be an argument to the request method of http is?](#q-an-angular-class-that-used-to-create-an-instance-that-will-be-an-argument-to-the-request-method-of-http-is)| 
 
 
 ### 6. Miscellaneous 
 
 |Sl.No|  Questions                                                                                                  |
 |-----|-------------------------------------------------------------------------------------------------------------|
-| 01. |[What is the best practice to build your application](#q-what-is-the-best-practice-to-build-your-application)|
-| 02. |[When it is necessary or whether it is necessary to use `$scope.$apply`](#q-when-it-is-necessary-or-whether-it-is-necessary-to-use---scope-apply)|
-| 03. |[A JSON Web Token consists of?](#q-a-json-web-token-consists-of)|
-| 04. |[A JWT should be signed with a secret called?](#q-a-jwt-should-be-signed-with-a-secret-called)|
-| 05. |[Having the JWT token, what is the format of the Authorization header looks like?](#q-having-the-jwt-token--what-is-the-format-of-the-authorization-header-looks-like)|
+| 76. |[What is the best practice to build your application](#q-what-is-the-best-practice-to-build-your-application)|
+| 77. |[When it is necessary or whether it is necessary to use `$scope.$apply`](#q-when-it-is-necessary-or-whether-it-is-necessary-to-use---scope-apply)|
+| 78. |[A JSON Web Token consists of?](#q-a-json-web-token-consists-of)|
+| 79. |[A JWT should be signed with a secret called?](#q-a-jwt-should-be-signed-with-a-secret-called)|
+| 80. |[Having the JWT token, what is the format of the Authorization header looks like?](#q-having-the-jwt-token--what-is-the-format-of-the-authorization-header-looks-like)|
 
 <br/>
 
