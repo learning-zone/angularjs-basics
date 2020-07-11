@@ -1,7 +1,7 @@
 ## AngularJS Interview Questions with Example ( Updated upto v1.7.x )
 
 
-### 1. Basics 
+### Basics 
 
 |Sl.No|  Questions                                     |
 |-----|------------------------------------------------|
@@ -40,7 +40,7 @@
 
 
 
-### 2. Architecture
+### Architecture
 
 |Sl.No| Questions                                                             |
 |-----|-----------------------------------------------------------------------|
@@ -63,7 +63,7 @@
 | 49. |[What makes the angular.copy() method so powerful?](#q-what-makes-the-angularcopy-method-so-powerful)|
 | 50. |[What is a singleton pattern and where we can find it in AngularJS?](#q-what-is-a-singleton-pattern-and-where-we-can-find-it-in-angularjs)|
 
-### 3. Directives 
+### Directives 
 
 |Sl.No|  Questions                                                             |
 |-----|------------------------------------------------------------------------|
@@ -82,7 +82,7 @@
 | 63. |[What is the Router directive that can be placed on elements to navigate to a new route?](#q-what-is-the-router-directive-that-can-be-placed-on-elements-to-navigate-to-a-new-route)|
 
 
-### 4. Filters
+### Filters
 
 |Sl.No|  Questions                                                       |
 |-----|------------------------------------------------------------------|
@@ -90,7 +90,7 @@
 | 65. |[What are the basics steps to unit test an AngulatJS filter?](#q-what-are-the-basics-steps-to-unit-test-an-angulatjs-filter)|
 
 
-### 5. Service
+### Service
 
 |Sl.No|  Questions                                                                                           |
 |-----|------------------------------------------------------------------------------------------------------|
@@ -106,7 +106,7 @@
 | 75. |[An Angular class that used to create an instance that will be an argument to the request method of http is?](#q-an-angular-class-that-used-to-create-an-instance-that-will-be-an-argument-to-the-request-method-of-http-is)| 
 
 
-### 6. Miscellaneous 
+### Miscellaneous 
 
 |Sl.No|  Questions                                                                                                  |
 |-----|-------------------------------------------------------------------------------------------------------------|
