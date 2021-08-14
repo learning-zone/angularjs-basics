@@ -1532,6 +1532,8 @@ $scope.names = ["Emil", "Tobias", "Linus"];
 #### Q. ***Please tell about life cycle of angularjs application?***
 #### Q. ***Please explain what is controller/model/view in angularjs?***
 
+*ToDo*
+
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
