@@ -1,6 +1,8 @@
-# AngularJS Interview Questions ( v1.8.x )
+# AngularJS Basics ( v1.8.x )
 
 *Click <img src="assets/star.png" width="18" height="18" align="absmiddle" title="Star" /> if you like the project. Pull Request are highly appreciated.*
+
+<br/>
 
 ## Table of Contents
 
@@ -1076,6 +1078,7 @@ In Angular Http module to make a request,  method is used to listen for an emitt
 Router directive that can be placed on elements to navigate to a new route is `[routerLink]`.
 
 ## Q. ***Assuming "form" is an NgForm object, which property is used to retrieve the form values?***
+
 The form value can be retrieved by `[form.value]`.
 
 ## Q. ***An Angular class that used to create an instance that will be an argument to the request method of http is?***
